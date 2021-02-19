@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ember-yadda docs</title>
+    <meta name="description" content="Docs for ember-yadda, a Cucumber-like BDD testing solution for Ember">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="ember-yadda docs">
+    <meta name="og:description" content="Docs for ember-yadda, a Cucumber-like BDD testing solution for Ember">
+    <meta name="og:locale" content="en-US">
+
+    
+<meta name="docs-app/config/environment" content="%7B%22environment%22%3A%22production%22%2C%22modulePrefix%22%3A%22docs-app%22%2C%22podModulePrefix%22%3A%22docs-app%2Fpods%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22apiNamespace%22%3A%22%22%2C%22apiHost%22%3A%22%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%22EMBER_METAL_TRACKED_PROPERTIES%22%3Atrue%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22LOG_RESOLVER%22%3Afalse%2C%22LOG_ACTIVE_GENERATION%22%3Afalse%2C%22LOG_TRANSITIONS%22%3Afalse%2C%22LOG_TRANSITIONS_INTERNAL%22%3Afalse%2C%22LOG_VIEW_LOOKUPS%22%3Afalse%2C%22name%22%3A%22docs-app%22%2C%22version%22%3A%220.0.0%2B5a1c0347%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22browserify%22%3A%7B%22tests%22%3Atrue%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
+    <link integrity="" rel="stylesheet" href="/assets/docs-app-cf63f8cd7dd66b500206eb2c8426bead.css">
+
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name" content="ember-yadda docs">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ember-yadda docs">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-320x460.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x920.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x1096.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-750x1294.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1182x2208.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1242x2148.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-748x1024.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-768x1004.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1496x2048.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1536x2008.png">
+    <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
+  </head>
+  <body>
+    <script type="x/boundary" id="fastboot-body-start"></script><div class="Route-Application">
+  <header class="Route-Application-Header">
+    <div>
+      <h2>ember-yadda</h2>
+
+      <p>
+        A Cucumber-style BDD testing solution for Ember
+      </p>
+    </div>
+
+      <ul class="Toc Route-Application-Toc">
+      <a href="/" id="ember3" class="active ember-view Toc-Item-Link link">
+        What and Why
+      </a>
+
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            Concept
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/concept/glossary" id="ember4" class="ember-view Toc-Item-Link link">
+            Glossary
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/truth" id="ember5" class="ember-view Toc-Item-Link link">
+            Truth to feature files
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/labels" id="ember6" class="ember-view Toc-Item-Link link">
+            Labels for test selectors
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/composing" id="ember7" class="ember-view Toc-Item-Link link">
+            Composing step implementations
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/debugging" id="ember8" class="ember-view Toc-Item-Link link">
+            Debugging
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            Usage
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/usage/project-structure" id="ember9" class="ember-view Toc-Item-Link link">
+            Project Structure
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/usage/baz" id="ember10" class="ember-view Toc-Item-Link link">
+            Baz
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+  </ul>
+
+  </header>
+
+  <main class="Route-Application-Content">
+    <div class="Route-Application-Content-Inner">
+      <div class="Route-Index">
+  <div class="Route-Index-Content">
+    <h1 id="welcometoemberyaddadocumentation">Welcome to @ember-yadda documentation</h1>
+<h2 id="whatemberyaddais">What ember-yadda is</h2>
+<ul>
+<li>A wrapper over the <a href="https://github.com/acuminous/yadda">Yadda</a> library, which is a JS implementation of the Cucumber BDD methodology.</li>
+<li>A set of very biased and very efficient practices of organizing your BDD tests.</li>
+<li>A collection of utilities to leverage those practices with ease.</li>
+<li>A compact library of reusable BDD step implementations.</li>
+</ul>
+<h2 id="whycucumber">Why Cucumber</h2>
+<p>Cucumber is a famous BDD implementation that offers exciting benefits:</p>
+<h3 id="acceptancetestsinformofemuserstoriesemofferalotofbenefits">Acceptance tests in form of <em>user stories</em> offer a lot of benefits:</h3>
+<ul>
+<li>User stories provide <em>guarantees</em></li>
+<li>Thus, they have <em>business value</em> for all stakeholders, whereas unit-tests serve rather a safeguard for developers only.</li>
+<li>User stories integrate into the BDD cycle in a broader sense.</li>
+<li>User stories thread through all the feature life, from conception to deployment</li>
+<li>User stories get all team members involved: not only developers, but also managers, designers, product owners, customer representatives</li>
+</ul>
+<h3 id="extensiveuserstorycoveragecanbeveryhelpful">Extensive <em>user story coverage</em> can be very helpful:</h3>
+<ul>
+<li>It reveals true size of features.</li>
+<li>It allows for more realistic estimations.</li>
+<li>It serves as a technical design specification.</li>
+<li>It is written in a human-readable language, understandable to non-developers.</li>
+<li>It serves as <em>the</em> source of truth for resolving disagreementsl</li>
+<li>It simplifies progress tracking.</li>
+<li>It focuses on user needs, rather than <a href="https://www.goodreads.com/book/show/44098.The_Inmates_Are_Running_the_Asylum">developer needs</a>.</li>
+<li>It encourages creating numerous minimal test cases, as opposed to few enormous cases that attempt to test everything in one go.</li>
+<li>It integrates well into automated testing.</li>
+</ul>
+<h2 id="cucumberhasitsproblemsandemberyaddasolvesthem">Cucumber has its problems and ember-yadda solves them</h2>
+<p>Though Cucumber has a large army of faithful fans, it has an equally large amount of haters. Lots of developers have tried Cucumber and found that it caused more trouble than it solved.</p>
+<p>Many developers on their path to embrace BDD, including me, have started as avid Cucumber enthusiasts and got severely disappointed, or got their teammates on — or over — the fence.</p>
+<p>I'm convinced that it's not Cucumber to blame, rather it's the misuse that causes grief. In much the same way, it would be ridiculous to advocate against using kitchen knives because you have cut your finger. 😏</p>
+<p>I have identified a number of issues with how Cucumber is typically used and, I believe, successfully solved them in this addon. The resulting approach is quite radical and quite effective. Read on!</p>
+<p>-- <a href="https://github.com/lolmaus">Andrey Mikhaylov @lolmaus</a></p>
+  </div>
+
+
+  <div>
+    <a href="/concept/glossary" id="ember11" class="ember-view">
+      Glossary
+    </a>
+  </div>
+</div>
+
+    </div>
+  </main>
+</div>
+<script type="fastboot/shoebox" id="shoebox-pages">[{"type":"pages","id":"concept","attributes":{"title":"Concept","index":1,"sectionOnly":true}},{"type":"pages","id":"concept/composing","attributes":{"title":"Composing step implementations","index":4}},{"type":"pages","id":"concept/debugging","attributes":{"title":"Debugging","index":5}},{"type":"pages","id":"concept/glossary","attributes":{"title":"Glossary","index":1}},{"type":"pages","id":"concept/labels","attributes":{"title":"Labels for test selectors","index":3}},{"type":"pages","id":"concept/truth","attributes":{"title":"Truth to feature files","index":2}},{"type":"pages","id":"index","attributes":{"title":"What and Why"}},{"type":"pages","id":"usage","attributes":{"title":"Usage","index":2,"sectionOnly":true}},{"type":"pages","id":"usage/baz","attributes":{"title":"Baz"}},{"type":"pages","id":"usage/project-structure","attributes":{"title":"Project Structure","index":1}}]</script><script type="fastboot/shoebox" id="shoebox-pages index">{"type":"pages","id":"index","attributes":{"html":"\u003ch1 id=\"welcometoemberyaddadocumentation\"\u003eWelcome to @ember-yadda documentation\u003c/h1\u003e\n\u003ch2 id=\"whatemberyaddais\"\u003eWhat ember-yadda is\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eA wrapper over the \u003ca href=\"https://github.com/acuminous/yadda\"\u003eYadda\u003c/a\u003e library, which is a JS implementation of the Cucumber BDD methodology.\u003c/li\u003e\n\u003cli\u003eA set of very biased and very efficient practices of organizing your BDD tests.\u003c/li\u003e\n\u003cli\u003eA collection of utilities to leverage those practices with ease.\u003c/li\u003e\n\u003cli\u003eA compact library of reusable BDD step implementations.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"whycucumber\"\u003eWhy Cucumber\u003c/h2\u003e\n\u003cp\u003eCucumber is a famous BDD implementation that offers exciting benefits:\u003c/p\u003e\n\u003ch3 id=\"acceptancetestsinformofemuserstoriesemofferalotofbenefits\"\u003eAcceptance tests in form of \u003cem\u003euser stories\u003c/em\u003e offer a lot of benefits:\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eUser stories provide \u003cem\u003eguarantees\u003c/em\u003e\u003c/li\u003e\n\u003cli\u003eThus, they have \u003cem\u003ebusiness value\u003c/em\u003e for all stakeholders, whereas unit-tests serve rather a safeguard for developers only.\u003c/li\u003e\n\u003cli\u003eUser stories integrate into the BDD cycle in a broader sense.\u003c/li\u003e\n\u003cli\u003eUser stories thread through all the feature life, from conception to deployment\u003c/li\u003e\n\u003cli\u003eUser stories get all team members involved: not only developers, but also managers, designers, product owners, customer representatives\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"extensiveuserstorycoveragecanbeveryhelpful\"\u003eExtensive \u003cem\u003euser story coverage\u003c/em\u003e can be very helpful:\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eIt reveals true size of features.\u003c/li\u003e\n\u003cli\u003eIt allows for more realistic estimations.\u003c/li\u003e\n\u003cli\u003eIt serves as a technical design specification.\u003c/li\u003e\n\u003cli\u003eIt is written in a human-readable language, understandable to non-developers.\u003c/li\u003e\n\u003cli\u003eIt serves as \u003cem\u003ethe\u003c/em\u003e source of truth for resolving disagreementsl\u003c/li\u003e\n\u003cli\u003eIt simplifies progress tracking.\u003c/li\u003e\n\u003cli\u003eIt focuses on user needs, rather than \u003ca href=\"https://www.goodreads.com/book/show/44098.The_Inmates_Are_Running_the_Asylum\"\u003edeveloper needs\u003c/a\u003e.\u003c/li\u003e\n\u003cli\u003eIt encourages creating numerous minimal test cases, as opposed to few enormous cases that attempt to test everything in one go.\u003c/li\u003e\n\u003cli\u003eIt integrates well into automated testing.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"cucumberhasitsproblemsandemberyaddasolvesthem\"\u003eCucumber has its problems and ember-yadda solves them\u003c/h2\u003e\n\u003cp\u003eThough Cucumber has a large army of faithful fans, it has an equally large amount of haters. Lots of developers have tried Cucumber and found that it caused more trouble than it solved.\u003c/p\u003e\n\u003cp\u003eMany developers on their path to embrace BDD, including me, have started as avid Cucumber enthusiasts and got severely disappointed, or got their teammates on — or over — the fence.\u003c/p\u003e\n\u003cp\u003eI'm convinced that it's not Cucumber to blame, rather it's the misuse that causes grief. In much the same way, it would be ridiculous to advocate against using kitchen knives because you have cut your finger. 😏\u003c/p\u003e\n\u003cp\u003eI have identified a number of issues with how Cucumber is typically used and, I believe, successfully solved them in this addon. The resulting approach is quite radical and quite effective. Read on!\u003c/p\u003e\n\u003cp\u003e-- \u003ca href=\"https://github.com/lolmaus\"\u003eAndrey Mikhaylov @lolmaus\u003c/a\u003e\u003c/p\u003e","title":"What and Why"}}</script><script type="x/boundary" id="fastboot-body-end"></script>
+
+    <div class="loading-overlay" id="app-loading">
+      <div class="spinner-border text-primary" role="status"><span class="sr-only">Lade...</span></div>
+    </div>
+    <style>
+      .loading-overlay {
+        position: fixed;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+
+    <script src="/assets/vendor-f920d0eaef37eb0b6281e1c370f24d0c.js" integrity="sha256-8Gq/nNQbY2lcLiXUxLTTc2A8laofeOdv30eGHcc0/4k= sha512-dOUBawsH/uXl+6b+eIgIEe47oDw7aDBD3zSYW9/4vGnay3QRfho7GNHY6MK/a+LdHu/ywSanymIZkgSa6/T/MQ==" ></script>
+    <script src="/assets/docs-app-8f97fee25aee0fdff63f5451014be661.js" integrity="sha256-WHzsJLs9bEt1mvhZqqySCumk542Ji8PyPEGeYcMfx5g= sha512-ynBlGQFG5VfJezHfPEbH4VjGlpqyyJgWnI4Q+/QPHyMTfo+WbaQWP9HyAhl7cgCPML0SbtTJ9ApLZLzf6ZOSUg==" ></script>
+
+    
+  </body>
+</html>

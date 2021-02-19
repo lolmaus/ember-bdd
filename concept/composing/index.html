@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ember-yadda docs</title>
+    <meta name="description" content="Docs for ember-yadda, a Cucumber-like BDD testing solution for Ember">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="ember-yadda docs">
+    <meta name="og:description" content="Docs for ember-yadda, a Cucumber-like BDD testing solution for Ember">
+    <meta name="og:locale" content="en-US">
+
+    
+<meta name="docs-app/config/environment" content="%7B%22environment%22%3A%22production%22%2C%22modulePrefix%22%3A%22docs-app%22%2C%22podModulePrefix%22%3A%22docs-app%2Fpods%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22apiNamespace%22%3A%22%22%2C%22apiHost%22%3A%22%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%22EMBER_METAL_TRACKED_PROPERTIES%22%3Atrue%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22LOG_RESOLVER%22%3Afalse%2C%22LOG_ACTIVE_GENERATION%22%3Afalse%2C%22LOG_TRANSITIONS%22%3Afalse%2C%22LOG_TRANSITIONS_INTERNAL%22%3Afalse%2C%22LOG_VIEW_LOOKUPS%22%3Afalse%2C%22name%22%3A%22docs-app%22%2C%22version%22%3A%220.0.0%2B5a1c0347%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22browserify%22%3A%7B%22tests%22%3Atrue%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
+    <link integrity="" rel="stylesheet" href="/assets/docs-app-cf63f8cd7dd66b500206eb2c8426bead.css">
+
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name" content="ember-yadda docs">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ember-yadda docs">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-320x460.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x920.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x1096.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-750x1294.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1182x2208.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1242x2148.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-748x1024.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-768x1004.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1496x2048.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1536x2008.png">
+    <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
+  </head>
+  <body>
+    <script type="x/boundary" id="fastboot-body-start"></script><div class="Route-Application">
+  <header class="Route-Application-Header">
+    <div>
+      <h2>ember-yadda</h2>
+
+      <p>
+        A Cucumber-style BDD testing solution for Ember
+      </p>
+    </div>
+
+      <ul class="Toc Route-Application-Toc">
+      <a href="/" id="ember14" class="ember-view Toc-Item-Link link">
+        What and Why
+      </a>
+
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            Concept
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/concept/glossary" id="ember15" class="ember-view Toc-Item-Link link">
+            Glossary
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/truth" id="ember16" class="ember-view Toc-Item-Link link">
+            Truth to feature files
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/labels" id="ember17" class="ember-view Toc-Item-Link link">
+            Labels for test selectors
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/composing" id="ember18" class="active ember-view Toc-Item-Link link">
+            Composing step implementations
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/debugging" id="ember19" class="ember-view Toc-Item-Link link">
+            Debugging
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            Usage
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/usage/project-structure" id="ember20" class="ember-view Toc-Item-Link link">
+            Project Structure
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/usage/baz" id="ember21" class="ember-view Toc-Item-Link link">
+            Baz
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+  </ul>
+
+  </header>
+
+  <main class="Route-Application-Content">
+    <div class="Route-Application-Content-Inner">
+      <div class="Route-Page">
+  <div class="Route-Page-Content">
+    <h1 id="composingyaddastepimplementations">Composing Yadda step implementations</h1>
+<h2 id="theproblem">The problem</h2>
+<p><a href="https://github.com/acuminous/yadda">Yadda</a>, the Cucumber implementation behind this addon, uses method chains to register step implementations. Here's an example from the <a href="https://github.com/albertjan/ember-cli-yadda">ember-cli-yadda</a> readme:</p>
+<pre><code class="js language-js">import steps from 'my-app/tests/acceptance/steps/steps';
+
+export default function(assert) {
+  return steps(assert)
+    .given('it\'s next to apples', function() {
+      let apples = this.element.querySelectorAll('.apple');
+      assert.ok(apples.length &gt; 0)
+    })
+    .when('left together for a while', function(next) {
+      // bananas rot really quickly next to apples.
+      setTimeout(next, 1000);
+    })
+    .then('the banana rots', function () {
+      let banana = this.element.querySelector('.banana');
+      assert.ok(banana.classList.contains('rotten'));
+    });
+}
+</code></pre>
+<p>This approach has disadvantages:</p>
+<ul>
+<li><p>It's quite boilerplatey.</p></li>
+<li><p>It has a lot of visual noise, the code is harder to read than it could be.</p></li>
+<li><p>It does not allow step composition. You can only inherit one file from another (similar to JS class inheritance), whereas assembling a library from multiple sources would be handy (similar to mixins).</p></li>
+<li><p>Steps can only be organized into files <em>by feature</em>, whereas most steps can be used in multiple features.</p>
+<p>For example, you have some generic <code>steps.js</code> and then you have acceptance-test specific <code>login-steps.js</code>. According to <code>ember-cli-yadda</code> stadnard, <code>login-steps.js</code> inherits from <code>steps.js</code>.</p>
+<p>Now imagine you're building another accepntance test with <code>post-steps.js</code> that also inherits from <code>steps.js</code>. You have a use case where an anonymous user must see a post without edit button, then login and see the edit button. You have the login step already implemented in <code>login-steps.js</code>, so you inherit <code>post-steps.js</code> from  <code>login-steps.js</code>.</p>
+<p>Now Yadda will complain about conflicting steps and refuse to start: <code>steps.js</code> was inherited twice.</p>
+<p>You can work around this by not inheriting <code>post-steps.js</code> from <code>steps.js</code>. This works, but only until you want to borrow some more steps from another step file: if two step files inherit from <code>steps.js</code>, you can't inherit from both! :(</p>
+<p>The only solution is to move all shared steps to the generic <code>steps.js</code>. Eventually it becomes large, mixed up, hard to read and to maintain.</p></li>
+</ul>
+<h2 id="thesolution">The solution</h2>
+<p><code>ember-cli-yadda-opinionated</code> lets you store steps in simple objects with methods. The above example can be rewritten like this:</p>
+<pre><code class="js language-js">// tests/acceptance/steps/_fruit-steps.js
+
+export default {
+
+  "Given it's next to apples" (assert) {
+    let apples = this.element.querySelectorAll('.apple');
+    assert.ok(apples.length &gt; 0)
+  },
+
+  'When left together for a while', function() {
+    // next() is not available. Return a promise or use async/await.
+    return new Promise(resolve =&gt; setTimeout(resolve, 1000)); 
+  }),
+
+  'Then the banana rots', function () {
+    let banana = this.element.querySelector('.banana');
+    assert.ok(banana.classList.contains('rotten'));
+  },
+
+};
+</code></pre>
+<p>This is cleaner and easier to read.</p>
+<p>(Note: this example is borrowed from the Yadda readme and is not using the opinionated approach of <LinkTo @route="docs.truth">reusable steps</LinkTo> and <LinkTo @route="docs.labels">labels</LinkTo>.)</p>
+<p><code>ember-cli-yadda-opinionated</code> lets you organize steps <em>by topic</em>, not directly bound to a specific feature. For example, you can have a collection of <em>authentication</em> steps and use them in all features that require anonymous/authenticated/admin user, logging out, etc.</p>
+<p>You can compose such steps with the <code>composeSteps</code> helper. It lets you include steps from multiple sources.</p>
+<p>Conflicting step names will not crash your test suite, letting you manually control the composition: the last conflicting step overwrites previous ones.</p>
+<p>The plain object approach lets you run one step from another:</p>
+<pre><code class="js language-js">export default const steps = {
+
+  // A one-liner step to seed a single post
+  "Given a post with $fields"(fields) {
+    /* seeding */
+  },
+
+  // A step that uses table syntax: useful to seed multiple records,
+  // but not practical to seed just one, since it consumes at least four lines of the feature file
+  "Given the following posts with\n$opinionatedTable"(rows) {
+    rows.forEach(row =&gt; {
+      steps["Given a post with $fields"].call(this, row);
+    })
+  },
+
+};
+</code></pre>
+  </div>
+
+
+  <div>
+        <a href="/concept/labels" id="ember22" class="ember-view">
+          Labels for test selectors
+        </a>
+
+      <a href="/concept/debugging" id="ember23" class="ember-view">
+        Debugging
+      </a>
+  </div>
+</div>
+
+    </div>
+  </main>
+</div>
+<script type="fastboot/shoebox" id="shoebox-pages">[{"type":"pages","id":"concept","attributes":{"title":"Concept","index":1,"sectionOnly":true}},{"type":"pages","id":"concept/composing","attributes":{"title":"Composing step implementations","index":4}},{"type":"pages","id":"concept/debugging","attributes":{"title":"Debugging","index":5}},{"type":"pages","id":"concept/glossary","attributes":{"title":"Glossary","index":1}},{"type":"pages","id":"concept/labels","attributes":{"title":"Labels for test selectors","index":3}},{"type":"pages","id":"concept/truth","attributes":{"title":"Truth to feature files","index":2}},{"type":"pages","id":"index","attributes":{"title":"What and Why"}},{"type":"pages","id":"usage","attributes":{"title":"Usage","index":2,"sectionOnly":true}},{"type":"pages","id":"usage/baz","attributes":{"title":"Baz"}},{"type":"pages","id":"usage/project-structure","attributes":{"title":"Project Structure","index":1}}]</script><script type="fastboot/shoebox" id="shoebox-pages concept__composing">{"type":"pages","id":"concept/composing","attributes":{"html":"\u003ch1 id=\"composingyaddastepimplementations\"\u003eComposing Yadda step implementations\u003c/h1\u003e\n\u003ch2 id=\"theproblem\"\u003eThe problem\u003c/h2\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/acuminous/yadda\"\u003eYadda\u003c/a\u003e, the Cucumber implementation behind this addon, uses method chains to register step implementations. Here's an example from the \u003ca href=\"https://github.com/albertjan/ember-cli-yadda\"\u003eember-cli-yadda\u003c/a\u003e readme:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"js language-js\"\u003eimport steps from 'my-app/tests/acceptance/steps/steps';\n\nexport default function(assert) {\n  return steps(assert)\n    .given('it\\'s next to apples', function() {\n      let apples = this.element.querySelectorAll('.apple');\n      assert.ok(apples.length \u0026gt; 0)\n    })\n    .when('left together for a while', function(next) {\n      // bananas rot really quickly next to apples.\n      setTimeout(next, 1000);\n    })\n    .then('the banana rots', function () {\n      let banana = this.element.querySelector('.banana');\n      assert.ok(banana.classList.contains('rotten'));\n    });\n}\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThis approach has disadvantages:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eIt's quite boilerplatey.\u003c/p\u003e\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eIt has a lot of visual noise, the code is harder to read than it could be.\u003c/p\u003e\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eIt does not allow step composition. You can only inherit one file from another (similar to JS class inheritance), whereas assembling a library from multiple sources would be handy (similar to mixins).\u003c/p\u003e\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eSteps can only be organized into files \u003cem\u003eby feature\u003c/em\u003e, whereas most steps can be used in multiple features.\u003c/p\u003e\n\u003cp\u003eFor example, you have some generic \u003ccode\u003esteps.js\u003c/code\u003e and then you have acceptance-test specific \u003ccode\u003elogin-steps.js\u003c/code\u003e. According to \u003ccode\u003eember-cli-yadda\u003c/code\u003e stadnard, \u003ccode\u003elogin-steps.js\u003c/code\u003e inherits from \u003ccode\u003esteps.js\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eNow imagine you're building another accepntance test with \u003ccode\u003epost-steps.js\u003c/code\u003e that also inherits from \u003ccode\u003esteps.js\u003c/code\u003e. You have a use case where an anonymous user must see a post without edit button, then login and see the edit button. You have the login step already implemented in \u003ccode\u003elogin-steps.js\u003c/code\u003e, so you inherit \u003ccode\u003epost-steps.js\u003c/code\u003e from  \u003ccode\u003elogin-steps.js\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eNow Yadda will complain about conflicting steps and refuse to start: \u003ccode\u003esteps.js\u003c/code\u003e was inherited twice.\u003c/p\u003e\n\u003cp\u003eYou can work around this by not inheriting \u003ccode\u003epost-steps.js\u003c/code\u003e from \u003ccode\u003esteps.js\u003c/code\u003e. This works, but only until you want to borrow some more steps from another step file: if two step files inherit from \u003ccode\u003esteps.js\u003c/code\u003e, you can't inherit from both! :(\u003c/p\u003e\n\u003cp\u003eThe only solution is to move all shared steps to the generic \u003ccode\u003esteps.js\u003c/code\u003e. Eventually it becomes large, mixed up, hard to read and to maintain.\u003c/p\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"thesolution\"\u003eThe solution\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003eember-cli-yadda-opinionated\u003c/code\u003e lets you store steps in simple objects with methods. The above example can be rewritten like this:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"js language-js\"\u003e// tests/acceptance/steps/_fruit-steps.js\n\nexport default {\n\n  \"Given it's next to apples\" (assert) {\n    let apples = this.element.querySelectorAll('.apple');\n    assert.ok(apples.length \u0026gt; 0)\n  },\n\n  'When left together for a while', function() {\n    // next() is not available. Return a promise or use async/await.\n    return new Promise(resolve =\u0026gt; setTimeout(resolve, 1000)); \n  }),\n\n  'Then the banana rots', function () {\n    let banana = this.element.querySelector('.banana');\n    assert.ok(banana.classList.contains('rotten'));\n  },\n\n};\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThis is cleaner and easier to read.\u003c/p\u003e\n\u003cp\u003e(Note: this example is borrowed from the Yadda readme and is not using the opinionated approach of \u003cLinkTo @route=\"docs.truth\"\u003ereusable steps\u003c/LinkTo\u003e and \u003cLinkTo @route=\"docs.labels\"\u003elabels\u003c/LinkTo\u003e.)\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eember-cli-yadda-opinionated\u003c/code\u003e lets you organize steps \u003cem\u003eby topic\u003c/em\u003e, not directly bound to a specific feature. For example, you can have a collection of \u003cem\u003eauthentication\u003c/em\u003e steps and use them in all features that require anonymous/authenticated/admin user, logging out, etc.\u003c/p\u003e\n\u003cp\u003eYou can compose such steps with the \u003ccode\u003ecomposeSteps\u003c/code\u003e helper. It lets you include steps from multiple sources.\u003c/p\u003e\n\u003cp\u003eConflicting step names will not crash your test suite, letting you manually control the composition: the last conflicting step overwrites previous ones.\u003c/p\u003e\n\u003cp\u003eThe plain object approach lets you run one step from another:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"js language-js\"\u003eexport default const steps = {\n\n  // A one-liner step to seed a single post\n  \"Given a post with $fields\"(fields) {\n    /* seeding */\n  },\n\n  // A step that uses table syntax: useful to seed multiple records,\n  // but not practical to seed just one, since it consumes at least four lines of the feature file\n  \"Given the following posts with\\n$opinionatedTable\"(rows) {\n    rows.forEach(row =\u0026gt; {\n      steps[\"Given a post with $fields\"].call(this, row);\n    })\n  },\n\n};\n\u003c/code\u003e\u003c/pre\u003e","title":"Composing step implementations","index":4}}</script><script type="x/boundary" id="fastboot-body-end"></script>
+
+    <div class="loading-overlay" id="app-loading">
+      <div class="spinner-border text-primary" role="status"><span class="sr-only">Lade...</span></div>
+    </div>
+    <style>
+      .loading-overlay {
+        position: fixed;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+
+    <script src="/assets/vendor-f920d0eaef37eb0b6281e1c370f24d0c.js"></script>
+    <script src="/assets/docs-app-8f97fee25aee0fdff63f5451014be661.js"></script>
+
+    
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ember-yadda docs</title>
+    <meta name="description" content="Docs for ember-yadda, a Cucumber-like BDD testing solution for Ember">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="ember-yadda docs">
+    <meta name="og:description" content="Docs for ember-yadda, a Cucumber-like BDD testing solution for Ember">
+    <meta name="og:locale" content="en-US">
+
+    
+<meta name="docs-app/config/environment" content="%7B%22environment%22%3A%22production%22%2C%22modulePrefix%22%3A%22docs-app%22%2C%22podModulePrefix%22%3A%22docs-app%2Fpods%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22auto%22%2C%22apiNamespace%22%3A%22%22%2C%22apiHost%22%3A%22%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%22EMBER_METAL_TRACKED_PROPERTIES%22%3Atrue%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22LOG_RESOLVER%22%3Afalse%2C%22LOG_ACTIVE_GENERATION%22%3Afalse%2C%22LOG_TRANSITIONS%22%3Afalse%2C%22LOG_TRANSITIONS_INTERNAL%22%3Afalse%2C%22LOG_VIEW_LOOKUPS%22%3Afalse%2C%22name%22%3A%22docs-app%22%2C%22version%22%3A%220.0.0%2B5a1c0347%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22browserify%22%3A%7B%22tests%22%3Atrue%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
+    <link integrity="" rel="stylesheet" href="/assets/docs-app-cf63f8cd7dd66b500206eb2c8426bead.css">
+
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name" content="ember-yadda docs">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ember-yadda docs">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-320x460.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x920.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x1096.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-750x1294.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1182x2208.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/apple-touch-startup-image-1242x2148.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-748x1024.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/apple-touch-startup-image-768x1004.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1496x2048.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-1536x2008.png">
+    <link rel="icon" type="image/png" sizes="228x228" href="/coast-228x228.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <link rel="yandex-tableau-widget" href="/yandex-browser-manifest.json">
+  </head>
+  <body>
+    <script type="x/boundary" id="fastboot-body-start"></script><div class="Route-Application">
+  <header class="Route-Application-Header">
+    <div>
+      <h2>ember-yadda</h2>
+
+      <p>
+        A Cucumber-style BDD testing solution for Ember
+      </p>
+    </div>
+
+      <ul class="Toc Route-Application-Toc">
+      <a href="/" id="ember26" class="ember-view Toc-Item-Link link">
+        What and Why
+      </a>
+
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            Concept
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/concept/glossary" id="ember27" class="ember-view Toc-Item-Link link">
+            Glossary
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/truth" id="ember28" class="ember-view Toc-Item-Link link">
+            Truth to feature files
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/labels" id="ember29" class="ember-view Toc-Item-Link link">
+            Labels for test selectors
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/composing" id="ember30" class="ember-view Toc-Item-Link link">
+            Composing step implementations
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/concept/debugging" id="ember31" class="active ember-view Toc-Item-Link link">
+            Debugging
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            Usage
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/usage/project-structure" id="ember32" class="ember-view Toc-Item-Link link">
+            Project Structure
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/usage/baz" id="ember33" class="ember-view Toc-Item-Link link">
+            Baz
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+  </ul>
+
+  </header>
+
+  <main class="Route-Application-Content">
+    <div class="Route-Application-Content-Inner">
+      <div class="Route-Page">
+  <div class="Route-Page-Content">
+    <h2 id="debugginginvestigatingissues">Debugging, investigating issues</h2>
+<p><code>ember-cli-yadda-opinionated</code> provides handy ways to investigate problems and avoid frustration.</p>
+<h2 id="richerrormessages">Rich error messages</h2>
+<p>One big problem with Cucumber is how difficult it is to debug a problem.</p>
+<p>Typically, you'd receive a non-meaningful error such as "Expected 1 to be 0". To make errors meaningful, a lot of effort needs to be put into carefully crafting <em>each</em> step.</p>
+<p><code>ember-cli-yadda-opinionated</code> <em>automatically</em> provides helpful detailed information, whenever a test crashes with an assertion error or exception:</p>
+<p><img src={{root-url "error.png"}} alt="Screenshot"></p>
+<p>Here's what you get out of the box:</p>
+<ul>
+<li><p>The name of the step that failed.</p></li>
+<li><p>The name of the implementation that was selected for that step.</p>
+<p>With Cucumber, a lot of grief often comes from a wrong implementation being selected for a step. Such a situation would typically produce an irrelevant error message.</p>
+<p><code>ember-cli-yadda-opinionated</code> lets you effortlessly montior which implementation has been selected for which step, including passed steps.</p></li>
+<li><p>The error message.</p></li>
+<li><p>The list of arguments passed into the step implementation.</p>
+<p>This lets you see whether Yadda macros have been expanded properly.</p>
+<p>Each label argument will be expanded to show the label itself, resulting selector and the amount of elements matched on the page.</p></li>
+</ul>
+<p>This drastically simplifies investigating errors.</p>
+<h2 id="pausinganddebugging">Pausing and debugging</h2>
+<p>Additionally, the addon provides you with two simple steps: <code>And pause</code> and <code>And debugger</code>.</p>
+<p>Both will stop the test and lets you inspect the app in its current state.</p>
+<p><code>And pause</code> is perfect for development ahead of the backend. Setting up Mirage and seedin any particular state you need lets you develop the frontend without waiting for the backend to implement the API.</p>
+<p><code>And debugger</code> lets you see what exact state the next step starts with. It is a very common problem that a certain process in the app is not waited upon, and the next step fires too early. The resulting error message will typically be unhelpful and cause frustration. Whenever you feel frustrated, put <code>And debugger</code> before the failing step and check of the app is in the correct state!</p>
+  </div>
+
+
+  <div>
+        <a href="/concept/composing" id="ember34" class="ember-view">
+          Composing step implementations
+        </a>
+
+      <a href="/usage/project-structure" id="ember35" class="ember-view">
+        Project Structure
+      </a>
+  </div>
+</div>
+
+    </div>
+  </main>
+</div>
+<script type="fastboot/shoebox" id="shoebox-pages">[{"type":"pages","id":"concept","attributes":{"title":"Concept","index":1,"sectionOnly":true}},{"type":"pages","id":"concept/composing","attributes":{"title":"Composing step implementations","index":4}},{"type":"pages","id":"concept/debugging","attributes":{"title":"Debugging","index":5}},{"type":"pages","id":"concept/glossary","attributes":{"title":"Glossary","index":1}},{"type":"pages","id":"concept/labels","attributes":{"title":"Labels for test selectors","index":3}},{"type":"pages","id":"concept/truth","attributes":{"title":"Truth to feature files","index":2}},{"type":"pages","id":"index","attributes":{"title":"What and Why"}},{"type":"pages","id":"usage","attributes":{"title":"Usage","index":2,"sectionOnly":true}},{"type":"pages","id":"usage/baz","attributes":{"title":"Baz"}},{"type":"pages","id":"usage/project-structure","attributes":{"title":"Project Structure","index":1}}]</script><script type="fastboot/shoebox" id="shoebox-pages concept__debugging">{"type":"pages","id":"concept/debugging","attributes":{"html":"\u003ch2 id=\"debugginginvestigatingissues\"\u003eDebugging, investigating issues\u003c/h2\u003e\n\u003cp\u003e\u003ccode\u003eember-cli-yadda-opinionated\u003c/code\u003e provides handy ways to investigate problems and avoid frustration.\u003c/p\u003e\n\u003ch2 id=\"richerrormessages\"\u003eRich error messages\u003c/h2\u003e\n\u003cp\u003eOne big problem with Cucumber is how difficult it is to debug a problem.\u003c/p\u003e\n\u003cp\u003eTypically, you'd receive a non-meaningful error such as \"Expected 1 to be 0\". To make errors meaningful, a lot of effort needs to be put into carefully crafting \u003cem\u003eeach\u003c/em\u003e step.\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eember-cli-yadda-opinionated\u003c/code\u003e \u003cem\u003eautomatically\u003c/em\u003e provides helpful detailed information, whenever a test crashes with an assertion error or exception:\u003c/p\u003e\n\u003cp\u003e\u003cimg src={{root-url \"error.png\"}} alt=\"Screenshot\"\u003e\u003c/p\u003e\n\u003cp\u003eHere's what you get out of the box:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cp\u003eThe name of the step that failed.\u003c/p\u003e\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eThe name of the implementation that was selected for that step.\u003c/p\u003e\n\u003cp\u003eWith Cucumber, a lot of grief often comes from a wrong implementation being selected for a step. Such a situation would typically produce an irrelevant error message.\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eember-cli-yadda-opinionated\u003c/code\u003e lets you effortlessly montior which implementation has been selected for which step, including passed steps.\u003c/p\u003e\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eThe error message.\u003c/p\u003e\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eThe list of arguments passed into the step implementation.\u003c/p\u003e\n\u003cp\u003eThis lets you see whether Yadda macros have been expanded properly.\u003c/p\u003e\n\u003cp\u003eEach label argument will be expanded to show the label itself, resulting selector and the amount of elements matched on the page.\u003c/p\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eThis drastically simplifies investigating errors.\u003c/p\u003e\n\u003ch2 id=\"pausinganddebugging\"\u003ePausing and debugging\u003c/h2\u003e\n\u003cp\u003eAdditionally, the addon provides you with two simple steps: \u003ccode\u003eAnd pause\u003c/code\u003e and \u003ccode\u003eAnd debugger\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eBoth will stop the test and lets you inspect the app in its current state.\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eAnd pause\u003c/code\u003e is perfect for development ahead of the backend. Setting up Mirage and seedin any particular state you need lets you develop the frontend without waiting for the backend to implement the API.\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003eAnd debugger\u003c/code\u003e lets you see what exact state the next step starts with. It is a very common problem that a certain process in the app is not waited upon, and the next step fires too early. The resulting error message will typically be unhelpful and cause frustration. Whenever you feel frustrated, put \u003ccode\u003eAnd debugger\u003c/code\u003e before the failing step and check of the app is in the correct state!\u003c/p\u003e","title":"Debugging","index":5}}</script><script type="x/boundary" id="fastboot-body-end"></script>
+
+    <div class="loading-overlay" id="app-loading">
+      <div class="spinner-border text-primary" role="status"><span class="sr-only">Lade...</span></div>
+    </div>
+    <style>
+      .loading-overlay {
+        position: fixed;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+
+    <script src="/assets/vendor-f920d0eaef37eb0b6281e1c370f24d0c.js"></script>
+    <script src="/assets/docs-app-8f97fee25aee0fdff63f5451014be661.js"></script>
+
+    
+  </body>
+</html>
