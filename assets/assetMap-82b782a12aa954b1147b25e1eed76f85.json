@@ -1,0 +1,6 @@
+{
+  "assets": {
+    "content/error.png": "content/error-27dd9a6adfa7d47d3e2d2f7a392d7d49.png"
+  },
+  "prepend": "/ember-yadda/"
+}
