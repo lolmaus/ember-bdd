@@ -1,0 +1,190 @@
+@use "app/styles/config/dimensions";
+
+
+
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-family-main: sans-serif;
+$font-family-heading: sans-serif;
+
+
+
+// Paragraph styles
+
+@mixin font-paragraph {
+  font-family: $font-family-main;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: $font-weight-normal;
+  color: var(--text-primary);
+}
+
+@mixin layout-paragraph {
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+@mixin font-paragraph-small {
+  font-family: $font-family-main;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.2px;
+  font-weight: $font-weight-normal;
+  color: var(--text-primary);
+}
+
+@mixin layout-paragraph-small {
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+@mixin font-paragraph-large {
+  font-family: $font-family-main;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: $font-weight-normal;
+  color: var(--text-primary);t: 32px;
+}
+
+@mixin layout-paragraph-large {
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+
+
+// Heading styles
+
+@mixin font-heading-xd1 {
+  font-family: $font-family-heading;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: $font-weight-bold;
+  color: var(--text-heading);
+}
+
+@mixin layout-heading-xd1 {
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+@mixin font-heading-xd2 {
+  font-family: $font-family-heading;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: $font-weight-bold;
+  color: var(--text-heading);
+}
+
+@mixin layout-heading-xd2 {
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+@mixin font-heading-xd3 {
+  font-family: $font-family-heading;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: $font-weight-bold;
+  color: var(--text-heading);
+}
+
+@mixin layout-heading-xd3 {
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+@mixin font-heading-xd4 {
+  font-family: $font-family-heading;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: $font-weight-bold;
+  color: var(--text-heading);
+}
+
+@mixin layout-heading-xd4 {
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+@mixin font-heading-xd5 {
+  font-family: $font-family-heading;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: $font-weight-bold;
+  color: var(--text-heading);
+}
+
+@mixin layout-heading-xd5 {
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+}
+
+@mixin font-heading-xd6 {
+  @include font-heading-xd4;
+}
+
+@mixin layout-heading-xd6 {
+  @include layout-heading-xd4;
+}
+
+
+
+// Specialty styles
+
+@mixin font-price-tag {
+  font-family: $font-family-main;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0;
+  font-weight: $font-weight-normal;
+  color: var(--text-price-tag);
+}
+
+@mixin font-price-tag-large {
+  font-family: $font-family-main;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0;
+  font-weight: $font-weight-normal;
+  color: var(--text-price-tag);
+}
+
+
+
+// Link styles
+
+@mixin font-link {
+  &, &:active, &:visited {
+    color: var(--link-normal);
+  }
+
+  &:not(:active):not(.active) {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: var(--link-hover);
+  }
+
+  &:active, &.active {
+    font-weight: 600;
+  }
+}
+

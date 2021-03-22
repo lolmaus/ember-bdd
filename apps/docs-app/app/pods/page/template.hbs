@@ -1,0 +1,38 @@
+<div class="Route-Page">
+  <div class="Route-Page-Content">
+    <DynamicTemplate @templateString={{this.page.attributes.html}}/>
+  </div>
+
+
+  <div class="Route-Page-Links">
+    {{! template-lint-disable no-bare-strings }}
+    {{#if this.pageObj.previousPageObj}}
+      {{#if (eq this.pageObj.previousPageObj.id "index")}}
+        <LinkTo
+          class="Route-Page-Links-Link _back"
+          @route="index"
+        >
+          ← {{this.pageObj.previousPageObj.title}}
+        </LinkTo>
+      {{else}}
+        <LinkTo
+          class="Route-Page-Links-Link _back"
+          @route="page"
+          @model={{this.pageObj.previousPageObj.id}}
+        >
+          ← {{this.pageObj.previousPageObj.title}}
+        </LinkTo>
+      {{/if}}
+    {{/if}}
+
+    {{#if this.pageObj.nextPageObj}}
+      <LinkTo
+        class="Route-Page-Links-Link _forward"
+        @route="page"
+        @model={{this.pageObj.nextPageObj.id}}
+      >
+        {{this.pageObj.nextPageObj.title}} →
+      </LinkTo>
+    {{/if}}
+  </div>
+</div>

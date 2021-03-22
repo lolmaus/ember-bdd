@@ -1,0 +1,6 @@
+@use "app/styles/utils/copy";
+
+.Route-Index-Content {
+  // Text
+  @include copy.copy;
+}

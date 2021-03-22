@@ -1,0 +1,56 @@
+$thickness: 2px;
+
+
+@mixin gradient($reverse: false) {
+  background: linear-gradient(
+    var(--gradient-#{if($reverse, "bottom", "top")}),
+    var(--gradient-#{if($reverse, "top",    "bottom")}),
+  );
+}
+
+
+
+@mixin hollow($absolute: false) {
+  position: relative;
+
+  padding: $thickness;
+
+  > * {
+    background: var(--background);
+
+    @if $absolute {
+      position: absolute;
+      left: $thickness;
+      top: $thickness;
+      width: calc(100% - #{$thickness} * 2);
+      height: calc(100% - #{$thickness} * 2);
+    }
+  }
+}
+
+
+
+@mixin gradient-outline($reverse: false, $absolute: false) {
+  @include gradient($reverse);
+  @include hollow($absolute);
+}
+
+
+
+@mixin border-radius($value: 20px) {
+  border-radius: $value;
+
+  > * {
+    border-radius: calc(#{$value} - #{$thickness});
+  }
+}
+
+
+
+@mixin border-radius-50 {
+  border-radius: 50%;
+
+  > * {
+    border-radius: 50%;
+  }
+}

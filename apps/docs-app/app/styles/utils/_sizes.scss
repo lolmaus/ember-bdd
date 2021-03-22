@@ -1,0 +1,17 @@
+@function strip-unit ($value-with-unit) {
+  @return $value-with-unit / ($value-with-unit * 0 + 1);
+}
+
+@function px-to-unit($value-px-or-unitless, $unit) {
+  $value-unitless: strip-unit($value-px-or-unitless);
+  $base-unitless: strip-unit($base-font-size);
+  @return $value-unitless / $base-unitless * $unit;
+}
+
+@function px-to-em($value-px-or-unitless) {
+  @return px-to-unit($value-px-or-unitless, 1em);
+}
+
+@function px-to-rem($value-px-or-unitless) {
+  @return px-to-unit($value-px-or-unitless, 1rem);
+}

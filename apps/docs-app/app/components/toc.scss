@@ -1,0 +1,16 @@
+.Toc {
+  // Content layout
+  .Toc-Item {
+    &:not(:first-child) {
+      margin-top: 0.5em;
+    }
+  }
+}
+
+
+.Toc-Item {
+  // Recursive content layout
+  .Toc {
+    margin-left: 1em;
+  }
+}

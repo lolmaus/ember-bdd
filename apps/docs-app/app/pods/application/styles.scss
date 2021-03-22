@@ -1,0 +1,55 @@
+@use 'app/styles/config/breakpoints';
+@use 'node_modules/breakpoint-slicer' as bp;
+
+
+
+$header-sidebar-width: 200px;
+
+
+
+.Route-Application {
+  // RWD
+  @include bp.from(s) {
+    .Route-Application-Header {
+      position: fixed;
+      width: $header-sidebar-width;
+      height: 100vh;
+      left: 0;
+      top: 0;
+    }
+
+    .Route-Application-Content {
+      padding-left: $header-sidebar-width;
+    }
+  }
+}
+
+
+
+.Route-Application-Header {
+  // Layout
+  padding: 10px;
+
+  // Content layout
+  .Route-Application-Toc {
+    margin-top: 2em;
+  }
+}
+
+
+
+.Route-Application-Content {
+  // Content layout
+  .Route-Application-Content-Inner {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
+.Route-Application-Content-Inner {
+  // Layout
+  padding: 10px;
+}

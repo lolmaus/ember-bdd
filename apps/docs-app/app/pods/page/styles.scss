@@ -1,0 +1,37 @@
+@use "app/styles/utils/copy";
+
+
+
+.Route-Page {
+  // Content Layout
+  .Route-Page-Links {
+    margin-top: 2rem;
+  }
+}
+
+
+
+.Route-Page-Content {
+  // Text
+  @include copy.copy;
+}
+
+
+
+.Route-Page-Links {
+  // Content layout
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .Route-Page-Link {
+    &._back {
+      margin-right: 1rem;
+    }
+    &._forward {
+      margin-left: 1rem;
+    }
+  }
+}
+
+

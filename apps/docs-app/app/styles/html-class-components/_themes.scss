@@ -1,0 +1,67 @@
+@use "app/styles/config/colors";
+
+
+
+.theme-white {
+  --background: #{colors.$white};
+
+  --text-primary: #{colors.$black};
+  --text-secondary: #{colors.$grey-tuna};
+
+  --text-code: #{colors.$grey-tuna};
+  --text-code-background: #{colors.$grey-mercury};
+
+  --text-heading: #{colors.$blue-chathams};
+  --text-heading-secondary: #{colors.$blue-picton};
+
+  --text-price-tag: #{colors.$grey-tuna};
+
+  --blockquote-decoration: #{colors.$grey-mercury};
+
+  --link-normal: #{colors.$blue-picton};
+  --link-hover: #{colors.$blue-chathams};
+
+  --button-primary-text: #{colors.$white};
+  --button-primary-background-top: #{colors.$blue-picton};
+  --button-primary-background-bottom: #{colors.$blue-chathams};
+  --button-primary-disabled-border: #{colors.$grey-mercury};
+  --button-primary-disabled-text: #{colors.$grey-silver};
+
+  --button-secondary-text: #{colors.$blue-picton};
+  --button-secondary-text-hover: #{colors.$blue-chathams};
+  --button-secondary-text-active: #{colors.$blue-chathams};
+
+  --form-interactive-control-border-inactive: #{colors.$blue-picton};
+  --form-interactive-control-border-active: #{colors.$blue-chathams};
+
+  --divider: #{colors.$grey-mercury};
+
+  --full-screen-button-normal: #{colors.$blue-chathams};
+  --full-screen-button-hover: #{colors.$blue-picton};
+
+  // --field-border: #{colors.$white};
+  // --field-background: #{colors.$black};
+  // --field-text: #{colors.$white};
+  // --field-placeholder: #{colors.$dove-gray};
+  // --field-error: #{colors.$k5-orange};
+
+  --gradient-top: #{colors.$blue-picton};
+  --gradient-bottom: #{colors.$blue-chathams};
+  --gradient-disabled: #{colors.$grey-mercury};
+
+  --nav-item-current-text: #{colors.$blue-chathams};
+  --nav-item-prev-text: #{colors.$blue-picton};
+  --nav-item-prev-text-hover: #{colors.$blue-chathams};
+  --nav-item-prev-bar: #{colors.$blue-chathams};
+  --nav-item-next-text: #{colors.$grey-silver};
+  --nav-item-next-bar: #{colors.$grey-mercury};
+
+  --table-header-text: #{colors.$white};
+  --table-header-background: #{colors.$blue-chathams};
+  --table-row-odd-text: #{colors.$black};
+  --table-row-odd-background: #{colors.$grey-mercury};
+  --table-row-even-text: #{colors.$black};
+  --table-row-even-background: #{colors.$white};
+
+  --backdrop: #{colors.$black-transparent};
+}

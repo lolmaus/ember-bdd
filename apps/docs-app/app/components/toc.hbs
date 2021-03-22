@@ -1,0 +1,39 @@
+{{#if this.pageObj.children.length}}
+  <ul
+    class="Toc"
+    ...attributes
+  >
+    {{#unless @pageObj}}
+      <LinkTo
+        class="Toc-Item-Link link"
+        @route="index"
+      >
+        {{this.pageObj.title}}
+      </LinkTo>
+    {{/unless}}
+
+    {{#each this.pageObj.children as |child|}}
+      <li class="Toc-Item">
+        {{#if child.sectionOnly}}
+          <span
+            class="Toc-Item-Link _empty"
+          >
+            {{child.title}}
+          </span>
+        {{else}}
+          <LinkTo
+            class="Toc-Item-Link link"
+            @route="page"
+            @model={{child.id}}
+          >
+            {{child.title}}
+          </LinkTo>
+        {{/if}}
+
+        <Toc
+          @pageObj={{child}}
+        />
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}

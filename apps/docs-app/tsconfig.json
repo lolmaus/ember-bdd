@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noEmitOnError": false,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "target": "es2017",
+    "skipLibCheck": true,
+    "paths": {
+      "docs-app/tests/*": [
+        "tests/*"
+      ],
+      "docs-app/*": [
+        "app/*",
+        "lib/select-sass-theme/app/*"
+      ],
+      "*": [
+        "types/*"
+      ],
+      "@glimmer/tracking": [
+        "node_modules/ember-cached-decorator-polyfill",
+        "node_modules/@glimmer/tracking/dist/types"
+      ],
+      "fetch": [
+        "node_modules/ember-fetch"
+      ],
+      "select-sass-theme": [
+        "lib/select-sass-theme/addon"
+      ],
+      "select-sass-theme/*": [
+        "lib/select-sass-theme/addon/*"
+      ],
+      "select-sass-theme/test-support": [
+        "lib/select-sass-theme/addon-test-support"
+      ],
+      "select-sass-theme/test-support/*": [
+        "lib/select-sass-theme/addon-test-support/*"
+      ]
+    }
+  },
+  "include": [
+    "app/**/*",
+    "mirage/**/*",
+    "tests/**/*",
+    "types/**/*",
+    "lib/select-sass-theme"
+  ]
+}

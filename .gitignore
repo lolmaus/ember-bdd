@@ -1,0 +1,39 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/apps/*/dist/
+/addons/*/dist/
+
+tmp/
+
+# dependencies
+bower_components/
+node_modules/
+
+# misc
+# /.env*
+.sass-cache/
+*.lock
+coverage/
+coverage/
+*.log*
+test-results/
+report.*.json
+
+# ember-try
+.node_modules.ember-try/
+bower.json.ember-try
+package.json.ember-try
+
+# IDE
+.idea/
+.history/
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

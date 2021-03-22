@@ -1,0 +1,105 @@
+@use "app/styles/config/dimensions";
+
+
+
+@mixin stretch() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+@mixin center($direction: 'both') {
+  position: absolute;
+
+  @if $direction == 'horizontally' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @else if $direction == 'vertically' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+@mixin intrinsic-ratio($ratio: 1) {
+  // Vertical padding in % is computed based on element **width**.
+  padding-top: 1 / $ratio * 100%;
+
+  position: relative;
+
+  > * {
+    @include stretch;
+  }
+}
+
+
+@mixin zoom ($ratio: 1.2, $child-selector: "") {
+  & #{$child-selector} {
+    transition: transform transitions.$soft;
+  }
+
+  &:hover #{$child-selector} {
+    transform: scale(1.2);
+  }
+}
+
+
+@mixin header-height {
+  @media (max-width: #{dimensions.$header-bp}) {
+    height: dimensions.$header-height-mobile;
+  }
+
+  @media (min-width: #{dimensions.$header-bp + 1px}) {
+    height: dimensions.$header-height-desktop;
+  }
+}
+
+
+@mixin header-padding-top($value: 0) {
+  @media (max-width: #{dimensions.$header-bp}) {
+    padding-top: calc(#{dimensions.$header-height-mobile} + #{$value});
+  }
+
+  @media (min-width: #{dimensions.$header-bp + 1px}) {
+    padding-top: calc(#{dimensions.$header-height-desktop} + #{$value});
+  }
+}
+
+
+
+
+@mixin layout-parent {
+  position: relative;
+
+  > * {
+    @include stretch;
+    overflow: hidden;
+  }
+}
+
+
+
+@mixin intrinsic-ratio($ratio: 16 / 9) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%; // Does not work with another width. If you need smaller width, use an extra container.
+  position: relative;
+
+  padding-top: 100% / $ratio;
+
+  > * {
+    @include stretch;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="Route-Index">
+  <div class="Route-Index-Content">
+    {{html-safe this.page.attributes.html}}
+  </div>
+
+
+  <div>
+    <LinkTo
+      @route="page"
+      @model={{this.pageObj.nextPageObj.id}}
+    >
+      {{this.pageObj.nextPageObj.title}}
+    </LinkTo>
+  </div>
+</div>

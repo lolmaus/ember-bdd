@@ -1,0 +1,108 @@
+@use "app/styles/utils/buttons";
+@use "app/styles/utils/typography";
+
+@mixin copy {
+  p, .p, ul, ol, blockquote {
+    @include typography.font-paragraph;
+    @include typography.layout-paragraph;
+  }
+
+
+  *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(.h1):not(.h2):not(.h3):not(.h4):not(.h5):not(.h6) + {
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+      margin-top: 2em;
+    }
+  }
+
+  h1, .h1 {
+    @include typography.font-heading-xd1;
+    @include typography.layout-heading-xd1;
+  }
+  h2, .h2 {
+    @include typography.font-heading-xd2;
+    @include typography.layout-heading-xd2;
+  }
+  h3, .h3 {
+    @include typography.font-heading-xd3;
+    @include typography.layout-heading-xd3;
+  }
+  h4, .h4 {
+    @include typography.font-heading-xd4;
+    @include typography.layout-heading-xd4;
+  }
+  h5, .h5, h6, .h6 {
+    @include typography.font-heading-xd5;
+    @include typography.layout-heading-xd5;
+  }
+  .p-large {
+    @include typography.font-paragraph-large;
+    @include typography.layout-paragraph-large;
+  }
+  .secondary {
+    color: var(--text-secondary);
+  }
+
+
+  a {
+    @include typography.font-link;
+  }
+
+  ul, ol {
+    &:not(.unstyled) {
+      margin-left: 2em;
+
+      li {
+        list-style: disc outside;
+      }
+    }
+  }
+
+  h1, .h1, h2, .h2, h3, .h3 {
+    position: relative;
+    margin-left: -40px;
+    padding-left: 40px;
+
+    .anchor {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: none;
+
+      > * {
+        vertical-align: middle;
+      }
+    }
+
+    &:hover .anchor {
+      display: block;
+    }
+  }
+
+  blockquote {
+    padding: 14px;
+    border-left: 6px solid var(--blockquote-decoration);
+  }
+
+  code:not(.hljs) {
+    color: var(--text-code);
+    background-color: var(--text-code-background);
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+
+  .anchor {
+    svg {
+      fill: var(--link-normal) !important;
+      stroke: var(--link-normal) !important;
+    }
+  }
+
+  .button-primary {
+    @include buttons.button-primary;
+  }
+
+  .button-secondary {
+    @include buttons.button-secondary;
+  }
+}

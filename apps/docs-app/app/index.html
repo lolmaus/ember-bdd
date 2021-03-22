@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ember-bdd docs</title>
+    <meta name="description" content="Docs for ember-bdd, a Cucumber-like BDD testing solution for Ember">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="ember-bdd docs">
+    <meta name="og:description" content="Docs for ember-bdd, a Cucumber-like BDD testing solution for Ember">
+    <meta name="og:locale" content="en-US">
+
+    {{content-for "head"}}
+
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/docs-app.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <div class="loading-overlay" id="app-loading">
+      <div class="spinner-border text-primary" role="status"><span class="sr-only">Lade...</span></div>
+    </div>
+    <style>
+      .loading-overlay {
+        position: fixed;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/docs-app.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

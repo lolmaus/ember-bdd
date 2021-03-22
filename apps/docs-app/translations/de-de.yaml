@@ -1,0 +1,13 @@
+index:
+  title: Willkommen
+
+loading: Lade...
+errors:
+  somethingWentWrong: Etwas ist schiefgelaufen!
+  backToHomepage: zurück zur Startseite
+
+exceptions:
+  unauthorized: Zugriff verweigert.
+  forbidden: Unerlaubter Zugriff.
+  not_found: Seite wurde nicht gefunden.
+  server_error: Ein Fehler ist aufgetreten.
