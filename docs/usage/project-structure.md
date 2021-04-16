@@ -114,7 +114,7 @@ See <LinkTo @route="page" @model="index">Populating the dictionary</LinkTo> for 
 
 
 
-/tests/yadda/custom-labels.js
+/tests/bdd/custom-labels.js
 -----------------------------
 
 Normally you should reference DOM elements via semantic test selectors. See <LinkTo @route="page" @model="concept/labels">Labels for test selectors</LinkTo>.
@@ -133,7 +133,7 @@ Please read up on <LinkTo @route="page" @model="index">Custom labels</LinkTo>.
 
 
 
-/tests/yadda/annotations.js
+/tests/bdd/annotations.js
 ---------------------------
 
 This is where you define annotations that let you initialize tests in different ways.

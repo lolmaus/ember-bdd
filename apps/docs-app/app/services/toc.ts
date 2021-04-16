@@ -1,8 +1,7 @@
 import Service, { inject as service } from '@ember/service';
 import { cached } from '@glimmer/tracking';
 import FetchService from './fetch';
-import { TaskGenerator } from 'ember-concurrency';
-import { dropTask } from 'ember-concurrency-decorators';
+import { dropTask } from 'ember-concurrency';
 import { PageSparse } from '../types';
 import { taskFor } from 'ember-concurrency-ts';
 import PageObj from 'docs-app/utils/page-obj';
@@ -10,10 +9,8 @@ import PageObj from 'docs-app/utils/page-obj';
 export default class TocService extends Service {
   @service fetch!: FetchService;
 
-  @dropTask fetchPagesSparseTask = taskFor(function* (
-    this: TocService
-  ): TaskGenerator<PageSparse[]> {
-    return (yield this.fetch.fetchPagesWithShoebox()) as PageSparse[];
+  @dropTask fetchPagesSparseTask = taskFor(async (): Promise<PageSparse[]> => {
+    return await this.fetch.fetchPagesWithShoebox();
   });
 
   get pagesSparse(): PageSparse[] {

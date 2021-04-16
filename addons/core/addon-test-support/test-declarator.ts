@@ -1,16 +1,18 @@
-import { module, test } from 'qunit';
+import { module, test, only, skip, todo } from 'qunit';
 import yadda, { Yadda, Dictionary } from 'yadda';
 import { Library } from 'yadda/lib/localisation/English';
 import FeatureParser, {
   SpecificationExport,
   ScenarioExport,
+  AnnotationsExport,
 } from 'yadda/lib/parsers/FeatureParser';
 import { cached } from 'tracked-toolbox';
 import requireModule from 'ember-require-module';
 import composeSteps from './-private/compose-steps';
-import { isStepImplementationsRecord } from './types';
+import { isStepImplementationsRecord, ModuleFunc, TestFunc } from './types';
 import { generateDictionary } from './-private/dictionary';
 import { assert } from '@ember/debug';
+import applyAnnotations from './-private/annotations';
 
 export default class TestDeclarator {
   protected relativePath: string;
@@ -63,11 +65,28 @@ export default class TestDeclarator {
   }
 
   public declare(): void {
-    module(this.featureParsed.title, (/* hooks: NestedHooks */) => {
+    const moduleFunction = this.getModuleFunction();
+
+    moduleFunction(this.featureParsed.title, (hooks: NestedHooks) => {
+      applyAnnotations(this.projectName, this.featureParsed.annotations, hooks);
+
       this.featureParsed.scenarios.forEach((scenario: ScenarioExport) => {
-        test(scenario.title, (assert: Assert) => {
-          return this.runScenario(scenario, assert);
-        });
+        const testFunction = this.getTestFunction(scenario.annotations);
+
+        if (this.areThereCustomAnnotations(scenario.annotations)) {
+          // Need to wrap the test with another moodule so that hooks can be run for individual test
+          module('', (hooks: NestedHooks) => {
+            applyAnnotations(this.projectName, scenario.annotations, hooks);
+
+            testFunction(scenario.title, (assert: Assert) => {
+              return this.runScenario(scenario, assert);
+            });
+          });
+        } else {
+          testFunction(scenario.title, (assert: Assert) => {
+            return this.runScenario(scenario, assert);
+          });
+        }
       });
     });
   }
@@ -82,5 +101,55 @@ export default class TestDeclarator {
         resolve();
       });
     });
+  }
+
+  protected getModuleFunction(): ModuleFunc {
+    const annotations = this.featureParsed.annotations;
+
+    // prettier-ignore
+    assert('Annotations @only, @skip and @todo cannot be used together',
+      !(
+        (annotations.skip && annotations.todo)
+        || (annotations.skip && annotations.only)
+        || (annotations.only && annotations.todo)
+      )
+    );
+
+    // prettier-ignore
+    return (
+      annotations.skip ? module.skip :
+      annotations.only ? module.only :
+      annotations.todo ? module.todo :
+                         module
+    );
+  }
+
+  protected getTestFunction(annotations: AnnotationsExport): TestFunc {
+    // prettier-ignore
+    assert('Annotations @only, @skip and @todo cannot be used together',
+      !(
+        (annotations.skip && annotations.todo)
+        || (annotations.skip && annotations.only)
+        || (annotations.only && annotations.todo)
+      )
+    );
+
+    // prettier-ignore
+    return (
+      annotations.skip ? skip :
+      annotations.only ? only :
+      annotations.todo ? todo :
+                         test
+    );
+  }
+
+  protected areThereCustomAnnotations(annotations: AnnotationsExport): boolean {
+    // prettier-ignore
+    const annotationsFiltered =
+      Object
+        .keys(annotations)
+        .filter((key) => key !== 'only' && key !== 'skip' && key !== 'todo')
+
+    return annotationsFiltered.length > 0;
   }
 }

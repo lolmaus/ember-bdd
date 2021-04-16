@@ -24,6 +24,7 @@ module.exports = {
     camelcase: 'off', // Have to keep this off for the TS equivalent to take precedence
     'no-console': ['error', { allow: ['debug', 'error', 'info', 'warn'] }],
     'no-unused-expressions': 'off',
+    'no-use-before-define': 'off', // Need this for cyclic references
     'no-useless-constructor': 'off', // This rule crashes ESLint unless disabled
     'prefer-const': 'error', // Only use `let` when you are actually mutating the variable
     'prettier/prettier': 'error',

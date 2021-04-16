@@ -1,6 +1,5 @@
 import { StepFn } from 'yadda';
-import { Library } from 'yadda/lib/localisation/English';
-import { isFunction, isObject, isString } from '@hqoss/guards';
+import { isArray, isFunction, isObject, isString } from '@hqoss/guards';
 
 export type StepArgs =
   | [Assert]
@@ -40,7 +39,7 @@ export type ConverterOpinionatedFunction = (...args: unknown[]) => unknown;
 
 export type ConverterOpinionatedSimple = string | RegExp;
 
-export type ConverterOpinionatedTuple = [ConverterOpinionatedSimple, ConverterOpinionatedFunction];
+export type ConverterOpinionatedTuple = [RegExp, ConverterOpinionatedFunction];
 
 export type ConverterOpinionated = ConverterOpinionatedSimple | ConverterOpinionatedTuple;
 
@@ -101,3 +100,22 @@ export type MethodName = 'given' | 'when' | 'then';
 export function isMethodName(maybeMethodName: unknown): maybeMethodName is MethodName {
   return maybeMethodName === 'given' || maybeMethodName === 'when' || maybeMethodName === 'then';
 }
+
+export type Next = (err: Error | null, result?: unknown) => void;
+
+export interface AnnotationsRecord {
+  [index: string]: (hooks: NestedHooks, arg?: string | true) => void;
+}
+
+export function isAnnotationsRecord(
+  maybeAnnotationsRecord: unknown
+): maybeAnnotationsRecord is AnnotationsRecord {
+  return (
+    isObject(maybeAnnotationsRecord) &&
+    !isArray(maybeAnnotationsRecord) &&
+    Object.values(maybeAnnotationsRecord).every(isFunction)
+  );
+}
+
+export type ModuleFunc = moduleFunc1 | moduleFunc2;
+export type TestFunc = QUnit['test'] | QUnit['only'] | QUnit['skip'] | QUnit['todo'];
