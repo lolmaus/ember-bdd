@@ -46,7 +46,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --immutable
-        working-directory: ${{env.working-directory}}
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Build
