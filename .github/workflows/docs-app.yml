@@ -20,6 +20,7 @@ jobs:
     env:
       working-directory: ./apps/docs-app
       DOTENV: pages-normal
+      YARN_ENABLE_IMMUTABLE_INSTALLS: false
 
     steps:
       - name: Check out a copy of the repo
