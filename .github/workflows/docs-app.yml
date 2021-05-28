@@ -48,7 +48,7 @@ jobs:
         run: yarn --version
         
       - name: Install dependencies
-        run: yarn install --immutable
+        run: yarn install
         # if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Build
