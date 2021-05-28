@@ -45,7 +45,7 @@ jobs:
       #     restore-keys: ${{ runner.os }}-${{ env.NODE_VERSION }}-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
         working-directory: ${{env.working-directory}}
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
