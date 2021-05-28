@@ -33,7 +33,7 @@ class FeatureParser extends Filter {
   getDestFilePath(relativePath) {
     const ext = path.extname(relativePath);
     if (ext === '.feature' || ext === '.spec' || ext === '.specification') {
-      return relativePath.replace(ext, '-__ember-yadda__-test.js');
+      return relativePath.replace(ext, '-__ember-bdd__-test.js');
     }
     return null;
   }
