@@ -1,0 +1,6 @@
+{
+  "assets": {
+    "assets/docs-app-fastboot.map": "assets/docs-app-fastboot-b1785c535db5373ab4204219179e6d29.map"
+  },
+  "prepend": "/ember-bdd/"
+}

@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "ember-bdd docs",
+  "description": "Docs for ember-bdd, a Cucumber-like BDD testing solution for Ember",
+  "icons": {
+    "60": "/ember-bdd/firefox_app_60x60.png",
+    "128": "/ember-bdd/firefox_app_128x128.png",
+    "512": "/ember-bdd/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "kaliber5 GmbH",
+    "url": "https://www.kaliber5.de"
+  }
+}
