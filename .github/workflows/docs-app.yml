@@ -3,7 +3,7 @@ name: Docs App Deployment
 on:
   push:
     branches:
-      - develop
+      - gen-0
   pull_request:
 
 env:
@@ -14,8 +14,8 @@ jobs:
     name: Deploy Docs app
     runs-on: ubuntu-latest
     timeout-minutes: 7
-    # Only run on pushes to develop branch that aren't from the cron workflow
-    if: github.event_name == 'push' && github.ref == 'refs/heads/develop' && contains(github.ref, 'cron') != true
+    # Only run on pushes to gen-0 branch that aren't from the cron workflow
+    if: github.event_name == 'push' && github.ref == 'refs/heads/gen-0' && contains(github.ref, 'cron') != true
 
     env:
       working-directory: ./apps/docs-app
