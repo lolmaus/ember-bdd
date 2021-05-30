@@ -13,7 +13,6 @@ node_modules/
 # misc
 # /.env*
 .sass-cache/
-*.lock
 coverage/
 coverage/
 *.log*
