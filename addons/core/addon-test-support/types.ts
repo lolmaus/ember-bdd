@@ -2,16 +2,26 @@ import { StepFn } from 'yadda';
 import { isArray, isFunction, isObject, isString } from '@hqoss/guards';
 
 export type StepArgs =
-  | [Assert]
-  | [unknown, Assert]
-  | [unknown, unknown, Assert]
-  | [unknown, unknown, unknown, Assert]
-  | [unknown, unknown, unknown, unknown, Assert]
-  | [unknown, unknown, unknown, unknown, unknown, Assert]
-  | [unknown, unknown, unknown, unknown, unknown, unknown, Assert]
-  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert]
-  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert]
-  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert];
+  // | [Assert]
+  // | [unknown, Assert]
+  // | [unknown, unknown, Assert]
+  // | [unknown, unknown, unknown, Assert]
+  // | [unknown, unknown, unknown, unknown, Assert]
+  // | [unknown, unknown, unknown, unknown, unknown, Assert]
+  // | [unknown, unknown, unknown, unknown, unknown, unknown, Assert]
+  // | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert]
+  // | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert]
+  // | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert]
+  | []
+  | [unknown]
+  | [unknown, unknown]
+  | [unknown, unknown, unknown]
+  | [unknown, unknown, unknown, unknown]
+  | [unknown, unknown, unknown, unknown, unknown]
+  | [unknown, unknown, unknown, unknown, unknown, unknown]
+  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown]
+  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown]
+  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown];
 
 export type StepImplementation = (
   this: StepFnOpinionated,

@@ -1,4 +1,4 @@
-steps-ember
+@ember-bdd/steps-config-environment
 ==============================================================================
 
 [Short description of the addon.]
@@ -16,7 +16,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install steps-ember
+ember install @ember-bdd/steps-config-environment
 ```
 
 

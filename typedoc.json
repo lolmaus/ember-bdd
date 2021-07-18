@@ -1,6 +1,0 @@
-{
-  "entryPoints": [
-    "steps"
-  ],
-  "out": "api-docs"
-}

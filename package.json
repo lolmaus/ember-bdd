@@ -10,9 +10,6 @@
       "addons/*"
     ]
   },
-  "installConfig": {
-    "hoistingLimits": "workspaces"
-  },
   "version": "0.0.0",
   "volta": {
     "node": "14.15.4",

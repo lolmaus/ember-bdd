@@ -30,8 +30,9 @@ Roadmap
   * [x] Step aliases
   * [ ] Custom labels
   * [ ] Blueprints
-* [ ] Step library
+* [ ] Step library + step docs
   * [ ] Ember (visit, settled, pause, debugger, URL, etc)
+  * [x] config/environment
   * [ ] DOM
   * [ ] Mirage
   * [ ] Window
@@ -52,6 +53,8 @@ Roadmap
       * [x] Annotations
       * [ ] Custom labels
       * [ ] Step implementations
+    * [ ] Addon development
+      * [ ] Addon structure 
   * [ ] Implementation
     * [x] Setup a docs app
     * [x] FastBoot setup 
@@ -60,7 +63,6 @@ Roadmap
     * [x] Minimal visual design
     * [ ] Fancy visual design
     * [x] CI, deployment
-  * [ ] TypeDoc 
   * [ ] Package
     * [ ] Update all things
     * [ ] Fill out readmes (or remove?)

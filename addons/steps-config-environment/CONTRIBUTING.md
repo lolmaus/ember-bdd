@@ -3,7 +3,7 @@
 ## Installation
 
 * `git clone <repository-url>`
-* `cd steps-ember`
+* `cd @ember-bdd/steps-config-environment`
 * `yarn install`
 
 ## Linting

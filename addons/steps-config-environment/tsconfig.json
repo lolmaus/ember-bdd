@@ -28,16 +28,16 @@
         "tests/dummy/app/*",
         "app/*"
       ],
-      "steps-ember": [
+      "@ember-bdd/steps-config-environment": [
         "addon"
       ],
-      "steps-ember/*": [
+      "@ember-bdd/steps-config-environment/*": [
         "addon/*"
       ],
-      "steps-ember/test-support": [
+      "@ember-bdd/steps-config-environment/test-support": [
         "addon-test-support"
       ],
-      "steps-ember/test-support/*": [
+      "@ember-bdd/steps-config-environment/test-support/*": [
         "addon-test-support/*"
       ],
       "*": [

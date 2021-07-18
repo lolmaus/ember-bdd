@@ -1491,7 +1491,7 @@ __metadata:
     broccoli-asset-rev: ^3.0.0
     broccoli-persistent-filter: ^3.1.2
     ember-auto-import: ^1.11.2
-    ember-cli: ~3.25.3
+    ember-cli: 3.26
     ember-cli-babel: ^7.26.3
     ember-cli-dependency-checker: ^3.2.0
     ember-cli-htmlbars: ^5.7.1
@@ -1530,6 +1530,92 @@ __metadata:
     tracked-toolbox: ^1.2.3
     typescript: ^4.2.3
     yadda: ^2.1.0
+  languageName: unknown
+  linkType: soft
+
+"@ember-bdd/steps-config-environment@*, @ember-bdd/steps-config-environment@workspace:addons/steps-config-environment":
+  version: 0.0.0-use.local
+  resolution: "@ember-bdd/steps-config-environment@workspace:addons/steps-config-environment"
+  dependencies:
+    "@ember/optional-features": ^2.0.0
+    "@ember/test-helpers": ^2.2.5
+    "@embroider/test-setup": ^0.37.0
+    "@glimmer/component": ^1.0.4
+    "@glimmer/tracking": ^1.0.4
+    "@types/ember": ^3.16.5
+    "@types/ember-data": ^3.16.13
+    "@types/ember-data__adapter": ^3.16.1
+    "@types/ember-data__model": ^3.16.2
+    "@types/ember-data__serializer": ^3.16.1
+    "@types/ember-data__store": ^3.16.1
+    "@types/ember-qunit": latest
+    "@types/ember-resolver": latest
+    "@types/ember-test-helpers": ^1.0.9
+    "@types/ember__application": latest
+    "@types/ember__array": latest
+    "@types/ember__component": latest
+    "@types/ember__controller": latest
+    "@types/ember__debug": latest
+    "@types/ember__engine": latest
+    "@types/ember__error": latest
+    "@types/ember__object": latest
+    "@types/ember__polyfills": latest
+    "@types/ember__routing": latest
+    "@types/ember__runloop": latest
+    "@types/ember__service": latest
+    "@types/ember__string": latest
+    "@types/ember__template": latest
+    "@types/ember__test": latest
+    "@types/ember__test-helpers": latest
+    "@types/ember__utils": latest
+    "@types/htmlbars-inline-precompile": latest
+    "@types/qunit": latest
+    "@types/rsvp": latest
+    "@types/sinon": ^10.0.2
+    "@types/yadda": ^2.0.1
+    "@typescript-eslint/eslint-plugin": ^4.28.0
+    "@typescript-eslint/parser": ^4.28.0
+    babel-eslint: ^10.1.0
+    broccoli-asset-rev: ^3.0.0
+    ember-auto-import: ^1.11.2
+    ember-cli: 3.26
+    ember-cli-babel: ^7.26.3
+    ember-cli-dependency-checker: ^3.2.0
+    ember-cli-htmlbars: ^5.7.1
+    ember-cli-inject-live-reload: ^2.0.2
+    ember-cli-sri: ^2.1.1
+    ember-cli-terser: ^4.0.1
+    ember-cli-typescript: ^4.2.1
+    ember-cli-typescript-blueprints: latest
+    ember-disable-prototype-extensions: ^1.1.3
+    ember-export-application-global: ^2.0.1
+    ember-get-config: ^0.3.0
+    ember-load-initializers: ^2.1.2
+    ember-maybe-import-regenerator: ^0.1.6
+    ember-page-title: ^6.2.1
+    ember-qunit: ^5.1.4
+    ember-resolver: ^8.0.2
+    ember-source: ~3.26.1
+    ember-source-channel-url: ^3.0.0
+    ember-template-lint: ^3.2.0
+    ember-try: ^1.4.0
+    eslint: ^7.29.0
+    eslint-config-prettier: ^8.3.0
+    eslint-config-standard: ^16.0.3
+    eslint-import-resolver-typescript: ^2.4.0
+    eslint-plugin-ember: ^10.5.1
+    eslint-plugin-import: ^2.23.4
+    eslint-plugin-json: ^3.0.0
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-prettier: ^3.4.0
+    eslint-plugin-promise: ^5.1.0
+    eslint-plugin-standard: ^5.0.0
+    loader.js: ^4.7.0
+    npm-run-all: ^4.1.5
+    prettier: ^2.2.1
+    qunit: ^2.14.1
+    qunit-dom: ^1.6.0
+    typescript: latest
   languageName: unknown
   linkType: soft
 
@@ -9502,6 +9588,107 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ember-cli@npm:3.26":
+  version: 3.26.1
+  resolution: "ember-cli@npm:3.26.1"
+  dependencies:
+    "@babel/core": ^7.12.10
+    "@babel/plugin-transform-modules-amd": ^7.12.1
+    amd-name-resolver: ^1.3.1
+    babel-plugin-module-resolver: ^4.0.0
+    bower-config: ^1.4.3
+    bower-endpoint-parser: 0.2.2
+    broccoli: ^3.5.0
+    broccoli-amd-funnel: ^2.0.1
+    broccoli-babel-transpiler: ^7.8.0
+    broccoli-builder: ^0.18.14
+    broccoli-concat: ^4.2.5
+    broccoli-config-loader: ^1.0.1
+    broccoli-config-replace: ^1.1.2
+    broccoli-debug: ^0.6.5
+    broccoli-funnel: ^2.0.2
+    broccoli-funnel-reducer: ^1.0.0
+    broccoli-merge-trees: ^3.0.2
+    broccoli-middleware: ^2.1.1
+    broccoli-slow-trees: ^3.1.0
+    broccoli-source: ^3.0.0
+    broccoli-stew: ^3.0.0
+    calculate-cache-key-for-tree: ^2.0.0
+    capture-exit: ^2.0.0
+    chalk: ^4.1.0
+    ci-info: ^2.0.0
+    clean-base-url: ^1.0.0
+    compression: ^1.7.4
+    configstore: ^5.0.1
+    console-ui: ^3.1.2
+    core-object: ^3.1.5
+    dag-map: ^2.0.2
+    diff: ^5.0.0
+    ember-cli-is-package-missing: ^1.0.0
+    ember-cli-lodash-subset: ^2.0.1
+    ember-cli-normalize-entity-name: ^1.0.0
+    ember-cli-preprocess-registry: ^3.3.0
+    ember-cli-string-utils: ^1.1.0
+    ember-source-channel-url: ^3.0.0
+    ensure-posix-path: ^1.1.1
+    execa: ^5.0.0
+    exit: ^0.1.2
+    express: ^4.17.1
+    filesize: ^6.1.0
+    find-up: ^5.0.0
+    find-yarn-workspace-root: ^2.0.0
+    fixturify-project: ^2.1.0
+    fs-extra: ^9.1.0
+    fs-tree-diff: ^2.0.1
+    get-caller-file: ^2.0.5
+    git-repo-info: ^2.1.1
+    glob: ^7.1.6
+    heimdalljs: ^0.2.6
+    heimdalljs-fs-monitor: ^1.1.0
+    heimdalljs-graph: ^1.0.0
+    heimdalljs-logger: ^0.1.10
+    http-proxy: ^1.18.1
+    inflection: ^1.12.0
+    is-git-url: ^1.0.0
+    is-language-code: ^2.0.0
+    isbinaryfile: ^4.0.6
+    js-yaml: ^3.14.0
+    json-stable-stringify: ^1.0.1
+    leek: 0.0.24
+    lodash.template: ^4.5.0
+    markdown-it: ^12.0.4
+    markdown-it-terminal: 0.2.1
+    minimatch: ^3.0.4
+    morgan: ^1.10.0
+    nopt: ^3.0.6
+    npm-package-arg: ^8.1.0
+    p-defer: ^3.0.0
+    portfinder: ^1.0.28
+    promise-map-series: ^0.3.0
+    promise.hash.helper: ^1.0.7
+    quick-temp: ^0.1.8
+    resolve: ^1.19.0
+    resolve-package-path: ^3.1.0
+    sane: ^4.1.0
+    semver: ^7.3.4
+    silent-error: ^1.1.1
+    sort-package-json: ^1.48.0
+    symlink-or-copy: ^1.3.1
+    temp: 0.9.4
+    testem: ^3.2.0
+    tiny-lr: ^2.0.0
+    tree-sync: ^2.1.0
+    uuid: ^8.3.2
+    walk-sync: ^2.2.0
+    watch-detector: ^1.0.0
+    workerpool: ^6.0.3
+    yam: ^1.0.0
+  bin:
+    ember: bin/ember
+  checksum: cee9d61b8e0b07159393f2e9142836c0be17f8a49f5ae9d6025c6ec7840c834fd8fa8a1983b6884de6a7cb2e72c90e4d8b8209d9d67c1f47b87b59c37c6a052e
+  languageName: node
+  linkType: hard
+
 "ember-cli@npm:~3.25.3":
   version: 3.25.3
   resolution: "ember-cli@npm:3.25.3"
@@ -9600,107 +9787,6 @@ __metadata:
   bin:
     ember: bin/ember
   checksum: 794c1233ffdbb8bc8f79de0059ff044a83dc83179f7450130f00f862c6824183060c53a3c4ca5e57a984b7acf78b6c400e76561d7181d6a2896f4b52fe8e25e1
-  languageName: node
-  linkType: hard
-
-"ember-cli@npm:~3.26.1":
-  version: 3.26.1
-  resolution: "ember-cli@npm:3.26.1"
-  dependencies:
-    "@babel/core": ^7.12.10
-    "@babel/plugin-transform-modules-amd": ^7.12.1
-    amd-name-resolver: ^1.3.1
-    babel-plugin-module-resolver: ^4.0.0
-    bower-config: ^1.4.3
-    bower-endpoint-parser: 0.2.2
-    broccoli: ^3.5.0
-    broccoli-amd-funnel: ^2.0.1
-    broccoli-babel-transpiler: ^7.8.0
-    broccoli-builder: ^0.18.14
-    broccoli-concat: ^4.2.5
-    broccoli-config-loader: ^1.0.1
-    broccoli-config-replace: ^1.1.2
-    broccoli-debug: ^0.6.5
-    broccoli-funnel: ^2.0.2
-    broccoli-funnel-reducer: ^1.0.0
-    broccoli-merge-trees: ^3.0.2
-    broccoli-middleware: ^2.1.1
-    broccoli-slow-trees: ^3.1.0
-    broccoli-source: ^3.0.0
-    broccoli-stew: ^3.0.0
-    calculate-cache-key-for-tree: ^2.0.0
-    capture-exit: ^2.0.0
-    chalk: ^4.1.0
-    ci-info: ^2.0.0
-    clean-base-url: ^1.0.0
-    compression: ^1.7.4
-    configstore: ^5.0.1
-    console-ui: ^3.1.2
-    core-object: ^3.1.5
-    dag-map: ^2.0.2
-    diff: ^5.0.0
-    ember-cli-is-package-missing: ^1.0.0
-    ember-cli-lodash-subset: ^2.0.1
-    ember-cli-normalize-entity-name: ^1.0.0
-    ember-cli-preprocess-registry: ^3.3.0
-    ember-cli-string-utils: ^1.1.0
-    ember-source-channel-url: ^3.0.0
-    ensure-posix-path: ^1.1.1
-    execa: ^5.0.0
-    exit: ^0.1.2
-    express: ^4.17.1
-    filesize: ^6.1.0
-    find-up: ^5.0.0
-    find-yarn-workspace-root: ^2.0.0
-    fixturify-project: ^2.1.0
-    fs-extra: ^9.1.0
-    fs-tree-diff: ^2.0.1
-    get-caller-file: ^2.0.5
-    git-repo-info: ^2.1.1
-    glob: ^7.1.6
-    heimdalljs: ^0.2.6
-    heimdalljs-fs-monitor: ^1.1.0
-    heimdalljs-graph: ^1.0.0
-    heimdalljs-logger: ^0.1.10
-    http-proxy: ^1.18.1
-    inflection: ^1.12.0
-    is-git-url: ^1.0.0
-    is-language-code: ^2.0.0
-    isbinaryfile: ^4.0.6
-    js-yaml: ^3.14.0
-    json-stable-stringify: ^1.0.1
-    leek: 0.0.24
-    lodash.template: ^4.5.0
-    markdown-it: ^12.0.4
-    markdown-it-terminal: 0.2.1
-    minimatch: ^3.0.4
-    morgan: ^1.10.0
-    nopt: ^3.0.6
-    npm-package-arg: ^8.1.0
-    p-defer: ^3.0.0
-    portfinder: ^1.0.28
-    promise-map-series: ^0.3.0
-    promise.hash.helper: ^1.0.7
-    quick-temp: ^0.1.8
-    resolve: ^1.19.0
-    resolve-package-path: ^3.1.0
-    sane: ^4.1.0
-    semver: ^7.3.4
-    silent-error: ^1.1.1
-    sort-package-json: ^1.48.0
-    symlink-or-copy: ^1.3.1
-    temp: 0.9.4
-    testem: ^3.2.0
-    tiny-lr: ^2.0.0
-    tree-sync: ^2.1.0
-    uuid: ^8.3.2
-    walk-sync: ^2.2.0
-    watch-detector: ^1.0.0
-    workerpool: ^6.0.3
-    yam: ^1.0.0
-  bin:
-    ember: bin/ember
-  checksum: cee9d61b8e0b07159393f2e9142836c0be17f8a49f5ae9d6025c6ec7840c834fd8fa8a1983b6884de6a7cb2e72c90e4d8b8209d9d67c1f47b87b59c37c6a052e
   languageName: node
   linkType: hard
 
@@ -19286,92 +19372,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"steps-ember@workspace:addons/steps-ember":
-  version: 0.0.0-use.local
-  resolution: "steps-ember@workspace:addons/steps-ember"
-  dependencies:
-    "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
-    "@embroider/test-setup": ^0.37.0
-    "@glimmer/component": ^1.0.4
-    "@glimmer/tracking": ^1.0.4
-    "@types/ember": ^3.16.5
-    "@types/ember-data": ^3.16.13
-    "@types/ember-data__adapter": ^3.16.1
-    "@types/ember-data__model": ^3.16.2
-    "@types/ember-data__serializer": ^3.16.1
-    "@types/ember-data__store": ^3.16.1
-    "@types/ember-qunit": latest
-    "@types/ember-resolver": latest
-    "@types/ember-test-helpers": ^1.0.9
-    "@types/ember__application": latest
-    "@types/ember__array": latest
-    "@types/ember__component": latest
-    "@types/ember__controller": latest
-    "@types/ember__debug": latest
-    "@types/ember__engine": latest
-    "@types/ember__error": latest
-    "@types/ember__object": latest
-    "@types/ember__polyfills": latest
-    "@types/ember__routing": latest
-    "@types/ember__runloop": latest
-    "@types/ember__service": latest
-    "@types/ember__string": latest
-    "@types/ember__template": latest
-    "@types/ember__test": latest
-    "@types/ember__test-helpers": latest
-    "@types/ember__utils": latest
-    "@types/htmlbars-inline-precompile": latest
-    "@types/qunit": latest
-    "@types/rsvp": latest
-    "@types/sinon": ^10.0.2
-    "@types/yadda": ^2.0.1
-    "@typescript-eslint/eslint-plugin": ^4.28.0
-    "@typescript-eslint/parser": ^4.28.0
-    babel-eslint: ^10.1.0
-    broccoli-asset-rev: ^3.0.0
-    ember-auto-import: ^1.11.2
-    ember-cli: ~3.26.1
-    ember-cli-babel: ^7.26.3
-    ember-cli-dependency-checker: ^3.2.0
-    ember-cli-htmlbars: ^5.7.1
-    ember-cli-inject-live-reload: ^2.0.2
-    ember-cli-sri: ^2.1.1
-    ember-cli-terser: ^4.0.1
-    ember-cli-typescript: ^4.2.1
-    ember-cli-typescript-blueprints: latest
-    ember-disable-prototype-extensions: ^1.1.3
-    ember-export-application-global: ^2.0.1
-    ember-get-config: ^0.3.0
-    ember-load-initializers: ^2.1.2
-    ember-maybe-import-regenerator: ^0.1.6
-    ember-page-title: ^6.2.1
-    ember-qunit: ^5.1.4
-    ember-resolver: ^8.0.2
-    ember-source: ~3.26.1
-    ember-source-channel-url: ^3.0.0
-    ember-template-lint: ^3.2.0
-    ember-try: ^1.4.0
-    eslint: ^7.29.0
-    eslint-config-prettier: ^8.3.0
-    eslint-config-standard: ^16.0.3
-    eslint-import-resolver-typescript: ^2.4.0
-    eslint-plugin-ember: ^10.5.1
-    eslint-plugin-import: ^2.23.4
-    eslint-plugin-json: ^3.0.0
-    eslint-plugin-node: ^11.1.0
-    eslint-plugin-prettier: ^3.4.0
-    eslint-plugin-promise: ^5.1.0
-    eslint-plugin-standard: ^5.0.0
-    loader.js: ^4.7.0
-    npm-run-all: ^4.1.5
-    prettier: ^2.2.1
-    qunit: ^2.14.1
-    qunit-dom: ^1.6.0
-    typescript: latest
-  languageName: unknown
-  linkType: soft
-
 "stream-browserify@npm:^2.0.1":
   version: 2.0.2
   resolution: "stream-browserify@npm:2.0.2"
@@ -19895,16 +19895,39 @@ fsevents@~2.3.1:
   resolution: "test-app@workspace:apps/test-app"
   dependencies:
     "@ember-bdd/core": "*"
+    "@ember-bdd/steps-config-environment": "*"
     "@ember/optional-features": ^2.0.0
     "@ember/test-helpers": ^2.2.5
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@types/chai": ^4.2.16
+    "@types/ember-qunit": latest
+    "@types/ember-resolver": latest
+    "@types/ember__application": latest
+    "@types/ember__array": latest
+    "@types/ember__component": latest
+    "@types/ember__controller": latest
+    "@types/ember__debug": latest
+    "@types/ember__engine": latest
+    "@types/ember__error": latest
+    "@types/ember__object": latest
+    "@types/ember__polyfills": latest
+    "@types/ember__routing": latest
+    "@types/ember__runloop": latest
+    "@types/ember__service": latest
+    "@types/ember__string": latest
+    "@types/ember__template": latest
+    "@types/ember__test": latest
+    "@types/ember__test-helpers": latest
+    "@types/ember__utils": latest
+    "@types/htmlbars-inline-precompile": latest
+    "@types/qunit": latest
+    "@types/rsvp": latest
     babel-eslint: ^10.1.0
     broccoli-asset-rev: ^3.0.0
     chai: ^4.3.4
     ember-auto-import: ^1.11.2
-    ember-cli: ~3.25.3
+    ember-cli: 3.26
     ember-cli-app-version: ^5.0.0
     ember-cli-babel: ^7.26.3
     ember-cli-dependency-checker: ^3.2.0
@@ -19912,6 +19935,8 @@ fsevents@~2.3.1:
     ember-cli-inject-live-reload: ^2.0.2
     ember-cli-sri: ^2.1.1
     ember-cli-terser: ^4.0.1
+    ember-cli-typescript: ^4.2.1
+    ember-cli-typescript-blueprints: latest
     ember-data: ~3.26.0
     ember-export-application-global: ^2.0.1
     ember-fetch: ^8.0.4
@@ -19932,6 +19957,7 @@ fsevents@~2.3.1:
     prettier: ^2.2.1
     qunit: ^2.14.1
     qunit-dom: ^1.6.0
+    typescript: latest
   languageName: unknown
   linkType: soft
 

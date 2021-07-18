@@ -1,5 +1,5 @@
 import { restoreOriginalConfig } from './utils/override-config';
 
-export default function setup(hooks: NestedHooks): void {
+export default function setupStepsConfigEnvironment(hooks: NestedHooks): void {
   hooks.afterEach(restoreOriginalConfig);
 }
