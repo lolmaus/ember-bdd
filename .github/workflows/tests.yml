@@ -84,5 +84,5 @@ jobs:
         run: yarn install --immutable
 
       - name: Lint and test
-        run: yarn test
+        run: yarn test:ember
         working-directory: addons/${{ matrix.addon }}
