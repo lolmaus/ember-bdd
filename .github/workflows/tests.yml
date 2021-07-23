@@ -13,7 +13,6 @@ jobs:
   apps:
     name: Test Apps
     runs-on: ubuntu-latest
-    continue-on-error: true
     strategy:
       matrix:
         app:
@@ -53,7 +52,6 @@ jobs:
   addons:
     name: Test Addons
     runs-on: ubuntu-latest
-    continue-on-error: true
     strategy:
       matrix:
         addon:
