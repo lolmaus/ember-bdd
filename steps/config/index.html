@@ -67,7 +67,7 @@
     </div>
 
       <ul class="Toc Route-Application-Toc">
-      <a href="/ember-bdd/" id="ember48" class="ember-view Toc-Item-Link link">
+      <a href="/ember-bdd/" id="ember94" class="ember-view Toc-Item-Link link">
         What and Why
       </a>
 
@@ -79,35 +79,35 @@
           <ul class="Toc">
 <!---->
       <li class="Toc-Item">
-          <a href="/ember-bdd/concept/glossary" id="ember49" class="active ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/concept/glossary" id="ember95" class="ember-view Toc-Item-Link link">
             Glossary
           </a>
 
         <!---->
       </li>
       <li class="Toc-Item">
-          <a href="/ember-bdd/concept/truth" id="ember50" class="ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/concept/truth" id="ember96" class="ember-view Toc-Item-Link link">
             Truth to feature files
           </a>
 
         <!---->
       </li>
       <li class="Toc-Item">
-          <a href="/ember-bdd/concept/labels" id="ember51" class="ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/concept/labels" id="ember97" class="ember-view Toc-Item-Link link">
             Labels for test selectors
           </a>
 
         <!---->
       </li>
       <li class="Toc-Item">
-          <a href="/ember-bdd/concept/composing" id="ember52" class="ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/concept/composing" id="ember98" class="ember-view Toc-Item-Link link">
             Composing step implementations
           </a>
 
         <!---->
       </li>
       <li class="Toc-Item">
-          <a href="/ember-bdd/concept/debugging" id="ember53" class="ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/concept/debugging" id="ember99" class="ember-view Toc-Item-Link link">
             Debugging
           </a>
 
@@ -124,21 +124,21 @@
           <ul class="Toc">
 <!---->
       <li class="Toc-Item">
-          <a href="/ember-bdd/usage/project-structure" id="ember54" class="ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/usage/project-structure" id="ember100" class="ember-view Toc-Item-Link link">
             Project Structure
           </a>
 
         <!---->
       </li>
       <li class="Toc-Item">
-          <a href="/ember-bdd/usage/dictionary" id="ember55" class="ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/usage/dictionary" id="ember101" class="ember-view Toc-Item-Link link">
             Dictionary
           </a>
 
         <!---->
       </li>
       <li class="Toc-Item">
-          <a href="/ember-bdd/usage/annotations" id="ember56" class="ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/usage/annotations" id="ember102" class="ember-view Toc-Item-Link link">
             Annotations
           </a>
 
@@ -155,7 +155,7 @@
           <ul class="Toc">
 <!---->
       <li class="Toc-Item">
-          <a href="/ember-bdd/steps/config" id="ember57" class="ember-view Toc-Item-Link link">
+          <a href="/ember-bdd/steps/config" id="ember103" class="active ember-view Toc-Item-Link link">
             The Config
           </a>
 
@@ -173,38 +173,33 @@
       <div class="Route-Page">
   <div class="Route-Page-Content">
     
-<h1 id="glossary">Glossary</h1>
-<h2 id="bddinanarrowsense">BDD, in a narrow sense</h2>
-<p>An approach to coding which adds a second loop to the TDD cycle: you are supposed to write an acceptance test before writing a unit test. It also implies a different style of writing assertions: <code>expect</code> or <code>should</code> instead of <code>assert</code>.</p>
-<h2 id="bddinabroadsense">BDD, in a broad sense</h2>
-<p>A methodology of software development, which involves all the team, not only developers. When a feature is conceived, it is captured in form of human-readable user stories. These user stories serve as a spec and are used to guide and validate development from planning to deployment.</p>
-<h2 id="cucumber">Cucumber</h2>
-<p>Initially, an automated testing library designed for BDD in Ruby. Today, an industry standard approach to BDD, popular in almost every programming language.</p>
-<p><a href="https://cucumber.io/">https://cucumber.io/</a></p>
-<h2 id="yadda">Yadda</h2>
-<p>A JS library which implements the Cucumber approach for Node and browsers. It's an alternative to Cucumber.js and others.</p>
-<p><a href="https://github.com/acuminous/yadda">https://github.com/acuminous/yadda</a></p>
-<h2 id="emberbdd">ember-bdd</h2>
-<p>An Ember addon that leverages Yadda and provides a full-fledged BDD framework for Ember apps, complete with a set of tools and opinionated conventions aimed at making Cucumber usage efficient and problem-free.</p>
+<h1 id="overrideconfigenvironmentvalue">Override config/environment value</h1>
+<p>Overrides a property on the config/environment object.</p>
+<p>Useful for testing various states that would otherwise require rebuilding the app with a different config.</p>
+<p>Uses <code>set()</code>, so a nested path delimited with dots can be used. All levels except for the innermost must preexist.</p>
+<p>Signature: </p>
+<pre><code>Given (?:the )config/environment property $opinionatedString is set to $opinionatedJSON
+</code></pre>
+<p>Examples:</p>
+<pre><code>Given the config/environment property "third-party-service.apiKey" is set to "123xyz"
+Given config/environment property "some-ember-addon" is set to { enabled: true, foo: 'bar' }
+</code></pre>
 
   </div>
 
 
   <div class="Route-Page-Links">
-        <a href="/ember-bdd/" id="ember58" class="ember-view Route-Page-Links-Link _back">
-          ← What and Why
+        <a href="/ember-bdd/usage/annotations" id="ember104" class="ember-view Route-Page-Links-Link _back">
+          ← Annotations
         </a>
 
-      <a href="/ember-bdd/concept/truth" id="ember59" class="ember-view Route-Page-Links-Link _forward">
-        Truth to feature files →
-      </a>
-  </div>
+<!---->  </div>
 </div>
 
     </div>
   </main>
 </div>
-<script type="fastboot/shoebox" id="shoebox-pages">[{"type":"pages","id":"concept","attributes":{"title":"Concept","index":1,"sectionOnly":true}},{"type":"pages","id":"concept/composing","attributes":{"title":"Composing step implementations","index":4}},{"type":"pages","id":"concept/debugging","attributes":{"title":"Debugging","index":5}},{"type":"pages","id":"concept/glossary","attributes":{"title":"Glossary","index":1}},{"type":"pages","id":"concept/labels","attributes":{"title":"Labels for test selectors","index":3}},{"type":"pages","id":"concept/truth","attributes":{"title":"Truth to feature files","index":2}},{"type":"pages","id":"index","attributes":{"title":"What and Why"}},{"type":"pages","id":"steps","attributes":{"title":"The steps","index":3,"sectionOnly":true}},{"type":"pages","id":"steps/config","attributes":{"title":"The Config","index":1}},{"type":"pages","id":"usage","attributes":{"title":"Usage","index":2,"sectionOnly":true}},{"type":"pages","id":"usage/annotations","attributes":{"title":"Annotations","index":3}},{"type":"pages","id":"usage/dictionary","attributes":{"title":"Dictionary","index":2}},{"type":"pages","id":"usage/project-structure","attributes":{"title":"Project Structure","index":1}}]</script><script type="fastboot/shoebox" id="shoebox-pages concept__glossary">{"type":"pages","id":"concept/glossary","attributes":{"html":"\u003ch1 id=\"glossary\"\u003eGlossary\u003c/h1\u003e\n\u003ch2 id=\"bddinanarrowsense\"\u003eBDD, in a narrow sense\u003c/h2\u003e\n\u003cp\u003eAn approach to coding which adds a second loop to the TDD cycle: you are supposed to write an acceptance test before writing a unit test. It also implies a different style of writing assertions: \u003ccode\u003eexpect\u003c/code\u003e or \u003ccode\u003eshould\u003c/code\u003e instead of \u003ccode\u003eassert\u003c/code\u003e.\u003c/p\u003e\n\u003ch2 id=\"bddinabroadsense\"\u003eBDD, in a broad sense\u003c/h2\u003e\n\u003cp\u003eA methodology of software development, which involves all the team, not only developers. When a feature is conceived, it is captured in form of human-readable user stories. These user stories serve as a spec and are used to guide and validate development from planning to deployment.\u003c/p\u003e\n\u003ch2 id=\"cucumber\"\u003eCucumber\u003c/h2\u003e\n\u003cp\u003eInitially, an automated testing library designed for BDD in Ruby. Today, an industry standard approach to BDD, popular in almost every programming language.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://cucumber.io/\"\u003ehttps://cucumber.io/\u003c/a\u003e\u003c/p\u003e\n\u003ch2 id=\"yadda\"\u003eYadda\u003c/h2\u003e\n\u003cp\u003eA JS library which implements the Cucumber approach for Node and browsers. It's an alternative to Cucumber.js and others.\u003c/p\u003e\n\u003cp\u003e\u003ca href=\"https://github.com/acuminous/yadda\"\u003ehttps://github.com/acuminous/yadda\u003c/a\u003e\u003c/p\u003e\n\u003ch2 id=\"emberbdd\"\u003eember-bdd\u003c/h2\u003e\n\u003cp\u003eAn Ember addon that leverages Yadda and provides a full-fledged BDD framework for Ember apps, complete with a set of tools and opinionated conventions aimed at making Cucumber usage efficient and problem-free.\u003c/p\u003e","title":"Glossary","index":1}}</script><script type="x/boundary" id="fastboot-body-end"></script>
+<script type="fastboot/shoebox" id="shoebox-pages">[{"type":"pages","id":"concept","attributes":{"title":"Concept","index":1,"sectionOnly":true}},{"type":"pages","id":"concept/composing","attributes":{"title":"Composing step implementations","index":4}},{"type":"pages","id":"concept/debugging","attributes":{"title":"Debugging","index":5}},{"type":"pages","id":"concept/glossary","attributes":{"title":"Glossary","index":1}},{"type":"pages","id":"concept/labels","attributes":{"title":"Labels for test selectors","index":3}},{"type":"pages","id":"concept/truth","attributes":{"title":"Truth to feature files","index":2}},{"type":"pages","id":"index","attributes":{"title":"What and Why"}},{"type":"pages","id":"steps","attributes":{"title":"The steps","index":3,"sectionOnly":true}},{"type":"pages","id":"steps/config","attributes":{"title":"The Config","index":1}},{"type":"pages","id":"usage","attributes":{"title":"Usage","index":2,"sectionOnly":true}},{"type":"pages","id":"usage/annotations","attributes":{"title":"Annotations","index":3}},{"type":"pages","id":"usage/dictionary","attributes":{"title":"Dictionary","index":2}},{"type":"pages","id":"usage/project-structure","attributes":{"title":"Project Structure","index":1}}]</script><script type="fastboot/shoebox" id="shoebox-pages steps__config">{"type":"pages","id":"steps/config","attributes":{"html":"\u003ch1 id=\"overrideconfigenvironmentvalue\"\u003eOverride config/environment value\u003c/h1\u003e\n\u003cp\u003eOverrides a property on the config/environment object.\u003c/p\u003e\n\u003cp\u003eUseful for testing various states that would otherwise require rebuilding the app with a different config.\u003c/p\u003e\n\u003cp\u003eUses \u003ccode\u003eset()\u003c/code\u003e, so a nested path delimited with dots can be used. All levels except for the innermost must preexist.\u003c/p\u003e\n\u003cp\u003eSignature: \u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eGiven (?:the )config/environment property $opinionatedString is set to $opinionatedJSON\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eExamples:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eGiven the config/environment property \"third-party-service.apiKey\" is set to \"123xyz\"\nGiven config/environment property \"some-ember-addon\" is set to { enabled: true, foo: 'bar' }\n\u003c/code\u003e\u003c/pre\u003e","title":"The Config","index":1}}</script><script type="x/boundary" id="fastboot-body-end"></script>
 
     <div class="loading-overlay" id="app-loading">
       <div class="spinner-border text-primary" role="status"><span class="sr-only">Lade...</span></div>
