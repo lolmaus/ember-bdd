@@ -1,0 +1,93 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - gen-0
+    tags:
+      - '*'
+  pull_request:
+
+
+jobs:
+  apps:
+    name: Test Apps
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        app:
+          - test-app
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10
+
+      # https://github.com/actions/cache/blob/main/examples.md#node---yarn-2
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - name: Maybe restore cache
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+
+      - name: Install dependencies with Yarn
+        run: yarn install --immutable
+
+      - name: Lint and test
+        run: yarn test
+        working-directory: apps/${{ matrix.app }}
+
+
+
+  addons:
+    name: Test Addons
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    strategy:
+      matrix:
+        addon:
+          - core
+          - steps-config-environment
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10
+
+      # https://github.com/actions/cache/blob/main/examples.md#node---yarn-2
+      - name: Get Yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - name: Maybe restore Yarn cache
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies with Yarn
+        run: yarn install --immutable
+
+      - name: Lint and test
+        run: yarn test
+        working-directory: addons/${{ matrix.addon }}
