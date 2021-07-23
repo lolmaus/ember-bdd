@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": true,
+    "noEmit": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "module": "es6",
+    "experimentalDecorators": true,
+    "paths": {
+      "test-app/tests/*": [
+        "tests/*"
+      ],
+      "test-app/*": [
+        "app/*"
+      ],
+      "@ember-bdd/core/test-support/*": [
+        "node_modules/@ember-bdd/core/addon-test-support/*"
+      ],
+      "@ember-bdd/steps-config-environment/test-support/*": [
+        "node_modules/@ember-bdd/steps-config-environment/addon-test-support/*"
+      ],
+      "*": [
+        "types/*"
+      ]
+    }
+  },
+  "include": [
+    "app/**/*",
+    "tests/**/*",
+    "types/**/*"
+  ]
+}
