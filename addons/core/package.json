@@ -36,6 +36,7 @@
     "ember-cli-typescript": "^4.1.0",
     "ember-require-module": "^0.3.0",
     "qunit": "^2.14.1",
+    "qunit-dom": "^1.6.0",
     "tracked-toolbox": "^1.2.3",
     "yadda": "^2.1.0"
   },
