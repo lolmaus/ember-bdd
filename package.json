@@ -14,5 +14,19 @@
   "volta": {
     "node": "14.15.4",
     "yarn": "1.22.10"
-  }
+  },
+  "scripts": {
+    "lint-staged": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint-staged:*'",
+    "lint-staged:addons/core": "cd addons/core && yarn lint-staged",
+    "lint-staged:addons/docs-addon": "cd addons/docs-addon && yarn lint-staged",
+    "lint-staged:addons/steps-config-environment": "cd addons/steps-config-environment && yarn lint-staged",
+    "lint-staged:apps/docs-app": "cd apps/docs-app && yarn lint-staged",
+    "lint-staged:apps/test-app": "cd apps/test-app && yarn lint-staged",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "name": "ember-bdd-3"
 }

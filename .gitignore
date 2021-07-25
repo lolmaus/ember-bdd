@@ -18,6 +18,7 @@ coverage/
 *.log*
 test-results/
 report.*.json
+.*cache
 
 # ember-try
 .node_modules.ember-try/

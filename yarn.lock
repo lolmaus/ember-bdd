@@ -8790,7 +8790,6 @@ __metadata:
     eslint-plugin-standard: ^5.0.0
     faker: ^5.5.2
     glob: ^7.1.6
-    husky: ^6.0.0
     lint-staged: ^11.1.1
     loader.js: ^4.7.0
     lodash: ^4.17.21
@@ -9106,6 +9105,15 @@ __metadata:
   checksum: 2ac4e08696f46b4e9e1ada49c068d5ca7a338e063ea47e332f81e72613ae287479504b1246e97b31bed7ca6a84ec7928d250e0de6f5bc7c6412a7e537532684b
   languageName: node
   linkType: hard
+
+"ember-bdd-3@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "ember-bdd-3@workspace:."
+  dependencies:
+    husky: ^7.0.1
+    npm-run-all: ^4.1.5
+  languageName: unknown
+  linkType: soft
 
 "ember-cache-primitive-polyfill@npm:^1.0.0, ember-cache-primitive-polyfill@npm:^1.0.1":
   version: 1.0.1
@@ -13404,12 +13412,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"husky@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "husky@npm:6.0.0"
+"husky@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "husky@npm:7.0.1"
   bin:
     husky: lib/bin.js
-  checksum: db6da76a670b2cd1e967990decfd291e6f35a5aee4d362208a51771474d3b4896d526acb4bf0413c2d7154716e42a4d8b6cc19f2bb108e48d1f554624c723a00
+  checksum: b2ea1460f1126ed7161779b1b89f7ec8ae66fb6723e0e9fd47c522f454f4a2ea7e31a21d6ce2eb5d32e9837d232fb0245783425c109df0adab53668f8c8d8fc8
   languageName: node
   linkType: hard
 
@@ -18531,12 +18539,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"root-workspace-0b6124@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "root-workspace-0b6124@workspace:."
-  languageName: unknown
-  linkType: soft
-
 "rsvp@npm:^3.0.14, rsvp@npm:^3.0.17, rsvp@npm:^3.0.18, rsvp@npm:^3.0.21, rsvp@npm:^3.0.6, rsvp@npm:^3.1.0":
   version: 3.6.2
   resolution: "rsvp@npm:3.6.2"
@@ -20040,6 +20042,7 @@ fsevents@~2.3.1:
     eslint-plugin-prettier: ^3.3.1
     eslint-plugin-promise: ^4.3.1
     eslint-plugin-standard: ^5.0.0
+    lint-staged: ^11.1.1
     loader.js: ^4.7.0
     npm-run-all: ^4.1.5
     prettier: ^2.2.1
