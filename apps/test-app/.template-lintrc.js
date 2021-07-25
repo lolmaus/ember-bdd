@@ -1,5 +1,3 @@
 'use strict';
 
-module.exports = {
-  extends: 'octane',
-};
+module.exports = require('../../addons/core/.template-lintrc.js');
