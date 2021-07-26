@@ -16,12 +16,12 @@
     "yarn": "1.22.10"
   },
   "scripts": {
-    "lint-staged": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint-staged:*'",
-    "lint-staged:addons/core": "cd addons/core && yarn lint-staged",
-    "lint-staged:addons/docs-addon": "cd addons/docs-addon && yarn lint-staged",
-    "lint-staged:addons/steps-config-environment": "cd addons/steps-config-environment && yarn lint-staged",
-    "lint-staged:apps/docs-app": "cd apps/docs-app && yarn lint-staged",
-    "lint-staged:apps/test-app": "cd apps/test-app && yarn lint-staged",
+    "lint-staged": "npm-run-all --continue-on-error --sequential 'lint-staged:*'",
+    "lint-staged:addons/core": "cd addons/core && echo 'addons/core' && yarn lint-staged",
+    "lint-staged:addons/docs-addon": "cd addons/docs-addon && echo 'addons/docs-addon' && yarn lint-staged",
+    "lint-staged:addons/steps-config-environment": "cd addons/steps-config-environment && echo 'addons/steps-config-environment' && yarn lint-staged",
+    "lint-staged:apps/docs-app": "cd apps/docs-app && echo 'apps/docs-app' && pwd && yarn lint-staged",
+    "lint-staged:apps/test-app": "cd apps/test-app && echo 'apps/test-app' && yarn lint-staged",
     "postinstall": "husky install"
   },
   "devDependencies": {

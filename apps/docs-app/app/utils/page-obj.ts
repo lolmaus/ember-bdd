@@ -67,11 +67,12 @@ export default class PageObj {
 
   @cached
   get children(): PageObj[] {
-    return (this.id === 'index'
-      ? this.toc.pageObjs.filter((pageObj) => pageObj.depth === 1)
-      : this.toc.pageObjs.filter((pageObj) => {
-          return pageObj.id.startsWith(`${this.id}/`) && pageObj.depth === this.depth + 1;
-        })
+    return (
+      this.id === 'index'
+        ? this.toc.pageObjs.filter((pageObj) => pageObj.depth === 1)
+        : this.toc.pageObjs.filter((pageObj) => {
+            return pageObj.id.startsWith(`${this.id}/`) && pageObj.depth === this.depth + 1;
+          })
     ).sort((a, b) => a.index - b.index);
   }
 
