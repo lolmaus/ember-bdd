@@ -12,7 +12,7 @@ void 0===t&&(t=n.set(e,new Map)),this.templateMap=t},componentName:Ember.compute
 if(!r)return null
 let n=e.get(r)
 if(void 0===n){let e,l=Ember.getOwner(this)
-try{e=Ember.HTMLBars.compile(r)}catch(i){console.error(i),console.log(r),e=Ember.HTMLBars.compile("<DynamicTemplateError />")}let u=l.factoryFor(`component:${this.componentId}`)
+try{e=Ember.HTMLBars.compile(r)}catch(i){console.error(i),console.info(r),e=Ember.HTMLBars.compile("<DynamicTemplateError />")}let u=l.factoryFor(`component:${this.componentId}`)
 u=u?class extends u.class{}:class extends t.default{},n="some-prefix-"+o++,l.register(`component:${n}`,u),l.register(`template:components/${n}`,e)}return n}))}))
 e.default=i})),define("docs-app/components/loading/overlay",["exports"],(function(e){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 const t=Ember.HTMLBars.template({id:"YoxZI94q",block:'[[[10,0],[14,0,"loading-overlay"],[12],[1,"\\n  "],[8,[39,0],null,null,null],[1,"\\n"],[13],[1,"\\n"]],[],false,["loading/spinner"]]',moduleName:"docs-app/components/loading/overlay.hbs",isStrictMode:!1})
@@ -154,4 +154,4 @@ if(n instanceof t.default){const t=r.find((([e])=>n instanceof e))
 if(t&&(i=`${o}.${t[1]}`,e.exists(i)))return i}var l
 if("messageKey"in n&&(i=`${o}.${null!==(l=n.messageKey)&&void 0!==l?l:""}`,e.exists(i)))return i}})),define("docs-app/utils/titleize",["exports","ember-cli-string-helpers/utils/titleize"],(function(e,t){Object.defineProperty(e,"__esModule",{value:!0}),Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})),define("docs-app/config/environment",[],(function(){if("undefined"!=typeof FastBoot)return FastBoot.config("docs-app")
 try{var e="docs-app/config/environment",t=document.querySelector('meta[name="'+e+'"]').getAttribute("content"),r={default:JSON.parse(decodeURIComponent(t))}
-return Object.defineProperty(r,"__esModule",{value:!0}),r}catch(n){throw new Error('Could not read config from meta tag with name "'+e+'".')}})),"undefined"==typeof FastBoot&&(runningTests||require("docs-app/app").default.create({LOG_RESOLVER:!1,LOG_ACTIVE_GENERATION:!1,LOG_TRANSITIONS:!1,LOG_TRANSITIONS_INTERNAL:!1,LOG_VIEW_LOOKUPS:!1,name:"docs-app",version:"0.0.0+892c17ae"}))
+return Object.defineProperty(r,"__esModule",{value:!0}),r}catch(n){throw new Error('Could not read config from meta tag with name "'+e+'".')}})),"undefined"==typeof FastBoot&&(runningTests||require("docs-app/app").default.create({LOG_RESOLVER:!1,LOG_ACTIVE_GENERATION:!1,LOG_TRANSITIONS:!1,LOG_TRANSITIONS_INTERNAL:!1,LOG_VIEW_LOOKUPS:!1,name:"docs-app",version:"0.0.0+dd2f84bf"}))
