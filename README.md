@@ -28,10 +28,11 @@ Roadmap
   * [x] Annotations
   * [x] Dictionary/converters/macros
   * [x] Step aliases
+  * [ ] Labels
   * [ ] Custom labels
   * [ ] Blueprints
 * [ ] Step library + step docs
-  * [ ] Ember (visit, settled, pause, debugger, URL, etc)
+  * [x] Ember (visit, settled, pause, debugger, URL, etc)
   * [x] config/environment
   * [ ] DOM
   * [ ] Mirage
@@ -51,6 +52,7 @@ Roadmap
       * [x] Project structure
       * [x] Dictionary
       * [x] Annotations
+      * [ ] Labels
       * [ ] Custom labels
       * [ ] Step implementations
     * [ ] Addon development
@@ -61,11 +63,13 @@ Roadmap
     * [x] Table of contents
     * [x] Forward and back links
     * [x] Minimal visual design
+    * [ ] Text formatting styles
+    * [ ] Syntax highlighting
     * [ ] Fancy visual design
     * [x] CI, deployment
   * [ ] Package
     * [ ] Update all things
     * [ ] Fill out readmes (or remove?)
     * [ ] Fill out `package.json`s
-    * [ ] Set up `release-it`
+    * [ ] Set up `release-it` via [create-rwjblue-release-it-setup](https://github.com/rwjblue/create-rwjblue-release-it-setup)
     * [ ] Publish to npm

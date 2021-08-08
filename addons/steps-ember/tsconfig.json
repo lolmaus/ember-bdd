@@ -21,20 +21,27 @@
     "module": "es6",
     "experimentalDecorators": true,
     "paths": {
-      "test-app/tests/*": [
+      "dummy/tests/*": [
         "tests/*"
       ],
-      "test-app/*": [
+      "dummy/*": [
+        "tests/dummy/app/*",
         "app/*"
       ],
-      "@ember-bdd/core/test-support/*": [
-        "node_modules/@ember-bdd/core/addon-test-support/*"
+      "@ember-bdd/steps-ember": [
+        "addon"
       ],
-      "@ember-bdd/steps-config-environment/test-support/*": [
-        "node_modules/@ember-bdd/steps-config-environment/addon-test-support/*"
+      "@ember-bdd/steps-ember/*": [
+        "addon/*"
+      ],
+      "@ember-bdd/steps-ember/test-support": [
+        "addon-test-support"
       ],
       "@ember-bdd/steps-ember/test-support/*": [
-        "node_modules/@ember-bdd/steps-ember/addon-test-support/*"
+        "addon-test-support/*"
+      ],
+      "@ember-bdd/core/test-support/*": [
+        "../core/addon-test-support/*"
       ],
       "*": [
         "types/*"
@@ -43,7 +50,10 @@
   },
   "include": [
     "app/**/*",
+    "addon/**/*",
     "tests/**/*",
-    "types/**/*"
+    "types/**/*",
+    "test-support/**/*",
+    "addon-test-support/**/*"
   ]
 }

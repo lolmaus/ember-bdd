@@ -83,7 +83,7 @@ module.exports = {
       }),
     },
     {
-      files: ['tests/**/*.ts', 'tests/**/*.js'],
+      files: ['tests/**/*.ts', 'tests/**/*.js', 'addon-test-support/steps.ts'],
       rules: {
         '@typescript-eslint/no-unused-expressions': 'off', // Chai needs this
       },
