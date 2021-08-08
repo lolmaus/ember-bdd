@@ -13,7 +13,10 @@ const steps: StepImplementationsRecord = {
     expect(email).match(/^.+?@.+?$/);
   },
 
-  'Then (?:the )config/environment property $emberBddString should be $emberBddJson'(key: string, value: unknown) {
+  'Then (?:the )config/environment property $emberBddString should be $emberBddJson'(
+    key: string,
+    value: unknown
+  ) {
     expect(get(config, key)).deep.equal(value);
   },
 };

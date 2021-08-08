@@ -6,6 +6,6 @@ export default {
   setupStepsConfigEnvironment,
 
   setupTestCustom(hooks, message) {
-    hooks.beforeEach(() => console.log(message));
+    hooks.beforeEach(() => {});
   },
 };

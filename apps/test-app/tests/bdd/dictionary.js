@@ -1,7 +1,4 @@
-import {
-  $emberBddJson,
-  $emberBddString,
-} from '@ember-bdd/core/test-support/dictionary';
+import { $emberBddJson, $emberBddString } from '@ember-bdd/core/test-support/dictionary';
 
 export default {
   // A regular expression with a capturing group
@@ -24,10 +21,7 @@ export default {
     (numberStr) => parseInt(numberStr, 10) - 1,
   ],
 
-  $collection: [
-    /(.+)/,
-    (selector) => Array.from(document.querySelectorAll(selector)),
-  ],
+  $collection: [/(.+)/, (selector) => Array.from(document.querySelectorAll(selector))],
 
   $qoutedString: /"(.+?)"/, // Unquotes the string
 

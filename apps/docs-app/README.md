@@ -80,7 +80,6 @@ Unfortunately, `ember-cli-dotenv` does not support loading more than one dotenv 
 * `yarn lint:hbs` — checks the templates for linting issues.
 * `yarn lint:js` — runs `lint:ts` and `lint:eslint`.
 * `yarn lint` — runs `lint:ts`, `lint:eslint` and `lint:hbs`.
-* `yarn lint-staged` — runs `lint:eslint` and `lint:hbs` on git-staged files only, runs `lint:ts` on the whole codebase.
 * `yarn dev-prod` — runs `ember s` against the production server in development mode. ⚠ Must be configured in `package.json`.
 * `yarn dev-staging` — runs `ember s` against the staging server in development mode. ⚠ Must be configured in `package.json`.
 
@@ -90,13 +89,9 @@ Unfortunately, `ember-cli-dotenv` does not support loading more than one dotenv 
 
 ### pre-commit
 
-The codebase is configured to run `lint-staged` (see above) on `pre-commit` hook.
+The codebase is configured to run `lint` on `pre-commit` hook.
 
-It will prevent from committing unlinted code.
-
-If you do need to commit unlinted code (e. g. to have your work-in-progress backed up), run `git commit` with the `-n` flag.
-
-If you want to run the hook without the actual commit, `git add` your files and then run `yarn lint-staged`.
+Unfortunately, it will lint the whole monorepo, even if you're trying to commit only some of your changes.
 
 
 
