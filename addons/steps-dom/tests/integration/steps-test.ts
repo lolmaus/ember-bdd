@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
@@ -16,7 +18,7 @@ module('Integration | Component | steps', function (hooks) {
     }
 
     test('click normally', async function (this: TestContextClick, assert) {
-      const m;
+      let m;
 
       // Set any properties with this.set('myProperty', 'value');
       // Handle any actions with this.set('myAction', function(val) { ... });
