@@ -26,10 +26,6 @@ export default class TestDeclarator {
     return this.relativePath.slice(0, this.relativePath.lastIndexOf('.')) + '-steps';
   }
 
-  @cached protected get opinionatedStepsFileName(): string {
-    return `${this.projectName}/tests/bdd/steps`;
-  }
-
   @cached protected get featureParser(): FeatureParser {
     return new yadda.parsers.FeatureParser();
   }
@@ -39,14 +35,14 @@ export default class TestDeclarator {
   }
 
   @cached protected get dictionary(): Dictionary {
-    return generateDictionary(this.projectName);
+    return generateDictionary();
   }
 
   @cached protected get library(): Library {
-    const stepImplementationsRecord = requireModule(this.opinionatedStepsFileName);
+    const stepImplementationsRecord = requireModule('@ember-bdd/core/test-support/app/steps') ?? {};
 
     assert(
-      `The ember-bdd step implementaions library ${this.opinionatedStepsFileName} must be an object with functions or strings`,
+      'The ember-bdd step implementaions library `tests/bdd/steps.js` must export an object with functions or strings',
       isStepImplementationsRecord(stepImplementationsRecord)
     );
 

@@ -45,11 +45,12 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'off', // Can't fully get rid of it due to TS quirks and issues with third-party depenecies
         '@typescript-eslint/camelcase': 'off', // Allow two levels of separation, e. g. ProductWizard_SidebarConfig_ListWithHeader_Component_Args
         '@typescript-eslint/class-name-casing': 'off', // Allow two levels of separation, e. g. ProductWizard_SidebarConfig_ListWithHeader_Component_Args
+        '@typescript-eslint/explicit-function-return-type': 'error', // We want to be strict with types
         '@typescript-eslint/no-empty-interface': 'off', // Required for simplified typing of Mirage and Ember Data
         '@typescript-eslint/no-non-null-assertion': 'off', // When I do it, I mean it.
         '@typescript-eslint/no-unused-expressions': 'error',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-        '@typescript-eslint/explicit-function-return-type': 'error', // We want to be strict with types
+        '@typescript-eslint/prefer-regexp-exec': 'off', // string.match works the way regexp.exec can't
       },
     },
     // node files

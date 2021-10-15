@@ -8,13 +8,12 @@ export default function applyAnnotations(
   annotations: Annotations,
   hooks: NestedHooks
 ): void {
-  const annotationFunctionsModuleName = `${projectName}/tests/bdd/annotations`;
-  const annotationFunctionsRecord = requireModule(annotationFunctionsModuleName);
+  const annotationFunctionsRecord = requireModule('@ember-bdd/core/test-support/app/annotations');
 
   if (!annotationFunctionsRecord) return;
 
   assert(
-    `The default export of ${annotationFunctionsModuleName} must be a record of functions`,
+    'The default export of `tests/bdd/annotations.js` must be a record of functions',
     isAnnotationsRecord(annotationFunctionsRecord)
   );
 
@@ -24,7 +23,7 @@ export default function applyAnnotations(
   }, {} as Record<string, string>);
 
   assert(
-    `${annotationFunctionsModuleName} keys have case collisions. Yadda annotations are case-insensitive`,
+    'keys in `tests/bdd/annotations.js` have case collisions. Yadda annotations are case-insensitive',
     Object.keys(keysMap).length === Object.keys(annotationFunctionsRecord).length
   );
 
@@ -35,7 +34,7 @@ export default function applyAnnotations(
     const annotationFunction = annotationFunctionsRecord[annotationName];
 
     assert(
-      `Annotation ${annotationNameLowCase} is not defined in ${annotationFunctionsModuleName} (case-insensitive)`,
+      `Annotation ${annotationNameLowCase} is not defined in \`tests/bdd/annotations.js\` (case-insensitive)`,
       annotationFunction
     );
 

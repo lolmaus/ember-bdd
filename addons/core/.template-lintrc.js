@@ -3,7 +3,7 @@
 module.exports = {
   extends: 'octane',
   rules: {
-    'no-bare-strings': true,
+    'no-bare-strings': false,
     'no-curly-component-invocation': { allow: ['while-loading'] },
   },
 };

@@ -92,7 +92,7 @@ Note that unlike attribute names, values are case-sensitive.
 
 
 
-## Mapping labels to selectos
+## Using labels for third-party components
 
 Labels are designed to prevent you from using non-semantic selectors, which are pure evil. But there's a situation where this evil is inevitable.
 

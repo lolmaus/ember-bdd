@@ -4,7 +4,7 @@ import {
   StepImplementation,
   StepImplementationsRecord,
 } from '../types';
-import { Collection } from './dom-helpers';
+import { Collection } from '../dom-helpers';
 import QUnit from 'qunit';
 import { Library } from 'yadda/lib/localisation/English';
 

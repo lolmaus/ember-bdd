@@ -4,13 +4,12 @@ import requireModule from 'ember-require-module';
 import { assert } from '@ember/debug';
 import { isConverter, isConverterSimple, isConvertersRecord, isConverterTuple } from '../types';
 
-export function generateDictionary(projectName: string): Dictionary {
+export function generateDictionary(): Dictionary {
   const dictionary: Dictionary = new yadda.Dictionary();
-  const convertersPath = `${projectName}/tests/bdd/dictionary`;
-  const converters = requireModule(convertersPath);
+  const converters = requireModule('@ember-bdd/core/test-support/app/dictionary') ?? {};
 
   assert(
-    `Expected ${convertersPath} to have a default export with an object of ember-bdd converters.`,
+    'Expected `tests/bdd/annotations.js` to have a default export with an object of ember-bdd converters.',
     isConvertersRecord(converters)
   );
 

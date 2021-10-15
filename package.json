@@ -21,6 +21,7 @@
     "lint:addons/docs-addon": "cd addons/docs-addon && echo 'addons/docs-addon' && yarn lint:fix",
     "lint:addons/steps-config-environment": "cd addons/steps-config-environment && echo 'addons/steps-config-environment' && yarn lint:fix",
     "lint:addons/steps-ember": "cd addons/steps-ember && echo 'addons/steps-ember' && yarn lint:fix",
+    "lint:addons/steps-dom": "cd addons/steps-dom && echo 'addons/steps-dom' && yarn lint:fix",
     "lint:apps/docs-app": "cd apps/docs-app && echo 'apps/docs-app' && yarn lint:fix",
     "lint:apps/test-app": "cd apps/test-app && echo 'apps/test-app' && yarn lint:fix",
     "postinstall": "husky install"

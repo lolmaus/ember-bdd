@@ -27,6 +27,7 @@
   "devDependencies": {
     "@ember-bdd/core": "*",
     "@ember-bdd/steps-config-environment": "*",
+    "@ember-bdd/steps-dom": "*",
     "@ember-bdd/steps-ember": "*",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.2.5",

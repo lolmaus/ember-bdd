@@ -28,16 +28,16 @@
         "tests/dummy/app/*",
         "app/*"
       ],
-      "core": [
+      "@ember-bdd/core": [
         "addon"
       ],
-      "core/*": [
+      "@ember-bdd/core/*": [
         "addon/*"
       ],
-      "core/test-support": [
+      "@ember-bdd/core/test-support": [
         "addon-test-support"
       ],
-      "core/test-support/*": [
+      "@ember-bdd/core/test-support/*": [
         "addon-test-support/*"
       ],
       "*": [

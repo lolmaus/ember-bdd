@@ -1,6 +1,8 @@
 'use strict';
 
 const FeatureParser = require('./lib/feature-parser');
+const reexporter = require('./lib/reexporter');
+const mergeTrees = require('broccoli-merge-trees');
 
 module.exports = {
   name: require('./package').name,
@@ -28,5 +30,12 @@ module.exports = {
         return new FeatureParser(tree, this.options);
       },
     });
+  },
+
+  treeForAddonTestSupport: function (tree) {
+    const treeWithReexports = reexporter(this);
+    const resultingTree = mergeTrees([tree, treeWithReexports]);
+
+    return this._super.treeForAddonTestSupport.call(this, resultingTree);
   },
 };

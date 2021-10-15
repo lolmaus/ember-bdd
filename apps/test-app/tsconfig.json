@@ -36,6 +36,9 @@
       "@ember-bdd/steps-ember/test-support/*": [
         "node_modules/@ember-bdd/steps-ember/addon-test-support/*"
       ],
+      "@ember-bdd/steps-dom/test-support/*": [
+        "node_modules/@ember-bdd/steps-dom/addon-test-support/*"
+      ],
       "*": [
         "types/*"
       ]

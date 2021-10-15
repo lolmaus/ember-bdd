@@ -28,9 +28,8 @@ export type StepImplementation = (
   ...args: StepArgs
 ) => void | Promise<void>;
 export type StepImplementationOrAlias = StepImplementation | string;
-
 export type StepImplementationsRecord = Record<string, StepImplementationOrAlias>;
-
+export type LabelOverridesRecord = Record<string, string>;
 export type Label = string;
 export type SelectorCompound = string;
 
@@ -101,6 +100,18 @@ export function isStepImplementationsRecord(
     Object.keys(maybeStepImplRecord).every((key) => {
       // @ts-ignore Asserting type
       return isString(maybeStepImplRecord[key]) || isFunction(maybeStepImplRecord[key]);
+    })
+  );
+}
+
+export function isLabelOverridesRecord(
+  maybeLabelOverridesRecord: unknown
+): maybeLabelOverridesRecord is LabelOverridesRecord {
+  return (
+    isObject(maybeLabelOverridesRecord) &&
+    Object.keys(maybeLabelOverridesRecord).every((key) => {
+      // @ts-ignore Asserting type
+      return isString(maybeLabelOverridesRecord[key]);
     })
   );
 }
