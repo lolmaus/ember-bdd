@@ -1629,6 +1629,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ember-bdd/steps-dom@workspace:addons/steps-dom"
   dependencies:
+    "@ember-bdd/core": "*"
     "@ember/optional-features": ^2.0.0
     "@ember/test-helpers": ^2.2.5
     "@embroider/test-setup": ^0.41.0

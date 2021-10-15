@@ -1,5 +1,16 @@
-{{page-title "TestApp"}}
+<div>
+  <h2>Click test</h2>
 
-{{!-- <h2 id="title">Welcome to Ember</h2> --}}
+  <button
+    data-test-click-button
+    type="button"
+    {{on "click" this.clickTestAction}}
+  >
+  </button>
 
-{{outlet}}
+  {{#if this.clickTestProp}}
+    <span data-test-click-result>
+
+    </span>
+  {{/if}}
+</div>>

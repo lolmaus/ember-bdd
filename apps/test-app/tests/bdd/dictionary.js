@@ -1,6 +1,7 @@
 import {
   $emberBddInt,
   $emberBddJson,
+  $emberBddLabel,
   $emberBddString,
 } from '@ember-bdd/core/test-support/dictionary';
 
@@ -31,5 +32,6 @@ export default {
 
   $emberBddInt,
   $emberBddJson,
+  $emberBddLabel,
   $emberBddString,
 };

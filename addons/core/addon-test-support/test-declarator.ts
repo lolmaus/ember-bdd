@@ -64,7 +64,7 @@ export default class TestDeclarator {
     const moduleFunction = this.getModuleFunction();
 
     moduleFunction(this.featureParsed.title, (hooks: NestedHooks) => {
-      applyAnnotations(this.projectName, this.featureParsed.annotations, hooks);
+      applyAnnotations(this.featureParsed.annotations, hooks);
 
       this.featureParsed.scenarios.forEach((scenario: ScenarioExport) => {
         const testFunction = this.getTestFunction(scenario.annotations);
@@ -72,7 +72,7 @@ export default class TestDeclarator {
         if (this.areThereCustomAnnotations(scenario.annotations)) {
           // Need to wrap the test with another moodule so that hooks can be run for individual test
           module('', (hooks: NestedHooks) => {
-            applyAnnotations(this.projectName, scenario.annotations, hooks);
+            applyAnnotations(scenario.annotations, hooks);
 
             testFunction(scenario.title, (assert: Assert) => {
               return this.runScenario(scenario, assert);

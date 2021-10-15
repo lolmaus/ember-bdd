@@ -17,27 +17,71 @@ module('Integration | Component | steps', function (hooks) {
       action?: SinonSpy;
     }
 
-    test('click normally', async function (this: TestContextClick, assert) {
-      let m;
+    //
 
+    test('click normally', async function (this: TestContextClick, assert) {
       // Set any properties with this.set('myProperty', 'value');
       // Handle any actions with this.set('myAction', function(val) { ... });
       this.set('action', sinon.spy());
 
       await render(hbs`
-        <a
+        <button
           data-test-button
-          href
+          type="button"
           {{on "click" this.action}}
         >
-        </a>`);
+        </button>`);
 
       const tuple = findByLabel('Button');
 
-      await steps['When I click (?:on )?$opinionatedElement'](tuple);
+      await steps['When I click (?:on )?$emberBddLabel'](tuple);
 
-      m = "Action should've been called";
-      assert.ok(this.action?.calledOnce, m);
+      assert.ok(this.action?.calledOnce);
+    });
+
+    //
+
+    test('crashes when no button is found', async function (this: TestContextClick, assert) {
+      await render(hbs``);
+
+      const tuple = findByLabel('Button');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I click (?:on )?$emberBddLabel'](tuple),
+        /Expected 1 element\(s\), but 0 found/
+      );
+    });
+
+    //
+
+    test('crashes when there are multiple buttons', async function (this: TestContextClick, assert) {
+      // Set any properties with this.set('myProperty', 'value');
+      // Handle any actions with this.set('myAction', function(val) { ... });
+      this.set('action', sinon.spy());
+
+      await render(hbs`
+      <button
+        data-test-button
+        type="button"
+        {{on "click" this.action}}
+      >
+      </button>
+
+      <button
+        data-test-button
+        type="button"
+        {{on "click" this.action}}
+      >
+      </button>`);
+
+      const tuple = findByLabel('Button');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I click (?:on )?$emberBddLabel'](tuple),
+        /Expected 1 element\(s\), but 2 found/
+      );
     });
   });
 });

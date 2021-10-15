@@ -4,7 +4,7 @@ import {
   StepImplementation,
   StepImplementationsRecord,
 } from '../types';
-import { Collection } from '../dom-helpers';
+import { isLabelTuple } from '../dom-helpers';
 import QUnit from 'qunit';
 import { Library } from 'yadda/lib/localisation/English';
 
@@ -53,10 +53,9 @@ function makeBetterMessage({
   message = `\n👟 ${stepName}\n⚙ ${stepImplName}\n⚠ ${message}\n\n🛠Arguments:`;
 
   args.forEach((arg, i) => {
-    const argMessage =
-      arg instanceof Collection
-        ? `Collection. Length: ${arg.collection.length}, Label: ${arg.label}, Selector: ${arg.selector}`
-        : arg;
+    const argMessage = isLabelTuple(arg)
+      ? `Collection. Length: ${arg[0].length}, Label: ${arg[1]}, Selector: ${arg[2]}`
+      : arg;
 
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     message += `\n    ${i}: ${argMessage}`;

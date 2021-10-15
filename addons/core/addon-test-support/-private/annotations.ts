@@ -3,11 +3,7 @@ import requireModule from 'ember-require-module';
 import { assert } from '@ember/debug';
 import { isAnnotationsRecord } from '../types';
 
-export default function applyAnnotations(
-  projectName: string,
-  annotations: Annotations,
-  hooks: NestedHooks
-): void {
+export default function applyAnnotations(annotations: Annotations, hooks: NestedHooks): void {
   const annotationFunctionsRecord = requireModule('@ember-bdd/core/test-support/app/annotations');
 
   if (!annotationFunctionsRecord) return;

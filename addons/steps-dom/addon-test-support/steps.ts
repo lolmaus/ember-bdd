@@ -3,26 +3,47 @@ import { click } from '@ember/test-helpers';
 import { LabelTuple } from '@ember-bdd/core/test-support/dom-helpers';
 
 function assertLength(collection: Array<unknown>, length = 1): void {
-  expect(collection.length).equal(
+  expect(collection).to.have.length(
     length,
     `Expected ${length} element(s), but ${collection.length} found`
   );
 }
 
 export default {
-  'When I click (?:on )?$opinionatedElement'([
+  async 'When I click (?:on )?$emberBddLabel'([
     collection /* , label, selector */,
   ]: LabelTuple): Promise<void> {
     assertLength(collection);
-    return click(collection[0]);
+
+    await click(collection[0]);
   },
 
-  // 'When I double click (?:on )?$opinionatedElement'([collection /* , label, selector */]) {
+  // PROCEED FROM HERE:
+  // need to cover this with docs 👆
+  // need to cover this with integration, aceptance and docs 👇
+
+  'Then there should be (NO |no )?(?:(\\d+) )?$emberBddLabel'(
+    no: string | undefined,
+    countStr: string | undefined,
+    [collection /* , label, selector */]: LabelTuple
+  ): void {
+    expect(no && countStr, "Don't use NO and number at the same time").not.ok;
+
+    // prettier-ignore
+    const count =
+      no       ? 0 :
+      countStr ? parseInt(countStr, 10) :
+                 1;
+
+    expect(collection).to.have.length(count);
+  },
+
+  // 'When I double click (?:on )?$emberBddLabel'([collection /* , label, selector */]) {
   //   assert(`Expected a single element, but ${collection.length} found`, collection.length === 1);
   //   return doubleClick(collection[0]);
   // },
 
-  // 'When I fill "(.*)" into $opinionatedElement'(text, [collection /* , label, selector */]) {
+  // 'When I fill "(.*)" into $emberBddLabel'(text, [collection /* , label, selector */]) {
   //   assert(`Expected a single element, but ${collection.length} found`, collection.length === 1);
   //   const element = collection[0];
   //   const target = findEditable(element);
@@ -30,27 +51,27 @@ export default {
   //   return fillIn(target, text);
   // },
 
-  // 'When I move the mouse pointer into $opinionatedElement'([collection /* , label, selector */]) {
+  // 'When I move the mouse pointer into $emberBddLabel'([collection /* , label, selector */]) {
   //   assert(`Expected a single element, but ${collection.length} found`, collection.length === 1);
   //   return triggerEvent(collection[0], 'mouseenter');
   // },
 
-  // 'When I move the mouse pointer out of $opinionatedElement'([collection /* , label, selector */]) {
+  // 'When I move the mouse pointer out of $emberBddLabel'([collection /* , label, selector */]) {
   //   assert(`Expected a single element, but ${collection.length} found`, collection.length === 1);
   //   return triggerEvent(collection[0], 'mouseeleave');
   // },
 
-  // 'When I focus into $opinionatedElement'([collection /* , label, selector */]) {
+  // 'When I focus into $emberBddLabel'([collection /* , label, selector */]) {
   //   assert(`Expected a single element, but ${collection.length} found`, collection.length === 1);
   //   return focus(collection[0]);
   // },
 
-  // 'When I focus out of $opinionatedElement'([collection /* , label, selector */]) {
+  // 'When I focus out of $emberBddLabel'([collection /* , label, selector */]) {
   //   assert(`Expected a single element, but ${collection.length} found`, collection.length === 1);
   //   return blur(collection[0]);
   // },
 
-  // 'When I (de)?select (?:the )?(?:radio button|checkbox) $opinionatedElement'(
+  // 'When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'(
   //   de,
   //   [collection /* , label, selector */]
   // ) {
@@ -72,7 +93,7 @@ export default {
   //   return click(input);
   // },
 
-  // 'When I (de)?select (?:the )?(?:radio button|checkbox) $opinionatedString in $opinionatedElement'(
+  // 'When I (de)?select (?:the )?(?:radio button|checkbox) $opinionatedString in $emberBddLabel'(
   //   de,
   //   text,
   //   [collection /* , label, selector */]
@@ -92,7 +113,7 @@ export default {
   //   return click(input);
   // },
 
-  // 'When I (press|press down|release) the $opinionatedString key in $opinionatedElement'(
+  // 'When I (press|press down|release) the $opinionatedString key in $emberBddLabel'(
   //   eventRaw,
   //   key,
   //   [collection /* , label, selector */]

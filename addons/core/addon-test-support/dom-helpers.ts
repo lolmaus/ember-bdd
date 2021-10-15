@@ -21,18 +21,22 @@ interface _LabelTuple {
 export type LabelTuple = [collection: Element[], label: string, SelectorCompound: string] &
   _LabelTuple;
 
-// This is currently only used to return values. Can be refactored to contain find logic
-export class Collection {
-  collection: Element[];
-  label: string;
-  selector: string;
-
-  constructor(collection: Element[], label: string, selector: string) {
-    this.collection = collection;
-    this.label = label;
-    this.selector = selector;
-  }
+export function isLabelTuple(maybeTuple: unknown): maybeTuple is LabelTuple {
+  return !!(maybeTuple as LabelTuple)?.__isLabelTuple__;
 }
+
+// // This is currently only used to return values. Can be refactored to contain find logic
+// export class Collection {
+//   collection: Element[];
+//   label: string;
+//   selector: string;
+
+//   constructor(collection: Element[], label: string, selector: string) {
+//     this.collection = collection;
+//     this.label = label;
+//     this.selector = selector;
+//   }
+// }
 
 export function findSelfOrChild(
   elementOrSelector: Element | string,

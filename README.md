@@ -28,13 +28,13 @@ Roadmap
   * [x] Annotations
   * [x] Dictionary/converters/macros
   * [x] Step aliases
-  * [ ] Labels
-  * [ ] Custom labels
+  * [x] Labels
+  * [x] Custom labels
   * [ ] Blueprints
 * [ ] Step library + step docs
   * [x] Ember (visit, settled, pause, debugger, URL, etc)
   * [x] config/environment
-  * [ ] DOM
+  * [ ] DOM (⏳ in progress)
   * [ ] Mirage
   * [ ] Window
   * [ ] Configuration service
