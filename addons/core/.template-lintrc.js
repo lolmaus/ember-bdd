@@ -5,5 +5,6 @@ module.exports = {
   rules: {
     'no-bare-strings': false,
     'no-curly-component-invocation': { allow: ['while-loading'] },
+    'require-input-label': false,
   },
 };

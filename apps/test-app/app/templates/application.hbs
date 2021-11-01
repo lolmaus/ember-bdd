@@ -1,16 +1,36 @@
 <div>
-  <h2>Click test</h2>
+  <h2>When I click (?:on )?$emberBddLabel</h2>
 
   <button
     data-test-click-button
     type="button"
-    {{on "click" this.clickTestAction}}
+    {{on "click" this.click.action}}
   >
   </button>
 
-  {{#if this.clickTestProp}}
-    <span data-test-click-result>
+  {{#if this.click.prop}}
+    <span data-test-click-result></span>
+  {{/if}}
 
-    </span>
+  <hr>
+
+  <h2>Then there should be (NO |no )?(?:(\\d+) )?$emberBddLabel</h2>
+
+  <div data-test-item></div>
+  <div data-test-item="foo"></div>
+
+  <hr>
+
+  <h2>When I double click (?:on )?$emberBddLabel</h2>
+
+  <button
+    data-test-double-click-button
+    type="button"
+    {{on "dblclick" this.dblclick.action}}
+  >
+  </button>
+
+  {{#if this.dblclick.prop}}
+    <span data-test-double-click-result></span>
   {{/if}}
 </div>>

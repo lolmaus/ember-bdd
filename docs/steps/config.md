@@ -6,6 +6,8 @@ index: 1
 Config steps
 ============
 
+Package name: `@ember-bdd/steps-config-environment`.
+
 These are steps interacting with the `config/environment` configuration.
 
 

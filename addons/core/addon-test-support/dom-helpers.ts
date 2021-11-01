@@ -181,11 +181,15 @@ export function triggerKeyByLabel(
   return triggerKeyEvent(element, eventType, key, modifiers);
 }
 
-export function findEditable(element: Element, includeContentEditable = true): Element | undefined {
+export function findEditable(
+  element: Element,
+  includeContentEditable = true,
+  includeSelect = true
+): Element {
   const selectors = [
     'textarea',
     'input:not([hidden])',
-    'select',
+    ...(includeSelect ? ['select'] : []),
     ...(includeContentEditable ? ['[contenteditable]'] : []),
   ];
 

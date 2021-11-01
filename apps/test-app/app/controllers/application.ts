@@ -2,12 +2,27 @@ import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
-export default class Application extends Controller {
-  @tracked clickTestProp = false;
+import { Resource, useResource } from 'ember-resources';
 
-  @action clickTestAction(): void {
-    this.clickTestProp = true;
+class ClickResource extends Resource {
+  @tracked prop = false;
+
+  @action action(): void {
+    this.prop = true;
   }
+}
+
+class DblclickResource extends Resource {
+  @tracked prop = false;
+
+  @action action(): void {
+    this.prop = true;
+  }
+}
+
+export default class Application extends Controller {
+  click = useResource(this, ClickResource);
+  dblclick = useResource(this, DblclickResource);
 }
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your controllers.
