@@ -13,12 +13,15 @@ Project structure
 /tests/test-helper.js
 ---------------------
 
-This file is an entry point for your Ember tests. Add this to initialize `ember-bdd`:
+This file is an entry point for your Ember tests.
+
+Here you need to initialize the [Chai](https://www.chaijs.com) assertion library which is used internally by `ember-bdd`:
 
 ```js
-import { init as initEmberBDD } from '@ember-bdd/core/test-support/index';
+import chai from 'chai';
+import chaiDom from 'chai-dom';
 
-initEmberBDD();
+chai.use(chaiDom);
 ```
 
 

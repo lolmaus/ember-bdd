@@ -33,4 +33,40 @@
   {{#if this.dblclick.prop}}
     <span data-test-double-click-result></span>
   {{/if}}
-</div>>
+
+  <hr>
+
+  <h2>When I (?:fill|type) $emberBddString into $emberBddLabel</h2>
+  <h2>Then $emberBddLabel should (not |NOT )?(?:have text|say|be) $emberBddString</h2>
+
+  <div data-test-text-field>
+    <label data-test-label for="text-field-input">
+      Text field
+    </label>
+
+    <input data-test-input type="text" id="text-field-input">
+  </div>
+
+  <hr>
+
+  <h2>When I move the mouse pointer into $emberBddLabel</h2>
+  <h2>When I move the mouse pointer out of $emberBddLabel</h2>
+  <h2>Then $emberBddLabel should (not |NOT )?have HTML class $emberBddString</h2>
+
+  <div
+    data-test-cursor-target
+    class={{if this.mouseEnterLeave.isActive "-active"}}
+    {{on "mouseenter" (fn this.mouseEnterLeave.action true)}}
+    {{on "mouseleave" (fn this.mouseEnterLeave.action false)}}
+  ></div>
+
+  <hr>
+
+  <h2>When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel</h2>
+  <h2>Then $emberBddLabel should (not |NOT )?be checked</h2>
+
+  <input data-test-checkbox="unchecked" type="checkbox">
+  <input data-test-checkbox="checked" type="checkbox" checked>
+  <input data-test-radio="unchecked" type="radio" name="radio group">
+  <input data-test-radio="checked" type="radio" checked name="radio group">
+</div>

@@ -34,7 +34,8 @@ Roadmap
 * [ ] Step library + step docs
   * [x] Ember (visit, settled, pause, debugger, URL, etc)
   * [x] config/environment
-  * [ ] DOM (⏳ in progress)
+  * [x] DOM
+  * [ ] Local storage
   * [ ] Mirage
   * [ ] Window
   * [ ] Configuration service

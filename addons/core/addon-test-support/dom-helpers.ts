@@ -14,29 +14,16 @@ import { selectorFromLabel } from './labels';
 import { KeyEvent, KeyModifiers } from '@ember/test-helpers/dom/trigger-key-event';
 import { LabelOverridesRecord } from './types';
 
-interface _LabelTuple {
-  __isLabelTuple__?: true;
+export interface Collection {
+  __isCollection__: true;
+  elements: Element[];
+  label: string;
+  selector: string;
 }
 
-export type LabelTuple = [collection: Element[], label: string, SelectorCompound: string] &
-  _LabelTuple;
-
-export function isLabelTuple(maybeTuple: unknown): maybeTuple is LabelTuple {
-  return !!(maybeTuple as LabelTuple)?.__isLabelTuple__;
+export function isCollection(maybeCollection: unknown): maybeCollection is Collection {
+  return (maybeCollection as Collection)?.__isCollection__ === true;
 }
-
-// // This is currently only used to return values. Can be refactored to contain find logic
-// export class Collection {
-//   collection: Element[];
-//   label: string;
-//   selector: string;
-
-//   constructor(collection: Element[], label: string, selector: string) {
-//     this.collection = collection;
-//     this.label = label;
-//     this.selector = selector;
-//   }
-// }
 
 export function findSelfOrChild(
   elementOrSelector: Element | string,
@@ -55,31 +42,36 @@ export function findSelfOrChild(
   }
 }
 
-export function findByLabel(label: string, labelOverrides?: LabelOverridesRecord): LabelTuple {
+export function findByLabel(label: string, labelOverrides?: LabelOverridesRecord): Collection {
   const selectorCompound = selectorFromLabel(label, labelOverrides);
 
   const selectorsMaybeWithEq = selectorCompound
     .split(REGEX_SELECTOR_WITH_EQ)
     .filter((substr) => substr && substr.length > 0);
 
-  const { collection } = selectorsMaybeWithEq.reduce(
-    ({ collection, parentSelector }, childSelectorMaybeWithEq) => {
+  const { elements } = selectorsMaybeWithEq.reduce(
+    ({ elements, parentSelector }, childSelectorMaybeWithEq) => {
       const [childSelectorWithoutEq, index] = _parseSelectorMaybeWithEq(childSelectorMaybeWithEq);
       const childSelectorWithoutEqFull = `${parentSelector} ${childSelectorWithoutEq}`;
 
       return {
-        collection: _findElements(collection, childSelectorWithoutEqFull, index),
+        elements: _findElements(elements, childSelectorWithoutEqFull, index),
         parentSelector: childSelectorWithoutEqFull,
       };
     },
-    { collection: [], parentSelector: '' } as {
-      collection: Element[];
+    { elements: [], parentSelector: '' } as {
+      elements: Element[];
       parentSelector: string;
     }
   );
 
-  const result: LabelTuple = [collection, label, selectorCompound];
-  result.__isLabelTuple__ = true;
+  const result: Collection = {
+    elements,
+    label,
+    selector: selectorCompound,
+    __isCollection__: true,
+  };
+
   return result;
 }
 
@@ -115,17 +107,17 @@ function _findElement(parent: Element | null, selector: string): Element[] {
 }
 
 export function findAllByLabel(label: string): Element[] | null {
-  return findByLabel(label)[0];
+  return findByLabel(label).elements;
 }
 
 export function findSingleByLabel(label: string): Element | undefined {
-  const [collection, , selector] = findByLabel(label);
+  const collection = findByLabel(label);
   assert(
-    `Expected a single element, but ${collection.length} found.\nLabel: ${label}\nSelector: ${selector}\n\n`,
-    collection.length === 1
+    `Expected a single element, but ${collection.elements.length} found.\nLabel: ${label}\nSelector: ${collection.selector}\n\n`,
+    collection.elements.length === 1
   );
 
-  return collection[0];
+  return collection.elements[0];
 }
 
 export function clickByLabel(label: string): Promise<void> {

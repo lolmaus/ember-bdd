@@ -77,7 +77,7 @@
     "broccoli-asset-rev": "^3.0.0",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
-    "chai-dom": "^1.9.0",
+    "chai-dom": "lolmaus/chai-dom#feature/39-checked",
     "cross-env": "^7.0.3",
     "docs-addon": "*",
     "els-addon-typed-templates": "^4.2.4",

@@ -30,9 +30,9 @@ module('Integration | Component | steps', function (hooks) {
         >
         </button>`);
 
-      const tuple = findByLabel('Button');
+      const collection = findByLabel('Button');
 
-      await steps['When I click (?:on )?$emberBddLabel'](tuple);
+      await steps['When I click (?:on )?$emberBddLabel'](collection);
 
       assert.ok(this.action?.calledOnce);
     });
@@ -42,11 +42,11 @@ module('Integration | Component | steps', function (hooks) {
     test('crashes when no button is found', async function (this: TestContextClick, assert) {
       await render(hbs``);
 
-      const tuple = findByLabel('Button');
+      const collection = findByLabel('Button');
 
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       assert.rejects(
-        steps['When I click (?:on )?$emberBddLabel'](tuple),
+        steps['When I click (?:on )?$emberBddLabel'](collection),
         /Expected `Button` to match 1 element\(s\), but 0 found/
       );
     });
@@ -73,11 +73,11 @@ module('Integration | Component | steps', function (hooks) {
       >
       </button>`);
 
-      const tuple = findByLabel('Button');
+      const collection = findByLabel('Button');
 
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       assert.rejects(
-        steps['When I click (?:on )?$emberBddLabel'](tuple),
+        steps['When I click (?:on )?$emberBddLabel'](collection),
         /Expected `Button` to match 1 element\(s\), but 2 found/
       );
     });
@@ -105,9 +105,9 @@ module('Integration | Component | steps', function (hooks) {
         >
         </button>`);
 
-      const tuple = findByLabel('Button');
+      const collection = findByLabel('Button');
 
-      await steps['When I double click (?:on )?$emberBddLabel'](tuple);
+      await steps['When I double click (?:on )?$emberBddLabel'](collection);
 
       assert.ok(this.action?.calledOnce);
     });
@@ -117,11 +117,11 @@ module('Integration | Component | steps', function (hooks) {
     test('crashes when no button is found', async function (this: TestContextClick, assert) {
       await render(hbs``);
 
-      const tuple = findByLabel('Button');
+      const collection = findByLabel('Button');
 
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       assert.rejects(
-        steps['When I double click (?:on )?$emberBddLabel'](tuple),
+        steps['When I double click (?:on )?$emberBddLabel'](collection),
         /Expected `Button` to match 1 element\(s\), but 0 found/
       );
     });
@@ -148,11 +148,11 @@ module('Integration | Component | steps', function (hooks) {
       >
       </button>`);
 
-      const tuple = findByLabel('Button');
+      const collection = findByLabel('Button');
 
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       assert.rejects(
-        steps['When I double click (?:on )?$emberBddLabel'](tuple),
+        steps['When I double click (?:on )?$emberBddLabel'](collection),
         /Expected `Button` to match 1 element\(s\), but 2 found/
       );
     });
@@ -160,17 +160,17 @@ module('Integration | Component | steps', function (hooks) {
 
   //
 
-  module('When I (?:fill|type) "(.*)" into $emberBddLabel', function () {
+  module('When I (?:fill|type) $emberBddString into $emberBddLabel', function () {
     test('Fill an input normally', async function (assert) {
       await render(hbs`
         <input data-test-field>
       `);
 
-      const tuple = findByLabel('Field');
+      const collection = findByLabel('Field');
 
-      await steps['When I (?:fill|type) "(.*)" into $emberBddLabel']('foo', tuple);
+      await steps['When I (?:fill|type) $emberBddString into $emberBddLabel']('foo', collection);
 
-      assert.dom(tuple[0][0]).hasValue('foo');
+      assert.dom(collection.elements[0]).hasValue('foo');
     });
 
     test('Fill a textarea normally', async function (assert) {
@@ -178,11 +178,11 @@ module('Integration | Component | steps', function (hooks) {
         <textarea data-test-field></textarea>
       `);
 
-      const tuple = findByLabel('Field');
+      const collection = findByLabel('Field');
 
-      await steps['When I (?:fill|type) "(.*)" into $emberBddLabel']('foo', tuple);
+      await steps['When I (?:fill|type) $emberBddString into $emberBddLabel']('foo', collection);
 
-      assert.dom(tuple[0][0]).hasValue('foo');
+      assert.dom(collection.elements[0]).hasValue('foo');
     });
 
     test('Fill a contenteditable normally', async function (assert) {
@@ -190,11 +190,11 @@ module('Integration | Component | steps', function (hooks) {
         <div contenteditable data-test-field></div>
       `);
 
-      const tuple = findByLabel('Field');
+      const collection = findByLabel('Field');
 
-      await steps['When I (?:fill|type) "(.*)" into $emberBddLabel']('foo', tuple);
+      await steps['When I (?:fill|type) $emberBddString into $emberBddLabel']('foo', collection);
 
-      assert.dom(tuple[0][0]).hasText('foo');
+      assert.dom(collection.elements[0]).hasText('foo');
     });
 
     test('Fill an input inside given element', async function (assert) {
@@ -204,9 +204,9 @@ module('Integration | Component | steps', function (hooks) {
         </div>
       `);
 
-      const tuple = findByLabel('Field');
+      const collection = findByLabel('Field');
 
-      await steps['When I (?:fill|type) "(.*)" into $emberBddLabel']('foo', tuple);
+      await steps['When I (?:fill|type) $emberBddString into $emberBddLabel']('foo', collection);
 
       assert.dom(find('input')).hasValue('foo');
     });
@@ -218,9 +218,9 @@ module('Integration | Component | steps', function (hooks) {
         </div>
       `);
 
-      const tuple = findByLabel('Field');
+      const collection = findByLabel('Field');
 
-      await steps['When I (?:fill|type) "(.*)" into $emberBddLabel']('foo', tuple);
+      await steps['When I (?:fill|type) $emberBddString into $emberBddLabel']('foo', collection);
 
       assert.dom(find('textarea')).hasValue('foo');
     });
@@ -232,9 +232,9 @@ module('Integration | Component | steps', function (hooks) {
         </div>
       `);
 
-      const tuple = findByLabel('Field');
+      const collection = findByLabel('Field');
 
-      await steps['When I (?:fill|type) "(.*)" into $emberBddLabel']('foo', tuple);
+      await steps['When I (?:fill|type) $emberBddString into $emberBddLabel']('foo', collection);
 
       assert.dom(find('[contenteditable]')).hasText('foo');
     });
@@ -242,11 +242,11 @@ module('Integration | Component | steps', function (hooks) {
     test('Should throw on missing element', async function (assert) {
       await render(hbs``);
 
-      const tuple = findByLabel('Field');
+      const collection = findByLabel('Field');
 
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       assert.rejects(
-        steps['When I (?:fill|type) "(.*)" into $emberBddLabel']('foo', tuple),
+        steps['When I (?:fill|type) $emberBddString into $emberBddLabel']('foo', collection),
         /Expected `Field` to match 1 element\(s\), but 0 found/
       );
     });
@@ -254,11 +254,11 @@ module('Integration | Component | steps', function (hooks) {
     test('Should throw when matching element is not editable and does not contain an editable', async function (assert) {
       await render(hbs`<div data-test-field></div>`);
 
-      const tuple = findByLabel('Field');
+      const collection = findByLabel('Field');
 
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       assert.rejects(
-        steps['When I (?:fill|type) "(.*)" into $emberBddLabel']('foo', tuple),
+        steps['When I (?:fill|type) $emberBddString into $emberBddLabel']('foo', collection),
         /Expected element to be fillable or have exactly one fillable child, but 0 fillable children found/
       );
     });
@@ -283,11 +283,189 @@ module('Integration | Component | steps', function (hooks) {
         </div>
       `);
 
-      const tuple = findByLabel('Item');
+      const collection = findByLabel('Item');
 
-      await steps['When I move the mouse pointer into $emberBddLabel'](tuple);
+      await steps['When I move the mouse pointer into $emberBddLabel'](collection);
 
       assert.equal(this.action!.callCount, 1);
+    });
+
+    test('Should throw on missing element', async function (assert) {
+      await render(hbs``);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I move the mouse pointer into $emberBddLabel'](collection),
+        /Expected `Field` to match 1 element\(s\), but 0 found/
+      );
+    });
+
+    test('Should throw on multiple matching elements', async function (assert) {
+      await render(hbs`
+        <div data-test-field></div>
+        <div data-test-field></div>
+      `);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I move the mouse pointer into $emberBddLabel'](collection),
+        /Expected `Field` to match 1 element\(s\), but 2 found/
+      );
+    });
+  });
+
+  //
+
+  module('When I focus into $emberBddLabel', function () {
+    test('Normal', async function (assert) {
+      await render(hbs`
+        <button data-test-button type="button">
+          f
+        </button>
+      `);
+
+      const collection = findByLabel('Button');
+
+      await steps['When I focus into $emberBddLabel'](collection);
+
+      assert.equal(document.activeElement, collection.elements[0]);
+    });
+
+    test('Should throw on missing element', async function (assert) {
+      await render(hbs``);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I focus into $emberBddLabel'](collection),
+        /Expected `Field` to match 1 element\(s\), but 0 found/
+      );
+    });
+
+    test('Should throw on multiple matching elements', async function (assert) {
+      await render(hbs`
+        <div data-test-field></div>
+        <div data-test-field></div>
+      `);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I focus into $emberBddLabel'](collection),
+        /Expected `Field` to match 1 element\(s\), but 2 found/
+      );
+    });
+  });
+
+  //
+
+  module('When I (?:focus|unfocus|blur) (?:out of|from) $emberBddLabel', function () {
+    test('Normal', async function (assert) {
+      await render(hbs`
+        <button data-test-button type="button">
+          f
+        </button>
+      `);
+
+      const collection = findByLabel('Button');
+      const [element] = collection.elements;
+
+      if (!(element instanceof HTMLElement)) {
+        throw new Error('Expected element to be an HTMLElement');
+      }
+
+      element.focus();
+
+      await steps['When I (?:focus|unfocus|blur) (?:out of|from) $emberBddLabel'](collection);
+
+      assert.notEqual(document.activeElement, collection.elements[0]);
+    });
+
+    test('Should throw on missing element', async function (assert) {
+      await render(hbs``);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I (?:focus|unfocus|blur) (?:out of|from) $emberBddLabel'](collection),
+        /Expected `Field` to match 1 element\(s\), but 0 found/
+      );
+    });
+
+    test('Should throw on multiple matching elements', async function (assert) {
+      await render(hbs`
+        <div data-test-field></div>
+        <div data-test-field></div>
+      `);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I (?:focus|unfocus|blur) (?:out of|from) $emberBddLabel'](collection),
+        /Expected `Field` to match 1 element\(s\), but 2 found/
+      );
+    });
+  });
+
+  //
+
+  module('When I move the mouse pointer out of $emberBddLabel', function () {
+    interface TestContextMouseEnter extends TestContext {
+      action?: SinonSpy;
+    }
+
+    test('Normal', async function (this: TestContextMouseEnter, assert) {
+      this.set('action', sinon.spy());
+
+      await render(hbs`
+        <div
+          data-test-item
+          {{on "mouseleave" this.action}}
+        >
+          f
+        </div>
+      `);
+
+      const collection = findByLabel('Item');
+
+      await steps['When I move the mouse pointer out of $emberBddLabel'](collection);
+
+      assert.equal(this.action!.callCount, 1);
+    });
+
+    test('Should throw on missing element', async function (assert) {
+      await render(hbs``);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I move the mouse pointer out of $emberBddLabel'](collection),
+        /Expected `Field` to match 1 element\(s\), but 0 found/
+      );
+    });
+
+    test('Should throw on multiple matching elements', async function (assert) {
+      await render(hbs`
+        <div data-test-field></div>
+        <div data-test-field></div>
+      `);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I move the mouse pointer out of $emberBddLabel'](collection),
+        /Expected `Field` to match 1 element\(s\), but 2 found/
+      );
     });
   });
 
@@ -329,13 +507,381 @@ module('Integration | Component | steps', function (hooks) {
       test(`Index ${i}`, async function (assert) {
         await render(template);
 
-        const tuple = findByLabel('Item');
+        const collection = findByLabel('Item');
 
         const assertion = (): void => {
           steps['Then there should be (NO |no )?(?:(\\d+) )?$emberBddLabel'](
-            args[0],
+            args[0] as 'NO ' | 'no ' | undefined,
             args[1],
-            tuple
+            collection
+          );
+        };
+
+        if (error) {
+          assert.throws(assertion, error);
+        } else {
+          assertion();
+          assert.expect(0);
+        }
+      });
+    });
+  });
+
+  //
+
+  module(
+    'Then $emberBddLabel should (not |NOT )?(?:have text|say|be) $emberBddString',
+    function () {
+      const cases = [
+        { template: hbs`<div data-test-item></div>`, args: [undefined, ''], error: false },
+        { template: hbs`<div data-test-item>foo</div>`, args: [undefined, 'foo'], error: false },
+        { template: hbs`<div data-test-item>foo</div>`, args: ['NOT ', 'bar'], error: false },
+        {
+          template: hbs`<div data-test-item>  foo  </div>`,
+          args: [undefined, 'foo'],
+          error: false,
+        },
+        { template: hbs`<div></div>`, args: ['NOT ', ''], error: false },
+        {
+          template: hbs`<div data-test-item></div>`,
+          args: ['not ', ''],
+          error: /expected (.+) not to have trimmed text ''/,
+        },
+        { template: hbs`<input data-test-item>`, args: [undefined, ''], error: false },
+        {
+          template: hbs`<input data-test-item value="foo">`,
+          args: [undefined, 'foo'],
+          error: false,
+        },
+        { template: hbs`<input data-test-item value="foo">`, args: ['NOT ', 'bar'], error: false },
+        {
+          template: hbs`<input data-test-item value="  foo  ">`,
+          args: [undefined, 'foo'],
+          error: /expected (.+) to have value 'foo', but the value was ' {2}foo {2}'/,
+        },
+        { template: hbs`<div></div>`, args: ['NOT ', ''], error: false },
+        {
+          template: hbs`<div data-test-item></div>`,
+          args: ['not ', ''],
+          error: /expected (.+) not to have trimmed text ''/,
+        },
+        {
+          template: hbs`<div></div>`,
+          args: [undefined, '0'],
+          error: /Expected `Item` to match 1 element\(s\), but 0 found/,
+        },
+        {
+          template: hbs`<div data-test-item></div><div data-test-item></div>`,
+          args: [undefined, '2'],
+          error: /Expected `Item` to match 1 element\(s\), but 2 found/,
+        },
+      ];
+
+      cases.forEach(({ template, args, error }, i) => {
+        test(`Index ${i}`, async function (assert) {
+          await render(template);
+
+          const collection = findByLabel('Item');
+
+          const assertion = (): void => {
+            steps['Then $emberBddLabel should (not |NOT )?(?:have text|say|be) $emberBddString'](
+              collection,
+              args[0] as 'not ' | 'NOT ' | undefined,
+              args[1] as string
+            );
+          };
+
+          if (error) {
+            assert.throws(assertion, error);
+          } else {
+            assertion();
+            assert.expect(0);
+          }
+        });
+      });
+    }
+  );
+
+  //
+
+  module('Then $emberBddLabel should (not |NOT )?have HTML class $emberBddString', function () {
+    const cases = [
+      {
+        template: hbs`<div data-test-item class="foo"></div>`,
+        args: [undefined, 'foo'],
+        error: false,
+      },
+      {
+        template: hbs`<div data-test-item class="foo"></div>`,
+        args: ['NOT ', 'bar'],
+        error: false,
+      },
+      { template: hbs`<div></div>`, args: ['NOT ', ''], error: false },
+      {
+        template: hbs`<div data-test-item></div>`,
+        args: ['not ', ''],
+        error: /Class cannot be empty string/,
+      },
+      {
+        template: hbs`<input data-test-item class="  foo  ">`,
+        args: [undefined, 'foo'],
+        error: false,
+      },
+      {
+        template: hbs`<div data-test-item class="foo"></div>`,
+        args: [undefined, ''],
+        error: /Class cannot be empty string/,
+      },
+      {
+        template: hbs`<div></div>`,
+        args: [undefined, '0'],
+        error: /Expected `Item` to match 1 element\(s\), but 0 found/,
+      },
+      {
+        template: hbs`<div data-test-item></div><div data-test-item></div>`,
+        args: [undefined, '2'],
+        error: /Expected `Item` to match 1 element\(s\), but 2 found/,
+      },
+    ];
+
+    cases.forEach(({ template, args, error }, i) => {
+      test(`Index ${i}`, async function (assert) {
+        await render(template);
+
+        const collection = findByLabel('Item');
+
+        const assertion = (): void => {
+          steps['Then $emberBddLabel should (not |NOT )?have HTML class $emberBddString'](
+            collection,
+            args[0] as 'not ' | 'NOT ' | undefined,
+            args[1] as string
+          );
+        };
+
+        if (error) {
+          assert.throws(assertion, error);
+        } else {
+          assertion();
+          assert.expect(0);
+        }
+      });
+    });
+  });
+
+  //
+
+  module('When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel', function () {
+    test('Selecting a checkbox', async function (assert) {
+      await render(hbs`<input type="checkbox" data-test-control>`);
+
+      const collection = findByLabel('Control');
+
+      await steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+        undefined,
+        collection
+      );
+
+      if (!(collection.elements[0] instanceof HTMLInputElement)) {
+        throw new Error('Expected collection to be an HTMLInputElement');
+      }
+
+      assert.true(collection.elements[0].checked);
+    });
+
+    test('Selecting a radio', async function (assert) {
+      await render(hbs`<input type="radio" data-test-control>`);
+
+      const collection = findByLabel('Control');
+
+      await steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+        undefined,
+        collection
+      );
+
+      if (!(collection.elements[0] instanceof HTMLInputElement)) {
+        throw new Error('Expected collection to be an HTMLInputElement');
+      }
+
+      assert.true(collection.elements[0].checked);
+    });
+
+    test('Deselecting a checkbox', async function (assert) {
+      await render(hbs`<input type="checkbox" data-test-control checked>`);
+
+      const collection = findByLabel('Control');
+
+      await steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+        'de',
+        collection
+      );
+
+      if (!(collection.elements[0] instanceof HTMLInputElement)) {
+        throw new Error('Expected collection to be an HTMLInputElement');
+      }
+
+      assert.false(collection.elements[0].checked);
+    });
+
+    test('Should throw when deselecting a radio', async function (assert) {
+      await render(hbs`<input type="radio" data-test-control>`);
+
+      const collection = findByLabel('Control');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+          'de',
+          collection
+        ),
+        /A radio button cannot be deselected/
+      );
+    });
+
+    test('Should throw when deselecting an unchecked checkbox', async function (assert) {
+      await render(hbs`<input type="checkbox" data-test-control>`);
+
+      const collection = findByLabel('Control');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+          'de',
+          collection
+        ),
+        /Checkbox has to be checked in order to uncheck it/
+      );
+    });
+
+    test('Should throw when selecting a checked checkbox', async function (assert) {
+      await render(hbs`<input type="checkbox" checked data-test-control>`);
+
+      const collection = findByLabel('Control');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+          undefined,
+          collection
+        ),
+        /Checkbox has to be unchecked in order to check it/
+      );
+    });
+
+    test('Should throw when selecting a checked radio', async function (assert) {
+      await render(hbs`<input type="radio" checked data-test-control>`);
+
+      const collection = findByLabel('Control');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+          undefined,
+          collection
+        ),
+        /Checkbox has to be unchecked in order to check it/
+      );
+    });
+
+    test('Should throw on missing element', async function (assert) {
+      await render(hbs``);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+          undefined,
+          collection
+        ),
+        /Expected `Field` to match 1 element\(s\), but 0 found/
+      );
+    });
+
+    test('Should throw on multiple matching elements', async function (assert) {
+      await render(hbs`
+        <div data-test-field></div>
+        <div data-test-field></div>
+      `);
+
+      const collection = findByLabel('Field');
+
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      assert.rejects(
+        steps['When I (de)?select (?:the )?(?:radio button|checkbox) $emberBddLabel'](
+          undefined,
+          collection
+        ),
+        /Expected `Field` to match 1 element\(s\), but 2 found/
+      );
+    });
+  });
+
+  //
+
+  module('Then $emberBddLabel should (not |NOT )?be checked', function () {
+    const cases = [
+      {
+        template: hbs`<input data-test-item checked type="checkbox">`,
+        args: [undefined],
+        error: false,
+      },
+      {
+        template: hbs`<input data-test-item checked type="radio">`,
+        args: [undefined],
+        error: false,
+      },
+      {
+        template: hbs`<input data-test-item type="checkbox">`,
+        args: ['not '],
+        error: false,
+      },
+      {
+        template: hbs`<input data-test-item type="radio">`,
+        args: ['not '],
+        error: false,
+      },
+      {
+        template: hbs`<input data-test-item checked type="checkbox">`,
+        args: ['not '],
+        error: /expected input\[data-test-item]\[checked]\[type="checkbox"] to not be checked/,
+      },
+      {
+        template: hbs`<input data-test-item checked type="radio">`,
+        args: ['not '],
+        error: /expected input\[data-test-item]\[checked]\[type="radio"] to not be checked/,
+      },
+      {
+        template: hbs`<input data-test-item type="checkbox">`,
+        args: [undefined],
+        error: /expected input\[data-test-item]\[type="checkbox"] to be checked/,
+      },
+      {
+        template: hbs`<input data-test-item type="radio">`,
+        args: [undefined],
+        error: /expected input\[data-test-item]\[type="radio"] to be checked/,
+      },
+      {
+        template: hbs`<div></div>`,
+        args: [undefined],
+        error: /Expected `Item` to match 1 element\(s\), but 0 found/,
+      },
+      {
+        template: hbs`<div data-test-item></div><div data-test-item></div>`,
+        args: [undefined],
+        error: /Expected `Item` to match 1 element\(s\), but 2 found/,
+      },
+    ];
+
+    cases.forEach(({ template, args, error }, i) => {
+      test(`Index ${i}`, async function (assert) {
+        await render(template);
+
+        const collection = findByLabel('Item');
+
+        const assertion = (): void => {
+          steps['Then $emberBddLabel should (not |NOT )?be checked'](
+            collection,
+            args[0] as 'not ' | 'NOT ' | undefined
           );
         };
 

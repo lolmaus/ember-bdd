@@ -1501,7 +1501,7 @@ __metadata:
     ember-cli-inject-live-reload: ^2.0.2
     ember-cli-sri: ^2.1.1
     ember-cli-terser: ^4.0.1
-    ember-cli-typescript: ^4.1.0
+    ember-cli-typescript: ^4.2.1
     ember-cli-typescript-blueprints: ^3.0.0
     ember-disable-prototype-extensions: ^1.1.3
     ember-export-application-global: ^2.0.1
@@ -1635,6 +1635,7 @@ __metadata:
     "@embroider/test-setup": ^0.41.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
+    "@types/chai-dom": ^0.0.11
     "@types/ember-qunit": latest
     "@types/ember-resolver": latest
     "@types/ember__application": latest
@@ -1663,6 +1664,7 @@ __metadata:
     babel-eslint: ^10.1.0
     broccoli-asset-rev: ^3.0.0
     chai: ^4.3.4
+    chai-dom: "lolmaus/chai-dom#feature/39-checked"
     ember-auto-import: 1.12.0
     ember-cli: ~3.27.0
     ember-cli-babel: ^7.26.6
@@ -3203,6 +3205,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sniptt/guards@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@sniptt/guards@npm:0.2.0"
+  checksum: 977fc798a75b4607eee9746146dc8fadba27ac65d8467b051918b39af0b425013a7d93c0291cd44db20177da2b368420ac50ec0965913f5deb5e30e7838c22fb
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -3251,6 +3260,15 @@ __metadata:
   dependencies:
     "@types/chai": "*"
   checksum: 1fc4a6f05ed6fca34cf9a3703a77a4ca624a5c93e1b242217c12462fcea8c4d402713a2e0780866eeba65dd3ebfb86ce88037a0ad8ce8295aeaacda6ed1858a8
+  languageName: node
+  linkType: hard
+
+"@types/chai-dom@npm:^0.0.11":
+  version: 0.0.11
+  resolution: "@types/chai-dom@npm:0.0.11"
+  dependencies:
+    "@types/chai": "*"
+  checksum: 8be51e358904b087277c9955f10df506c9fb5c8ed8f0e23d25d34b1df411e5943864e9d3f623c99f772abcee7878d2cccdf0c004f8b652c611f3206d67741dd4
   languageName: node
   linkType: hard
 
@@ -7290,13 +7308,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chai-dom@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "chai-dom@npm:1.9.0"
+"chai-dom@lolmaus/chai-dom#feature/39-checked":
+  version: 1.10.0
+  resolution: "chai-dom@https://github.com/lolmaus/chai-dom.git#commit=ad72295f8b2e1864d0871231c258b9ae1bc75cb3"
   peerDependencies:
     chai: ">= 3"
     mocha: ">= 2"
-  checksum: d604a709d0f98a148d2ccb440ce8ff958af11500328602912c5e56e0aadce0a0b675434d39d0f15c636a19309ba05fe556946b144dc842dd9716c0b3fb9d4685
+  checksum: 578c4c44e433745c6adf63e34a65aa34222de884bc66c3b79f8b28cf4623e274d101c5ff0d6b1ccebe93d3b01c8d33936f656574e0c44e153ce2ae4558a2b20d
   languageName: node
   linkType: hard
 
@@ -8788,7 +8806,7 @@ __metadata:
     broccoli-asset-rev: ^3.0.0
     chai: ^4.3.4
     chai-as-promised: ^7.1.1
-    chai-dom: ^1.9.0
+    chai-dom: "lolmaus/chai-dom#feature/39-checked"
     cross-env: ^7.0.3
     docs-addon: "*"
     els-addon-typed-templates: ^4.2.4
@@ -20124,7 +20142,9 @@ fsevents@~2.3.1:
     "@ember/test-helpers": ^2.2.5
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
+    "@sniptt/guards": ^0.2.0
     "@types/chai": ^4.2.16
+    "@types/chai-dom": ^0.0.11
     "@types/ember-qunit": latest
     "@types/ember-resolver": latest
     "@types/ember__application": latest
@@ -20152,6 +20172,7 @@ fsevents@~2.3.1:
     babel-eslint: ^10.1.0
     broccoli-asset-rev: ^3.0.0
     chai: ^4.3.4
+    chai-dom: "lolmaus/chai-dom#feature/39-checked"
     ember-auto-import: ^1.11.2
     ember-cli: 3.26
     ember-cli-app-version: ^5.0.0
@@ -20161,7 +20182,6 @@ fsevents@~2.3.1:
     ember-cli-inject-live-reload: ^2.0.2
     ember-cli-sri: ^2.1.1
     ember-cli-terser: ^4.0.1
-    ember-cli-typescript: ^4.2.1
     ember-cli-typescript-blueprints: latest
     ember-data: ~3.26.0
     ember-export-application-global: ^2.0.1
