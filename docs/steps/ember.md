@@ -6,9 +6,11 @@ index: 2
 Ember-related steps
 ===================
 
+Package name: `@ember-bdd/steps-ember`.
+
 Steps for interacting with the Ember framework itself, primarily delegating to [@ember/test-helpers](https://github.com/emberjs/ember-test-helpers/).
 
-Note: this package does not include steps for interacting with the DOM. Those are in a separate package.
+Note: this package does not include steps for interacting with the DOM. Those are in the [DOM package](./dom).
 
 
 
@@ -139,7 +141,7 @@ Then I should be at URL "/"
 Then I should be on URL "/foo"
 Then I should still be at URL "/products?sort=desc"
 Then I should still be on URL "/"
-
+```
 
 
 
@@ -182,9 +184,6 @@ Then current URL should NOT have query param "foo"
 ```
 
 
-
-
-
 Checking for a query param key value
 ------------------------------------
 
@@ -203,4 +202,3 @@ Then current URL should have query param "foo" with value "bar"
 Then current URL should not have query param "foo" with value "bar"
 Then current URL should NOT have query param "foo" with value "bar"
 ```
-
