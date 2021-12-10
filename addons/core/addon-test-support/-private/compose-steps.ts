@@ -4,9 +4,9 @@ import {
   StepImplementation,
   StepImplementationsRecord,
 } from '../types';
-import { isLabelTuple } from '../dom-helpers';
 import QUnit from 'qunit';
 import { Library } from 'yadda/lib/localisation/English';
+import { isCollection } from '../dom-helpers';
 
 export const REGEX_STEP_NAME = /^(\S+) ([\s\S]+)$/;
 
@@ -53,8 +53,8 @@ function makeBetterMessage({
   message = `\n👟 ${stepName}\n⚙ ${stepImplName}\n⚠ ${message}\n\n🛠Arguments:`;
 
   args.forEach((arg, i) => {
-    const argMessage = isLabelTuple(arg)
-      ? `Collection. Length: ${arg[0].length}, Label: ${arg[1]}, Selector: ${arg[2]}`
+    const argMessage = isCollection(arg)
+      ? `Collection. Length: ${arg.elements.length}, Label: ${arg.label}, Selector: ${arg.selector}`
       : arg;
 
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions

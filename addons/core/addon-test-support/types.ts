@@ -33,13 +33,6 @@ export type LabelOverridesRecord = Record<string, string>;
 export type Label = string;
 export type SelectorCompound = string;
 
-export interface LabelTuple {
-  [0]: Element[];
-  [1]: Label;
-  [2]: SelectorCompound;
-  __isLabelTuple__: true;
-}
-
 export interface StepFnOpinionated extends StepFn {
   assert: Assert;
 }
