@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ember-bdd docs</title>
+    <meta name="description" content="Docs for ember-bdd, a Cucumber-like BDD testing solution for Ember">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="og:title" content="ember-bdd docs">
+    <meta name="og:description" content="Docs for ember-bdd, a Cucumber-like BDD testing solution for Ember">
+    <meta name="og:locale" content="en-US">
+
+    
+<meta name="docs-app/config/environment" content="%7B%22environment%22%3A%22production%22%2C%22modulePrefix%22%3A%22docs-app%22%2C%22podModulePrefix%22%3A%22docs-app%2Fpods%22%2C%22rootURL%22%3A%22%2Fember-bdd%2F%22%2C%22locationType%22%3A%22auto%22%2C%22apiNamespace%22%3A%22%22%2C%22apiHost%22%3A%22%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%22EMBER_METAL_TRACKED_PROPERTIES%22%3Atrue%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22LOG_RESOLVER%22%3Afalse%2C%22LOG_ACTIVE_GENERATION%22%3Afalse%2C%22LOG_TRANSITIONS%22%3Afalse%2C%22LOG_TRANSITIONS_INTERNAL%22%3Afalse%2C%22LOG_VIEW_LOOKUPS%22%3Afalse%2C%22name%22%3A%22docs-app%22%2C%22version%22%3A%220.0.0%2Bd0abae49%22%7D%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->
+
+    <link integrity="" rel="stylesheet" href="/ember-bdd/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
+    <link integrity="" rel="stylesheet" href="/ember-bdd/assets/docs-app-19e02fa591a445b08bcc8ebeabafea30.css">
+
+    
+    <link rel="shortcut icon" href="/ember-bdd/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ember-bdd/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ember-bdd/favicon-32x32.png">
+    <link rel="manifest" href="/ember-bdd/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name" content="ember-bdd docs">
+    <link rel="apple-touch-icon" sizes="57x57" href="/ember-bdd/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/ember-bdd/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/ember-bdd/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/ember-bdd/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/ember-bdd/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/ember-bdd/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/ember-bdd/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/ember-bdd/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/ember-bdd/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ember-bdd/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="/ember-bdd/apple-touch-icon-1024x1024.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="ember-bdd docs">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/ember-bdd/apple-touch-startup-image-320x460.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/ember-bdd/apple-touch-startup-image-640x920.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/ember-bdd/apple-touch-startup-image-640x1096.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/ember-bdd/apple-touch-startup-image-750x1294.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/ember-bdd/apple-touch-startup-image-1182x2208.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/ember-bdd/apple-touch-startup-image-1242x2148.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/ember-bdd/apple-touch-startup-image-748x1024.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/ember-bdd/apple-touch-startup-image-768x1004.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/ember-bdd/apple-touch-startup-image-1496x2048.png">
+    <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/ember-bdd/apple-touch-startup-image-1536x2008.png">
+    <link rel="icon" type="image/png" sizes="228x228" href="/ember-bdd/coast-228x228.png">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/ember-bdd/mstile-144x144.png">
+    <meta name="msapplication-config" content="/ember-bdd/browserconfig.xml">
+    <link rel="yandex-tableau-widget" href="/ember-bdd/yandex-browser-manifest.json">
+  </head>
+  <body>
+    <script type="x/boundary" id="fastboot-body-start"></script><div class="Route-Application">
+  <header class="Route-Application-Header">
+    <div>
+      <h2>ember-bdd</h2>
+
+      <p>
+        A Cucumber-style BDD testing solution for Ember
+      </p>
+    </div>
+
+      <ul class="Toc Route-Application-Toc">
+      <a href="/ember-bdd/" id="ember123" class="ember-view Toc-Item-Link link">
+        What and Why
+      </a>
+
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            Concept
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/ember-bdd/concept/glossary" id="ember124" class="ember-view Toc-Item-Link link">
+            Glossary
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/ember-bdd/concept/truth" id="ember125" class="ember-view Toc-Item-Link link">
+            Truth to feature files
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/ember-bdd/concept/labels" id="ember126" class="ember-view Toc-Item-Link link">
+            Labels for test selectors
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/ember-bdd/concept/composing" id="ember127" class="ember-view Toc-Item-Link link">
+            Composing step implementations
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/ember-bdd/concept/debugging" id="ember128" class="ember-view Toc-Item-Link link">
+            Debugging
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            Usage
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/ember-bdd/usage/project-structure" id="ember129" class="ember-view Toc-Item-Link link">
+            Project Structure
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/ember-bdd/usage/dictionary" id="ember130" class="ember-view Toc-Item-Link link">
+            Dictionary
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/ember-bdd/usage/annotations" id="ember131" class="ember-view Toc-Item-Link link">
+            Annotations
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+      <li class="Toc-Item">
+          <span class="Toc-Item-Link _empty">
+            The steps
+          </span>
+
+          <ul class="Toc">
+<!---->
+      <li class="Toc-Item">
+          <a href="/ember-bdd/steps/config" id="ember132" class="ember-view Toc-Item-Link link">
+            The Config
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/ember-bdd/steps/ember" id="ember133" class="ember-view Toc-Item-Link link">
+            Ember
+          </a>
+
+        <!---->
+      </li>
+      <li class="Toc-Item">
+          <a href="/ember-bdd/steps/dom" id="ember134" class="active ember-view Toc-Item-Link link">
+            DOM
+          </a>
+
+        <!---->
+      </li>
+  </ul>
+
+      </li>
+  </ul>
+
+  </header>
+
+  <main class="Route-Application-Content">
+    <div class="Route-Application-Content-Inner">
+      <div class="Route-Page">
+  <div class="Route-Page-Content">
+    
+<h1 id="dommanipulationsteps">DOM manipulation steps</h1>
+<p>Package name: <code>@ember-bdd/steps-dom</code>.</p>
+<p>Steps for interacting with elements on the page, mostly delegating to <a href="https://github.com/emberjs/ember-test-helpers/">@ember/test-helpers</a>.</p>
+<p>Note: this package does not include steps for interacting with the URL. Those are in the <a href="./ember">steps-ember</a>.</p>
+<h2 id="clickinganelement">Clicking an element</h2>
+<p>Triggers a click event on an element. Delegates to <a href="https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click">click</a>.</p>
+<p>Expects exactly one element to match the selector label.</p>
+<p>⚠ This step would silently ignore disabled form elements. That's unlike the <code>click()</code> helper from <code>@ember/test-helpers</code> which would throw an error when attempting to click a disabled element. Throwing an error lets you notice early that you're doing something that might be unintended and meaningless. But it might as well being intended, e. g. when trying to reproduce a BDD scenario written by a UI/UX designer, and the scenario involves clicking an element. See <a href="https://github.com/emberjs/ember-test-helpers/issues/1100">related discussion</a> and <a href="https://github.com/emberjs/ember-test-helpers/pull/778">implementation</a>.</p>
+<p><strong>Signature</strong>: </p>
+<pre><code class="feature language-feature">When I click (?:on )?$emberBddLabel
+</code></pre>
+<p><strong>Examples</strong>:</p>
+<pre><code class="feature language-feature">When I click Submit-Button
+When I click the Submit-Button
+When I click on Submit-Button
+When I click on the Submit-Button
+</code></pre>
+<h2 id="doubleclickinganelement">Double clicking an element</h2>
+<p>Triggers a click event on an element. Delegates to <a href="https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click">click</a>.</p>
+<p>Expects exactly one element to match the selector label.</p>
+<p>⚠ This step would silently ignore disabled form elements. That's unlike the <code>click()</code> helper from <code>@ember/test-helpers</code> which would throw an error when attempting to click a disabled element. Throwing an error lets you notice early that you're doing something that might be unintended and meaningless. But it might as well being intended, e. g. when trying to reproduce a BDD scenario written by a UI/UX designer, and the scenario involves clicking an element. See <a href="https://github.com/emberjs/ember-test-helpers/issues/1100">related discussion</a>  and <a href="https://github.com/emberjs/ember-test-helpers/pull/778">implementation</a>.</p>
+<p><strong>Signature</strong>: </p>
+<pre><code class="feature language-feature">When I double click (?:on )?$emberBddLabel
+</code></pre>
+<p><strong>Examples</strong>:</p>
+<pre><code class="feature language-feature">When I double click Submit-Button
+When I double click the Submit-Button
+When I double click on Submit-Button
+When I double click on the Submit-Button
+</code></pre>
+<h2 id="typingtextintoatextfield">Typing text into a text field</h2>
+<p>Fills text into given input, textarea or a contenteditable, or selects a value in a select. Delegates to <a href="https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click">click</a>.</p>
+<p>Expects exactly one element to match the selector label.</p>
+<p><strong>Signature</strong>:</p>
+<pre><code class="feature language-feature">When I (?:fill|type) "(.*)" into $emberBddLabel
+</code></pre>
+<p><strong>Examples</strong>:</p>
+<pre><code class="feature language-feature">When I type "foo" into the Name-Field
+When I fill "bar" into Name-Field
+</code></pre>
+<h2 id="movingthemousepointerintoanelement">Moving the mouse pointer into an element</h2>
+<p>Fills text into given input, textarea or a contenteditable, or selects a value in a select. Delegates to <a href="https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click">click</a>.</p>
+<p>Expects exactly one element to match the selector label.</p>
+<p><strong>Signature</strong>:</p>
+<pre><code class="feature language-feature">When I move the mouse pointer out of $emberBddLabel
+</code></pre>
+<p><strong>Examples</strong>:</p>
+<pre><code class="feature language-feature">When I type "foo" into the Name-Field
+When I fill "bar" into Name-Field
+</code></pre>
+<h2 id="assertingelemnetexistencecount">Asserting elemnet existence/count</h2>
+<p>Asserts that a given number of elements exist or dont' exist on a page</p>
+<p><strong>Signature</strong>: </p>
+<pre><code class="feature language-feature">Then there should be (NO |no )?(?:(\\d+) )?$emberBddLabel
+</code></pre>
+<p><strong>Examples</strong>:</p>
+<pre><code class="feature language-feature">Then there should be NO Items
+Then there should be 0 Items
+Then there should be an Item
+Then there should be 1 Item
+Then there should be 2 Items
+</code></pre>
+
+  </div>
+
+
+  <div class="Route-Page-Links">
+        <a href="/ember-bdd/steps/ember" id="ember135" class="ember-view Route-Page-Links-Link _back">
+          ← Ember
+        </a>
+
+<!---->  </div>
+</div>
+
+    </div>
+  </main>
+</div>
+<script type="fastboot/shoebox" id="shoebox-pages">[{"type":"pages","id":"concept","attributes":{"title":"Concept","index":1,"sectionOnly":true}},{"type":"pages","id":"concept/composing","attributes":{"title":"Composing step implementations","index":4}},{"type":"pages","id":"concept/debugging","attributes":{"title":"Debugging","index":5}},{"type":"pages","id":"concept/glossary","attributes":{"title":"Glossary","index":1}},{"type":"pages","id":"concept/labels","attributes":{"title":"Labels for test selectors","index":3}},{"type":"pages","id":"concept/truth","attributes":{"title":"Truth to feature files","index":2}},{"type":"pages","id":"index","attributes":{"title":"What and Why"}},{"type":"pages","id":"steps","attributes":{"title":"The steps","index":3,"sectionOnly":true}},{"type":"pages","id":"steps/config","attributes":{"title":"The Config","index":1}},{"type":"pages","id":"steps/dom","attributes":{"title":"DOM","index":3}},{"type":"pages","id":"steps/ember","attributes":{"title":"Ember","index":2}},{"type":"pages","id":"usage","attributes":{"title":"Usage","index":2,"sectionOnly":true}},{"type":"pages","id":"usage/annotations","attributes":{"title":"Annotations","index":3}},{"type":"pages","id":"usage/dictionary","attributes":{"title":"Dictionary","index":2}},{"type":"pages","id":"usage/project-structure","attributes":{"title":"Project Structure","index":1}}]</script><script type="fastboot/shoebox" id="shoebox-pages steps__dom">{"type":"pages","id":"steps/dom","attributes":{"html":"\u003ch1 id=\"dommanipulationsteps\"\u003eDOM manipulation steps\u003c/h1\u003e\n\u003cp\u003ePackage name: \u003ccode\u003e@ember-bdd/steps-dom\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eSteps for interacting with elements on the page, mostly delegating to \u003ca href=\"https://github.com/emberjs/ember-test-helpers/\"\u003e@ember/test-helpers\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eNote: this package does not include steps for interacting with the URL. Those are in the \u003ca href=\"./ember\"\u003esteps-ember\u003c/a\u003e.\u003c/p\u003e\n\u003ch2 id=\"clickinganelement\"\u003eClicking an element\u003c/h2\u003e\n\u003cp\u003eTriggers a click event on an element. Delegates to \u003ca href=\"https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click\"\u003eclick\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eExpects exactly one element to match the selector label.\u003c/p\u003e\n\u003cp\u003e⚠ This step would silently ignore disabled form elements. That's unlike the \u003ccode\u003eclick()\u003c/code\u003e helper from \u003ccode\u003e@ember/test-helpers\u003c/code\u003e which would throw an error when attempting to click a disabled element. Throwing an error lets you notice early that you're doing something that might be unintended and meaningless. But it might as well being intended, e. g. when trying to reproduce a BDD scenario written by a UI/UX designer, and the scenario involves clicking an element. See \u003ca href=\"https://github.com/emberjs/ember-test-helpers/issues/1100\"\u003erelated discussion\u003c/a\u003e and \u003ca href=\"https://github.com/emberjs/ember-test-helpers/pull/778\"\u003eimplementation\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eSignature\u003c/strong\u003e: \u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eWhen I click (?:on )?$emberBddLabel\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eExamples\u003c/strong\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eWhen I click Submit-Button\nWhen I click the Submit-Button\nWhen I click on Submit-Button\nWhen I click on the Submit-Button\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"doubleclickinganelement\"\u003eDouble clicking an element\u003c/h2\u003e\n\u003cp\u003eTriggers a click event on an element. Delegates to \u003ca href=\"https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click\"\u003eclick\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eExpects exactly one element to match the selector label.\u003c/p\u003e\n\u003cp\u003e⚠ This step would silently ignore disabled form elements. That's unlike the \u003ccode\u003eclick()\u003c/code\u003e helper from \u003ccode\u003e@ember/test-helpers\u003c/code\u003e which would throw an error when attempting to click a disabled element. Throwing an error lets you notice early that you're doing something that might be unintended and meaningless. But it might as well being intended, e. g. when trying to reproduce a BDD scenario written by a UI/UX designer, and the scenario involves clicking an element. See \u003ca href=\"https://github.com/emberjs/ember-test-helpers/issues/1100\"\u003erelated discussion\u003c/a\u003e  and \u003ca href=\"https://github.com/emberjs/ember-test-helpers/pull/778\"\u003eimplementation\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eSignature\u003c/strong\u003e: \u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eWhen I double click (?:on )?$emberBddLabel\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eExamples\u003c/strong\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eWhen I double click Submit-Button\nWhen I double click the Submit-Button\nWhen I double click on Submit-Button\nWhen I double click on the Submit-Button\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"typingtextintoatextfield\"\u003eTyping text into a text field\u003c/h2\u003e\n\u003cp\u003eFills text into given input, textarea or a contenteditable, or selects a value in a select. Delegates to \u003ca href=\"https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click\"\u003eclick\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eExpects exactly one element to match the selector label.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eSignature\u003c/strong\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eWhen I (?:fill|type) \"(.*)\" into $emberBddLabel\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eExamples\u003c/strong\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eWhen I type \"foo\" into the Name-Field\nWhen I fill \"bar\" into Name-Field\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"movingthemousepointerintoanelement\"\u003eMoving the mouse pointer into an element\u003c/h2\u003e\n\u003cp\u003eFills text into given input, textarea or a contenteditable, or selects a value in a select. Delegates to \u003ca href=\"https://github.com/emberjs/ember-test-helpers/blob/master/API.md#click\"\u003eclick\u003c/a\u003e.\u003c/p\u003e\n\u003cp\u003eExpects exactly one element to match the selector label.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eSignature\u003c/strong\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eWhen I move the mouse pointer out of $emberBddLabel\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eExamples\u003c/strong\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eWhen I type \"foo\" into the Name-Field\nWhen I fill \"bar\" into Name-Field\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"assertingelemnetexistencecount\"\u003eAsserting elemnet existence/count\u003c/h2\u003e\n\u003cp\u003eAsserts that a given number of elements exist or dont' exist on a page\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eSignature\u003c/strong\u003e: \u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eThen there should be (NO |no )?(?:(\\\\d+) )?$emberBddLabel\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003eExamples\u003c/strong\u003e:\u003c/p\u003e\n\u003cpre\u003e\u003ccode class=\"feature language-feature\"\u003eThen there should be NO Items\nThen there should be 0 Items\nThen there should be an Item\nThen there should be 1 Item\nThen there should be 2 Items\n\u003c/code\u003e\u003c/pre\u003e","title":"DOM","index":3}}</script><script type="x/boundary" id="fastboot-body-end"></script>
+
+    <div class="loading-overlay" id="app-loading">
+      <div class="spinner-border text-primary" role="status"><span class="sr-only">Lade...</span></div>
+    </div>
+    <style>
+      .loading-overlay {
+        position: fixed;
+        left: 50vw;
+        top: 50vh;
+        transform: translate(-50%,-50%);
+      }
+    </style>
+
+    <script src="/ember-bdd/assets/vendor-4d802a6e2607b9b091fff8e9ddfb8fca.js"></script>
+    <script src="/ember-bdd/assets/docs-app-d7d540a2a57b6faa5be0b5e0bd44c983.js"></script>
+
+    
+  </body>
+</html>
