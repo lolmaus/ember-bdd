@@ -72,6 +72,7 @@ jobs:
           - ember-classic
           - embroider-safe
           - embroider-optimized
+      fail-fast: false
 
     steps:
       - name: Checkout code

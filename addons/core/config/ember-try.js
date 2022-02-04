@@ -75,5 +75,8 @@ module.exports = async function () {
         },
       },
     ],
+    buildManagerOptions(scenario) {
+      return [];
+    },
   };
 };

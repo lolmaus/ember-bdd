@@ -78,5 +78,8 @@ module.exports = async function () {
       embroiderSafe(),
       embroiderOptimized(),
     ],
+    buildManagerOptions(scenario) {
+      return [];
+    },
   };
 };
