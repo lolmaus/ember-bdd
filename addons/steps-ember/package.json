@@ -67,7 +67,7 @@
     "@typescript-eslint/parser": "^4.29.0",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
-    "ember-auto-import": "^1.11.3",
+    "ember-auto-import": "^2.4.0",
     "ember-cli": "~3.27.0",
     "ember-cli-dependency-checker": "^3.2.0",
     "ember-cli-inject-live-reload": "^2.0.2",
@@ -102,7 +102,8 @@
     "prettier": "^2.3.2",
     "qunit": "^2.15.0",
     "qunit-dom": "^1.6.0",
-    "typescript": "latest"
+    "typescript": "latest",
+    "webpack": "^5.66.0"
   },
   "engines": {
     "node": "10.* || >= 12"

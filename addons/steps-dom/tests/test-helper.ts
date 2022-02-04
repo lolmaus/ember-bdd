@@ -7,6 +7,7 @@ import { start } from 'ember-qunit';
 import chai from 'chai';
 import chaiDom from 'chai-dom';
 
+
 chai.use(chaiDom);
 
 setApplication(Application.create(config.APP));

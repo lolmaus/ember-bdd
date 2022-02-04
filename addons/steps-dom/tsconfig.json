@@ -21,6 +21,7 @@
     "module": "es6",
     "experimentalDecorators": true,
     "skipLibCheck": true,
+    "rootDir": "../..",
     "paths": {
       "dummy/tests/*": [
         "tests/*"
