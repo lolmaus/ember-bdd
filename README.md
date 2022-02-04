@@ -4,6 +4,14 @@ ember-bdd
 A Cucumber-style BDD testing solution for Ember.
 
 
+Compatibility
+------------------------------------------------------------------------------
+
+* Ember.js v3.24 or above
+* Ember CLI v3.24 or above
+* Node.js v12 or above
+* Embroider or ember-auto-import v2
+
 
 Docs
 ----
