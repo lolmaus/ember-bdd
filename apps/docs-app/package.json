@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "Small description for docs-app goes here",
-  "repository": "",
+  "repository": "https://github.com/kaliber5/ember-bdd.git",
   "license": "MIT",
   "author": "",
   "directories": {
