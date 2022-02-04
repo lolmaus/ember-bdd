@@ -16,8 +16,6 @@
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:*:fix'",
-    "lint:etl": "ember-template-lint .",
-    "lint:etl:fix": "ember-template-lint . --fix",
     "lint:eslint": "eslint . --ext .js,.ts --cache",
     "lint:eslint:fix": "eslint . --ext .js,.ts --cache --fix",
     "lint:tsc": "tsc --noEmit",
@@ -35,7 +33,7 @@
     "broccoli-file-creator": "^2.1.1",
     "broccoli-merge-trees": "^4.2.0",
     "broccoli-persistent-filter": "^3.1.2",
-    "ember-auto-import": "^1.11.2",
+    "ember-auto-import": "^2.4.0",
     "ember-cli-babel": "^7.26.3",
     "ember-cli-htmlbars": "^5.7.1",
     "ember-cli-typescript": "^4.2.1",
@@ -118,7 +116,8 @@
     "loader.js": "^4.7.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+    "webpack": "^5.68.0"
   },
   "engines": {
     "node": "10.* || >= 12"

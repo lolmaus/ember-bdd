@@ -14,9 +14,14 @@ module.exports = {
   options: {
     autoImport: {
       webpack: {
+        resolve: {
+          fallback: {
+            fs: false,
+            path: false,
+          },
+        },
         node: {
-          fs: 'empty',
-          path: 'empty',
+          global: true,
         },
       },
     },

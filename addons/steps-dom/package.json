@@ -16,8 +16,6 @@
     "build": "ember build --environment=production",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:!(fix)'",
     "lint:fix": "npm-run-all --aggregate-output --continue-on-error --parallel 'lint:*:fix'",
-    "lint:etl": "ember-template-lint .",
-    "lint:etl:fix": "ember-template-lint . --fix",
     "lint:eslint": "eslint . --ext .js,.ts --cache",
     "lint:eslint:fix": "eslint . --ext .js,.ts --cache --fix",
     "lint:tsc": "tsc --noEmit",
@@ -33,9 +31,8 @@
     "@ember-bdd/core": "*",
     "chai": "^4.3.4",
     "chai-dom": "lolmaus/chai-dom#feature/39-checked",
-    "ember-auto-import": "1.12.0",
+    "ember-auto-import": "^2.4.0",
     "ember-cli-babel": "^7.26.6",
-    "ember-cli-htmlbars": "^5.7.1",
     "ember-cli-typescript": "^4.2.1"
   },
   "devDependencies": {
@@ -74,6 +71,7 @@
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.27.0",
     "ember-cli-dependency-checker": "^3.2.0",
+    "ember-cli-htmlbars": "^5.7.1",
     "ember-cli-htmlbars-inline-precompile": "^3.0.2",
     "ember-cli-inject-live-reload": "^2.0.2",
     "ember-cli-sri": "^2.1.1",
@@ -88,7 +86,6 @@
     "ember-resolver": "^8.0.2",
     "ember-source": "~3.27.2",
     "ember-source-channel-url": "^3.0.0",
-    "ember-template-lint": "^3.5.1",
     "ember-try": "^1.4.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -108,7 +105,8 @@
     "qunit": "^2.15.0",
     "qunit-dom": "^1.6.0",
     "sinon": "^11.1.2",
-    "typescript": "latest"
+    "typescript": "latest",
+    "webpack": "^5.68.0"
   },
   "engines": {
     "node": "10.* || >= 12"

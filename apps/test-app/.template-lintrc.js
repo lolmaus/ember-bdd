@@ -1,3 +1,10 @@
 'use strict';
 
-module.exports = require('../../addons/core/.template-lintrc.js');
+module.exports = {
+  extends: 'octane',
+  rules: {
+    'no-bare-strings': false,
+    'no-curly-component-invocation': { allow: ['while-loading'] },
+    'require-input-label': false,
+  },
+};
