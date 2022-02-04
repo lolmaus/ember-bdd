@@ -2583,6 +2583,7 @@ __metadata:
   dependencies:
     "@ember/optional-features": ^2.0.0
     "@ember/test-helpers": ^2.2.5
+    "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@hqoss/guards": ^0.0.3
@@ -2677,7 +2678,7 @@ __metadata:
   dependencies:
     "@ember/optional-features": ^2.0.0
     "@ember/test-helpers": ^2.2.5
-    "@embroider/test-setup": ^0.37.0
+    "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@types/ember": ^3.16.5
@@ -2765,7 +2766,7 @@ __metadata:
     "@ember-bdd/core": "*"
     "@ember/optional-features": ^2.0.0
     "@ember/test-helpers": ^2.2.5
-    "@embroider/test-setup": ^0.41.0
+    "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@types/chai-dom": ^0.0.11
@@ -2848,7 +2849,7 @@ __metadata:
   dependencies:
     "@ember/optional-features": ^2.0.0
     "@ember/test-helpers": ^2.2.5
-    "@embroider/test-setup": ^0.41.0
+    "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@types/ember-qunit": latest
@@ -3264,23 +3265,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@embroider/test-setup@npm:^0.37.0":
-  version: 0.37.0
-  resolution: "@embroider/test-setup@npm:0.37.0"
+"@embroider/test-setup@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@embroider/test-setup@npm:1.0.0"
   dependencies:
-    lodash: ^4.17.20
-    resolve: ^1.17.0
-  checksum: 3d7176316c0f8b7dd2030ec7e16d7013d8c3d846bf0089236767caf8f9acff92d963ecdfd8995e618ef47638dcb5d6a1835ebb4356d3f90501445ff8daf45b5a
-  languageName: node
-  linkType: hard
-
-"@embroider/test-setup@npm:^0.41.0":
-  version: 0.41.0
-  resolution: "@embroider/test-setup@npm:0.41.0"
-  dependencies:
-    lodash: ^4.17.20
-    resolve: ^1.17.0
-  checksum: a547005909180cc302632ce5413ee5cbb68188d23ae0c957f24f2318a35b7f43011fa5b1e356b1fbcbf7f81dde77b51b5ae521797b53fa93dcd419885ac956f5
+    lodash: ^4.17.21
+    resolve: ^1.20.0
+  checksum: a153e9b6df7134691b4866b37cad98465c66673e7a9344f564ee0317c0684147591d9a5cc16e986b66c44092449e0635045333b8a2d81a3912dfa7a42c710757
   languageName: node
   linkType: hard
 
