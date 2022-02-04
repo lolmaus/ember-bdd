@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "module": "es6",
     "experimentalDecorators": true,
+    "rootDir": "../..",
     "paths": {
       "dummy/tests/*": [
         "tests/*"
