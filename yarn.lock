@@ -2582,7 +2582,7 @@ __metadata:
   resolution: "@ember-bdd/core@workspace:addons/core"
   dependencies:
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
     "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
@@ -2677,7 +2677,7 @@ __metadata:
   resolution: "@ember-bdd/steps-config-environment@workspace:addons/steps-config-environment"
   dependencies:
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
     "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
@@ -2765,7 +2765,7 @@ __metadata:
   dependencies:
     "@ember-bdd/core": "*"
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
     "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
@@ -2848,7 +2848,7 @@ __metadata:
   resolution: "@ember-bdd/steps-ember@workspace:addons/steps-ember"
   dependencies:
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
     "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
@@ -3137,17 +3137,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ember/test-helpers@npm:^2.2.5":
-  version: 2.2.5
-  resolution: "@ember/test-helpers@npm:2.2.5"
+"@ember/test-helpers@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "@ember/test-helpers@npm:2.6.0"
   dependencies:
-    "@ember/test-waiters": ^2.4.3
+    "@ember/test-waiters": ^3.0.0
     broccoli-debug: ^0.6.5
-    broccoli-funnel: ^3.0.3
-    ember-cli-babel: ^7.26.2
+    broccoli-funnel: ^3.0.8
+    ember-cli-babel: ^7.26.6
     ember-cli-htmlbars: ^5.7.1
     ember-destroyable-polyfill: ^2.0.3
-  checksum: 7b58f05afe461195b9d6fdceb5018a3b6d6af69a4c4880ad0cc48359ae2efb0cca5ae78acd3d00d1dff02cb4aa832cea5e858ad222b602665a426091f15af0b2
+  checksum: d6cf174e4b4ea1674c9078cfa1b8add52371c7177d38a6d5088d2817ef47da9d76c63a2f1d607585f0a85204985fc16135ea72693e83743e4f908749aa01838a
   languageName: node
   linkType: hard
 
@@ -10346,7 +10346,7 @@ __metadata:
   resolution: "docs-app@workspace:apps/docs-app"
   dependencies:
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
     "@ember/test-waiters": ^2.4.3
     "@github-docs/frontmatter": ^1.3.1
     "@glimmer/component": ^1.0.4
@@ -22138,7 +22138,7 @@ fsevents@~2.3.1:
     "@ember-bdd/steps-dom": "*"
     "@ember-bdd/steps-ember": "*"
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@sniptt/guards": ^0.2.0

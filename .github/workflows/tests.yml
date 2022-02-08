@@ -11,6 +11,7 @@ jobs:
   apps:
     name: Test Apps
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       matrix:
         app:
@@ -56,6 +57,7 @@ jobs:
   addons:
     name: Test Addons
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       matrix:
         addon:
