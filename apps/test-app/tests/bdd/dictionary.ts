@@ -1,6 +1,12 @@
-import { $emberBddInt, $emberBddJson, $emberBddLabel, $emberBddString } from '@ember-bdd/core';
+import {
+  $emberBddInt,
+  $emberBddJson,
+  $emberBddLabel,
+  $emberBddString,
+  ConvertersOpinionatedRecord,
+} from '@ember-bdd/core';
 
-export default {
+const dictionary: ConvertersOpinionatedRecord = {
   // A regular expression with a capturing group
   $email: /(.+?@.+)/, // john.doe@example.com
 
@@ -18,10 +24,13 @@ export default {
 
   $index: [
     /(\d+)(?:st|nd|rd|th)/, // ?: means a non-capturing group
-    (numberStr) => parseInt(numberStr, 10) - 1,
+    (numberStr: string): number => parseInt(numberStr, 10) - 1,
   ],
 
-  $collection: [/(.+)/, (selector) => Array.from(document.querySelectorAll(selector))],
+  $collection: [
+    /(.+)/,
+    (selector: string): Element[] => Array.from(document.querySelectorAll(selector)),
+  ],
 
   $quotedString: /"(.+?)"/, // Unquotes the string
 
@@ -30,3 +39,5 @@ export default {
   $emberBddLabel,
   $emberBddString,
 };
+
+export default dictionary;

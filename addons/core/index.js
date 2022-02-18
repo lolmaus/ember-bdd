@@ -1,8 +1,6 @@
 'use strict';
 
 const FeatureParser = require('./lib/feature-parser');
-const reexporter = require('./lib/reexporter');
-const mergeTrees = require('broccoli-merge-trees');
 
 module.exports = {
   name: require('./package').name,
@@ -44,10 +42,7 @@ module.exports = {
 
     const Funnel = require('broccoli-funnel');
 
-    const treeWithReexports = reexporter(this);
-    const input = mergeTrees([tree, treeWithReexports]);
-
-    const scopedInputTree = new Funnel(input, { destDir: this.name });
+    const scopedInputTree = new Funnel(tree, { destDir: this.name });
 
     return this.preprocessJs(scopedInputTree, '/', this.name, {
       registry: this.registry,

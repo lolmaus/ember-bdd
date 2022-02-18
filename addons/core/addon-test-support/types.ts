@@ -118,7 +118,7 @@ export function isMethodName(maybeMethodName: unknown): maybeMethodName is Metho
 export type Next = (err: Error | null, result?: unknown) => void;
 
 export interface AnnotationsRecord {
-  [index: string]: (hooks: NestedHooks, arg?: string | true) => void;
+  [index: string]: (hooks: NestedHooks, arg?: string | unknown) => void;
 }
 
 export function isAnnotationsRecord(

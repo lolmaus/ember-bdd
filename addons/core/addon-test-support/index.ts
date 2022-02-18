@@ -1,4 +1,11 @@
-export { $emberBddInt, $emberBddJson, $emberBddString, $emberBddLabel } from './dictionary';
+export {
+  $emberBddInt,
+  $emberBddJson,
+  $emberBddString,
+  $emberBddLabel,
+  setupDictionary,
+  getDictionary,
+} from './dictionary';
 
 export {
   doubleClickByLabel,
@@ -20,9 +27,13 @@ export {
 
 export { pause, isVisible, getIndexZero } from './helpers';
 
-export { selectorFromLabel } from './labels';
+export { selectorFromLabel, setupLabelOverrides, getLabelOverrides } from './labels';
 
 export { generateLabelRegexString } from './regex';
+
+export { setupAnnotations, getAnnotations } from './-private/annotations';
+
+export { setupSteps, getSteps } from './steps';
 
 // Reexport all code explicitly, for better discoverability...
 export {

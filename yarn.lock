@@ -2623,9 +2623,7 @@ __metadata:
     babel-eslint: ^10.1.0
     broccoli-asset-rev: ^3.0.0
     broccoli-debug: ^0.6.5
-    broccoli-file-creator: ^2.1.1
     broccoli-funnel: ^3.0.8
-    broccoli-merge-trees: ^4.2.0
     broccoli-persistent-filter: ^3.1.2
     ember-auto-import: ^2.4.0
     ember-cli: 3.26
@@ -2644,7 +2642,6 @@ __metadata:
     ember-maybe-import-regenerator: ^0.1.6
     ember-page-title: ^6.2.1
     ember-qunit: ^5.1.4
-    ember-require-module: ^0.3.0
     ember-resolver: ^8.0.2
     ember-source: ~3.26.1
     ember-source-channel-url: ^3.0.0
@@ -10896,7 +10893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-cli-babel@npm:^6.0.0-beta.4, ember-cli-babel@npm:^6.6.0, ember-cli-babel@npm:^6.9.2":
+"ember-cli-babel@npm:^6.0.0-beta.4, ember-cli-babel@npm:^6.6.0":
   version: 6.18.0
   resolution: "ember-cli-babel@npm:6.18.0"
   dependencies:
@@ -12012,15 +12009,6 @@ __metadata:
     "@ember/test-helpers": ^2.1.0
     qunit: ^2.13.0
   checksum: c72b5a71d7c082ba005ea79deb34d130f0f79ab9a82bcd3c70fd656c1691c2622c5f3099986dde513500a8efd47cb095a9b40c0033a6a69e915d3b1f542ffa22
-  languageName: node
-  linkType: hard
-
-"ember-require-module@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "ember-require-module@npm:0.3.0"
-  dependencies:
-    ember-cli-babel: ^6.9.2
-  checksum: e1fade99c6f7644733270ede3981b8498b8ee4c40a65ab3a8e763e7d6dc3feae88b8f7160d5fae985669a16efdf56fd9717ab78b5ecbe74e38407bb01216d0c8
   languageName: node
   linkType: hard
 
