@@ -30,16 +30,16 @@
         "app/*"
       ],
       "@ember-bdd/steps-config-environment": [
-        "addon"
-      ],
-      "@ember-bdd/steps-config-environment/*": [
-        "addon/*"
-      ],
-      "@ember-bdd/steps-config-environment/test-support": [
         "addon-test-support"
       ],
-      "@ember-bdd/steps-config-environment/test-support/*": [
+      "@ember-bdd/steps-config-environment/*": [
         "addon-test-support/*"
+      ],
+      "@ember-bdd/core": [
+        "../core/addon-test-support"
+      ],
+      "@ember-bdd/core/*": [
+        "../core/addon-test-support/*"
       ],
       "*": [
         "types/*"

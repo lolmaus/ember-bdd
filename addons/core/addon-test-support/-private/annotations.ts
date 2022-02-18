@@ -4,7 +4,7 @@ import { assert } from '@ember/debug';
 import { isAnnotationsRecord } from '../types';
 
 export default function applyAnnotations(annotations: Annotations, hooks: NestedHooks): void {
-  const annotationFunctionsRecord = requireModule('@ember-bdd/core/test-support/app/annotations');
+  const annotationFunctionsRecord = requireModule('@ember-bdd/core/app/annotations');
 
   if (!annotationFunctionsRecord) return;
 

@@ -1,9 +1,4 @@
-import {
-  $emberBddInt,
-  $emberBddJson,
-  $emberBddLabel,
-  $emberBddString,
-} from '@ember-bdd/core/test-support/dictionary';
+import { $emberBddInt, $emberBddJson, $emberBddLabel, $emberBddString } from '@ember-bdd/core';
 
 export default {
   // A regular expression with a capturing group

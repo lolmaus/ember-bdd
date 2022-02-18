@@ -28,16 +28,28 @@
       "test-app/*": [
         "app/*"
       ],
-      "@ember-bdd/core/test-support/*": [
+      "@ember-bdd/core": [
+        "node_modules/@ember-bdd/core/addon-test-support"
+      ],
+      "@ember-bdd/core/*": [
         "node_modules/@ember-bdd/core/addon-test-support/*"
       ],
-      "@ember-bdd/steps-config-environment/test-support/*": [
+      "@ember-bdd/steps-config-environment": [
+        "node_modules/@ember-bdd/steps-config-environment/addon-test-support"
+      ],
+      "@ember-bdd/steps-config-environment/*": [
         "node_modules/@ember-bdd/steps-config-environment/addon-test-support/*"
       ],
-      "@ember-bdd/steps-ember/test-support/*": [
+      "@ember-bdd/steps-ember": [
+        "node_modules/@ember-bdd/steps-ember/addon-test-support"
+      ],
+      "@ember-bdd/steps-ember/*": [
         "node_modules/@ember-bdd/steps-ember/addon-test-support/*"
       ],
-      "@ember-bdd/steps-dom/test-support/*": [
+      "@ember-bdd/steps-dom": [
+        "node_modules/@ember-bdd/steps-dom/addon-test-support"
+      ],
+      "@ember-bdd/steps-dom/*": [
         "node_modules/@ember-bdd/steps-dom/addon-test-support/*"
       ],
       "*": [

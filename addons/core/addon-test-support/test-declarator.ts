@@ -39,7 +39,7 @@ export default class TestDeclarator {
   }
 
   @cached protected get library(): Library {
-    const stepImplementationsRecord = requireModule('@ember-bdd/core/test-support/app/steps') ?? {};
+    const stepImplementationsRecord = requireModule('@ember-bdd/core/app/steps') ?? {};
 
     assert(
       'The ember-bdd step implementaions library `tests/bdd/steps.js` must export an object with functions or strings',

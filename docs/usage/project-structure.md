@@ -97,7 +97,7 @@ import {
   table,
   json,
   string,
- } from '@mber-bdd/core/test-support/converters';
+ } from '@mber-bdd/core';
 
  import { modelName } from '@ember-bdd/mirage';
 

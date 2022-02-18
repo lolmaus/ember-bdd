@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { blur, click, doubleClick, fillIn, focus, triggerEvent } from '@ember/test-helpers';
-import { Collection, findEditable } from '@ember-bdd/core/test-support/dom-helpers';
+import { Collection, findEditable } from '@ember-bdd/core/dom-helpers';
 
 // @ts-ignore Missing type
 import isFormControl from '@ember/test-helpers/dom/-is-form-control';

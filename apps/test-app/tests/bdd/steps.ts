@@ -1,8 +1,8 @@
 import { expect } from 'chai';
-import { StepImplementationsRecord } from '@ember-bdd/core/test-support/types';
-import stepsConfigEnvironment from '@ember-bdd/steps-config-environment/test-support/steps';
-import stepsEmber from '@ember-bdd/steps-ember/test-support/steps';
-import stepsDom from '@ember-bdd/steps-dom/test-support/steps';
+import { StepImplementationsRecord } from '@ember-bdd/core';
+import { steps as stepsConfigEnvironment } from '@ember-bdd/steps-config-environment';
+import { steps as stepsEmber } from '@ember-bdd/steps-ember';
+import { steps as stepsDom } from '@ember-bdd/steps-dom';
 
 // @ts-ignore
 import config from 'ember-get-config';

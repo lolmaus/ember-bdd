@@ -6,7 +6,7 @@ import { isConverter, isConverterSimple, isConvertersRecord, isConverterTuple } 
 
 export function generateDictionary(): Dictionary {
   const dictionary: Dictionary = new yadda.Dictionary();
-  const converters = requireModule('@ember-bdd/core/test-support/app/dictionary') ?? {};
+  const converters = requireModule('@ember-bdd/core/app/dictionary') ?? {};
 
   assert(
     'Expected `tests/bdd/annotations.js` to have a default export with an object of ember-bdd converters.',

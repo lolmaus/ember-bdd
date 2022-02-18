@@ -31,18 +31,15 @@
         "app/*"
       ],
       "@ember-bdd/steps-dom": [
-        "addon"
-      ],
-      "@ember-bdd/steps-dom/*": [
-        "addon/*"
-      ],
-      "@ember-bdd/steps-dom/test-support": [
         "addon-test-support"
       ],
-      "@ember-bdd/steps-dom/test-support/*": [
+      "@ember-bdd/steps-dom/*": [
         "addon-test-support/*"
       ],
-      "@ember-bdd/core/test-support/*": [
+      "@ember-bdd/core": [
+        "../core/addon-test-support"
+      ],
+      "@ember-bdd/core/*": [
         "../core/addon-test-support/*"
       ],
       "*": [
