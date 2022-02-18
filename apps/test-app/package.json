@@ -30,7 +30,7 @@
     "@ember-bdd/steps-dom": "*",
     "@ember-bdd/steps-ember": "*",
     "@ember/optional-features": "^2.0.0",
-    "@ember/test-helpers": "^2.2.5",
+    "@ember/test-helpers": "^2.6.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
     "@sniptt/guards": "^0.2.0",

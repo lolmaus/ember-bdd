@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - gen-0
-    tags:
-      - '*'
   pull_request:
 
 
@@ -13,6 +11,7 @@ jobs:
   apps:
     name: Test Apps
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       matrix:
         app:
@@ -26,6 +25,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
+
+      - name: Install dependencies with Yarn
+        run: yarn install --immutable
+
+      - name: Lint
+        run: yarn lint
 
       # # https://github.com/actions/cache/blob/main/examples.md#node---yarn-2
       # - name: Get yarn cache directory path
@@ -44,7 +49,7 @@ jobs:
       - name: Install dependencies with Yarn
         run: yarn install --immutable
 
-      - name: Lint and test
+      - name: Test
         run: yarn test
         working-directory: apps/${{ matrix.app }}
 
@@ -52,11 +57,24 @@ jobs:
   addons:
     name: Test Addons
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       matrix:
         addon:
           - core
           - steps-config-environment
+          - steps-dom
+          - steps-ember
+        scenario:
+          - ember-lts-3.24
+          - ember-lts-3.28
+          - ember-release
+          - ember-beta
+          - ember-canary
+          - ember-classic
+          - embroider-safe
+          - embroider-optimized
+      fail-fast: false
 
     steps:
       - name: Checkout code
@@ -83,6 +101,8 @@ jobs:
       - name: Install dependencies with Yarn
         run: yarn install --immutable
 
-      - name: Lint and test
-        run: yarn test:ember
+      - name: Test
+        run: yarn ember try:one ${{ matrix.scenario }}
         working-directory: addons/${{ matrix.addon }}
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false

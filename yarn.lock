@@ -2582,7 +2582,8 @@ __metadata:
   resolution: "@ember-bdd/core@workspace:addons/core"
   dependencies:
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
+    "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@hqoss/guards": ^0.0.3
@@ -2676,8 +2677,8 @@ __metadata:
   resolution: "@ember-bdd/steps-config-environment@workspace:addons/steps-config-environment"
   dependencies:
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
-    "@embroider/test-setup": ^0.37.0
+    "@ember/test-helpers": ^2.6.0
+    "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@types/ember": ^3.16.5
@@ -2764,8 +2765,8 @@ __metadata:
   dependencies:
     "@ember-bdd/core": "*"
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
-    "@embroider/test-setup": ^0.41.0
+    "@ember/test-helpers": ^2.6.0
+    "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@types/chai-dom": ^0.0.11
@@ -2847,8 +2848,8 @@ __metadata:
   resolution: "@ember-bdd/steps-ember@workspace:addons/steps-ember"
   dependencies:
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
-    "@embroider/test-setup": ^0.41.0
+    "@ember/test-helpers": ^2.6.0
+    "@embroider/test-setup": ^1.0.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@types/ember-qunit": latest
@@ -3136,17 +3137,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ember/test-helpers@npm:^2.2.5":
-  version: 2.2.5
-  resolution: "@ember/test-helpers@npm:2.2.5"
+"@ember/test-helpers@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "@ember/test-helpers@npm:2.6.0"
   dependencies:
-    "@ember/test-waiters": ^2.4.3
+    "@ember/test-waiters": ^3.0.0
     broccoli-debug: ^0.6.5
-    broccoli-funnel: ^3.0.3
-    ember-cli-babel: ^7.26.2
+    broccoli-funnel: ^3.0.8
+    ember-cli-babel: ^7.26.6
     ember-cli-htmlbars: ^5.7.1
     ember-destroyable-polyfill: ^2.0.3
-  checksum: 7b58f05afe461195b9d6fdceb5018a3b6d6af69a4c4880ad0cc48359ae2efb0cca5ae78acd3d00d1dff02cb4aa832cea5e858ad222b602665a426091f15af0b2
+  checksum: d6cf174e4b4ea1674c9078cfa1b8add52371c7177d38a6d5088d2817ef47da9d76c63a2f1d607585f0a85204985fc16135ea72693e83743e4f908749aa01838a
   languageName: node
   linkType: hard
 
@@ -3264,23 +3265,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@embroider/test-setup@npm:^0.37.0":
-  version: 0.37.0
-  resolution: "@embroider/test-setup@npm:0.37.0"
+"@embroider/test-setup@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@embroider/test-setup@npm:1.0.0"
   dependencies:
-    lodash: ^4.17.20
-    resolve: ^1.17.0
-  checksum: 3d7176316c0f8b7dd2030ec7e16d7013d8c3d846bf0089236767caf8f9acff92d963ecdfd8995e618ef47638dcb5d6a1835ebb4356d3f90501445ff8daf45b5a
-  languageName: node
-  linkType: hard
-
-"@embroider/test-setup@npm:^0.41.0":
-  version: 0.41.0
-  resolution: "@embroider/test-setup@npm:0.41.0"
-  dependencies:
-    lodash: ^4.17.20
-    resolve: ^1.17.0
-  checksum: a547005909180cc302632ce5413ee5cbb68188d23ae0c957f24f2318a35b7f43011fa5b1e356b1fbcbf7f81dde77b51b5ae521797b53fa93dcd419885ac956f5
+    lodash: ^4.17.21
+    resolve: ^1.20.0
+  checksum: a153e9b6df7134691b4866b37cad98465c66673e7a9344f564ee0317c0684147591d9a5cc16e986b66c44092449e0635045333b8a2d81a3912dfa7a42c710757
   languageName: node
   linkType: hard
 
@@ -10355,7 +10346,7 @@ __metadata:
   resolution: "docs-app@workspace:apps/docs-app"
   dependencies:
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
     "@ember/test-waiters": ^2.4.3
     "@github-docs/frontmatter": ^1.3.1
     "@glimmer/component": ^1.0.4
@@ -22147,7 +22138,7 @@ fsevents@~2.3.1:
     "@ember-bdd/steps-dom": "*"
     "@ember-bdd/steps-ember": "*"
     "@ember/optional-features": ^2.0.0
-    "@ember/test-helpers": ^2.2.5
+    "@ember/test-helpers": ^2.6.0
     "@glimmer/component": ^1.0.4
     "@glimmer/tracking": ^1.0.4
     "@sniptt/guards": ^0.2.0

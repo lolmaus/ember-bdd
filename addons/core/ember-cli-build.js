@@ -14,5 +14,23 @@ module.exports = function (defaults) {
     behave. You most likely want to be modifying `./index.js` or app's build file
   */
 
-  return app.toTree();
+  const { maybeEmbroider } = require('@embroider/test-setup');
+  return maybeEmbroider(app, {
+    packagerOptions: {
+      webpackConfig: {
+        devtool: false,
+        // this is needed for yadda :( https://github.com/acuminous/yadda/blob/master/lib/shims/index.js#L12
+        resolve: {
+          fallback: {
+            fs: false,
+            path: false,
+            process: false,
+          },
+        },
+        node: {
+          global: true,
+        },
+      },
+    },
+  });
 };
