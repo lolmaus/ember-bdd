@@ -5,8 +5,8 @@ import { setupRenderingTest } from 'ember-qunit';
 import { find, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import sinon, { SinonSpy } from 'sinon';
-import steps from '@ember-bdd/steps-dom/steps';
-import { findByLabel } from '@ember-bdd/core/dom-helpers';
+import { steps } from '@ember-bdd/steps-dom';
+import { findByLabel } from '@ember-bdd/core';
 import { TestContext } from 'ember-test-helpers';
 
 module('Integration | Component | steps', function (hooks) {

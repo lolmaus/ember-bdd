@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import { findByLabel } from '@ember-bdd/core/dom-helpers';
+import { findByLabel } from '@ember-bdd/core';
 
 module('Integration | Util | find-by-label', function (hooks): void {
   setupRenderingTest(hooks);
