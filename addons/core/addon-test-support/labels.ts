@@ -46,7 +46,7 @@ function getSelectorFromLabelOverride(
   label: string,
   labelOverrides?: LabelOverridesRecord
 ): string | undefined {
-  return Object.entries(labelOverrides ?? getLabelOverrides()).find(([key]) => {
+  return Object.entries(labelOverrides ?? getLabelOverrides() ?? {}).find(([key]) => {
     return dasherize(key) === dasherize(label);
   })?.[1];
 }
@@ -63,10 +63,6 @@ export function setupLabelOverrides(labelOverrides: LabelOverridesRecord): void 
   _labelOverrides = labelOverrides;
 }
 
-export function getLabelOverrides(): LabelOverridesRecord {
-  assert(
-    'You must call `setupLabelOverrides()` before running any ember-bdd tests!',
-    _labelOverrides
-  );
+export function getLabelOverrides(): LabelOverridesRecord | undefined {
   return _labelOverrides;
 }
