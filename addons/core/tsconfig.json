@@ -31,15 +31,9 @@
         "app/*"
       ],
       "@ember-bdd/core": [
-        "addon"
-      ],
-      "@ember-bdd/core/*": [
-        "addon/*"
-      ],
-      "@ember-bdd/core/test-support": [
         "addon-test-support"
       ],
-      "@ember-bdd/core/test-support/*": [
+      "@ember-bdd/core/*": [
         "addon-test-support/*"
       ],
       "*": [

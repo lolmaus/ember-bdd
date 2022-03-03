@@ -15,7 +15,7 @@ class FeatureParser extends Filter {
     const contentEscaped = content.replace(/`/g, '\\`');
 
     const module = `
-      import TestDeclarator from '@ember-bdd/core/test-support/test-declarator';
+      import TestDeclarator from '@ember-bdd/core/test-declarator';
 
       const relativePath = '${relativePath}';
       const feature = \`${contentEscaped}\`;

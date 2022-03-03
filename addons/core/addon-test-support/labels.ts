@@ -51,8 +51,7 @@ function getSelectorFromLabelOverride(
   labelOverrides?: LabelOverridesRecord
 ): string | undefined {
   if (!labelOverrides) {
-    const labelOverridesRecord =
-      requireModule('@ember-bdd/core/test-support/app/label-overrides') ?? {};
+    const labelOverridesRecord = requireModule('@ember-bdd/core/app/label-overrides') ?? {};
 
     assert(
       'The `tests/bdd/label-overrides.js` file must export an object with strings',

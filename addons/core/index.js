@@ -29,7 +29,7 @@ module.exports = {
 
   setupPreprocessorRegistry(type, registry) {
     registry.add('js', {
-      name: 'ember-cli-yadda',
+      name: 'ember-bdd',
       ext: ['feature', 'spec', 'specification'],
       toTree: (tree) => {
         return new FeatureParser(tree, this.options);
@@ -38,9 +38,20 @@ module.exports = {
   },
 
   treeForAddonTestSupport: function (tree) {
-    const treeWithReexports = reexporter(this);
-    const resultingTree = mergeTrees([tree, treeWithReexports]);
+    // intentionally not calling _super here
+    // so that can have our `import`'s be
+    // import { ... } from 'ember-bdd/*';
 
-    return this._super.treeForAddonTestSupport.call(this, resultingTree);
+    const Funnel = require('broccoli-funnel');
+
+    const treeWithReexports = reexporter(this);
+    const input = mergeTrees([tree, treeWithReexports]);
+
+    const scopedInputTree = new Funnel(input, { destDir: this.name });
+
+    return this.preprocessJs(scopedInputTree, '/', this.name, {
+      registry: this.registry,
+      treeType: 'addon-test-support',
+    });
   },
 };

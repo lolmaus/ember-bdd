@@ -1,4 +1,4 @@
-import { selectorFromLabel } from '@ember-bdd/core/test-support/labels';
+import { selectorFromLabel } from '@ember-bdd/core';
 import { module, test } from 'qunit';
 
 const cases = [

@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@ember-bdd/core": "*",
+    "broccoli-funnel": "^3.0.8",
     "chai": "^4.3.4",
     "chai-dom": "lolmaus/chai-dom#feature/39-checked",
     "ember-auto-import": "^2.4.0",

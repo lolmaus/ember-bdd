@@ -228,7 +228,7 @@ export function findInputForLabelWithText(text: string, parent: Element | null):
   return input;
 }
 
-// https://github.com/cibernox/ember-power-select/blob/v2.2.1/addon-test-support/index.js
+// https://github.com/cibernox/ember-power-select/blob/v2.2.1/addon-index.js
 
 const POWER_SELECT_TRIGGER_CLASS = 'ember-power-select-trigger';
 const POWER_SELECT_DROPDOWN_PLACEHOLDER_CLASS = 'ember-basic-dropdown-content-placeholder';
@@ -527,7 +527,7 @@ export function powerSelectFindOptionByLabelAndValue(
 }
 
 const POWER_DATE_PICKER_TRIGGER_CLASS = 'ember-power-datepicker-trigger';
-export const POWER_DATE_PICKER_DROPDOWN_SELECTOR = '.ember-power-datepicker-content';
+const POWER_DATE_PICKER_DROPDOWN_SELECTOR = '.ember-power-datepicker-content';
 
 export function powerDatePickerFindTrigger(triggerOrSelector: Target): Element {
   const result = findSelfOrChild(triggerOrSelector, POWER_DATE_PICKER_TRIGGER_CLASS);

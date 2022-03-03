@@ -5,7 +5,7 @@ import {
   REGEX_LABEL_CONSTRAINED,
   REGEX_COMMA_AND_SEPARATOR,
   STR_STRING_WITH_ESCAPE,
-} from '@ember-bdd/core/test-support/regex';
+} from '@ember-bdd/core/regex';
 import { module, test } from 'qunit';
 
 interface Case {

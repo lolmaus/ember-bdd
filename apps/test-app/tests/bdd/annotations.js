@@ -1,5 +1,5 @@
 import { setupApplicationTest } from 'ember-qunit';
-import setupStepsConfigEnvironment from '@ember-bdd/steps-config-environment/test-support/setup';
+import { setupStepsConfigEnvironment } from '@ember-bdd/steps-config-environment';
 
 export default {
   setupApplicationTest,

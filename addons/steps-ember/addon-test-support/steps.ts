@@ -1,9 +1,6 @@
 import { visit, settled, currentURL } from '@ember/test-helpers';
 import { assert } from '@ember/debug';
-import {
-  assertNumber,
-  assertUnquotedString,
-} from '@ember-bdd/core/test-support/-private/converter-assertions';
+import { assertNumber, assertUnquotedString } from '@ember-bdd/core/-private/converter-assertions';
 import { pauseTest } from '@ember/test-helpers/setup-context';
 import { expect } from 'chai';
 

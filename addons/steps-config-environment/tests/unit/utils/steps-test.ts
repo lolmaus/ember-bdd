@@ -1,10 +1,10 @@
 import {
   overrideConfig,
   restoreOriginalConfig,
-} from '@ember-bdd/steps-config-environment/test-support/utils/override-config';
+} from '@ember-bdd/steps-config-environment/utils/override-config';
 import { module, test } from 'qunit';
 
-import setupStepsConfigEnvironment from '@ember-bdd/steps-config-environment/test-support/setup';
+import { setupStepsConfigEnvironment } from '@ember-bdd/steps-config-environment';
 
 // @ts-ignore
 import config from 'ember-get-config';
