@@ -527,7 +527,7 @@ export function powerSelectFindOptionByLabelAndValue(
 }
 
 const POWER_DATE_PICKER_TRIGGER_CLASS = 'ember-power-datepicker-trigger';
-export const POWER_DATE_PICKER_DROPDOWN_SELECTOR = '.ember-power-datepicker-content';
+const POWER_DATE_PICKER_DROPDOWN_SELECTOR = '.ember-power-datepicker-content';
 
 export function powerDatePickerFindTrigger(triggerOrSelector: Target): Element {
   const result = findSelfOrChild(triggerOrSelector, POWER_DATE_PICKER_TRIGGER_CLASS);
