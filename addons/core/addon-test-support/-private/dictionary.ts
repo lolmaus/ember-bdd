@@ -1,17 +1,12 @@
 import yadda, { Dictionary } from 'yadda';
 import { wrapWithNodeStyleLengthSafe } from './utils';
-import requireModule from 'ember-require-module';
 import { assert } from '@ember/debug';
-import { isConverter, isConverterSimple, isConvertersRecord, isConverterTuple } from '../types';
+import { isConverter, isConverterSimple, isConverterTuple } from '../types';
+import { getDictionary } from '@ember-bdd/core';
 
 export function generateDictionary(): Dictionary {
   const dictionary: Dictionary = new yadda.Dictionary();
-  const converters = requireModule('@ember-bdd/core/app/dictionary') ?? {};
-
-  assert(
-    'Expected `tests/bdd/annotations.js` to have a default export with an object of ember-bdd converters.',
-    isConvertersRecord(converters)
-  );
+  const converters = getDictionary();
 
   if (converters) {
     Object.keys(converters).forEach((key) => {

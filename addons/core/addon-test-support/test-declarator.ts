@@ -1,18 +1,18 @@
-import { module, test, only, skip, todo } from 'qunit';
-import yadda, { Yadda, Dictionary } from 'yadda';
+import { module, only, skip, test, todo } from 'qunit';
+import yadda, { Dictionary, Yadda } from 'yadda';
 import { Library } from 'yadda/lib/localisation/English';
 import FeatureParser, {
-  SpecificationExport,
-  ScenarioExport,
   AnnotationsExport,
+  ScenarioExport,
+  SpecificationExport,
 } from 'yadda/lib/parsers/FeatureParser';
 import { cached } from 'tracked-toolbox';
-import requireModule from 'ember-require-module';
 import composeSteps from './-private/compose-steps';
-import { isStepImplementationsRecord, ModuleFunc, TestFunc } from './types';
+import { ModuleFunc, TestFunc } from './types';
 import { generateDictionary } from './-private/dictionary';
 import { assert } from '@ember/debug';
-import applyAnnotations from './-private/annotations';
+import { applyAnnotations } from './-private/annotations';
+import { getSteps } from '@ember-bdd/core/steps';
 
 export default class TestDeclarator {
   protected relativePath: string;
@@ -39,13 +39,7 @@ export default class TestDeclarator {
   }
 
   @cached protected get library(): Library {
-    const stepImplementationsRecord = requireModule('@ember-bdd/core/app/steps') ?? {};
-
-    assert(
-      'The ember-bdd step implementaions library `tests/bdd/steps.js` must export an object with functions or strings',
-      isStepImplementationsRecord(stepImplementationsRecord)
-    );
-
+    const stepImplementationsRecord = getSteps();
     const library: Library = yadda.localisation.default.library(this.dictionary);
 
     return composeSteps(library, stepImplementationsRecord);
