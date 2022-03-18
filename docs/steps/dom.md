@@ -207,10 +207,11 @@ Assertion steps
 
 Asserts that a given number of elements exist or dont' exist on a page.
 
-**Signature**: 
+**Signatures**: 
 
 ```feature
 Then there should be (NO |no )?(?:(\\d+) )?$emberBddLabel
+Then I should see (NO |no )?(?:(\\d+) )?$emberBddLabel
 ```
 
 **Examples**:
@@ -221,6 +222,11 @@ Then there should be 0 Items
 Then there should be an Item
 Then there should be 1 Item
 Then there should be 2 Items
+Then I should see NO Items
+Then I should see 0 Items
+Then I should see an Item
+Then I should see 1 Item
+Then I should see 2 Items
 ```
 
 

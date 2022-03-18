@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 4
+  version: 5
   cacheKey: 8
 
 "@ampproject/remapping@npm:^2.0.0":
@@ -83,7 +83,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.15.0, @babel/core@npm:^7.0.0, @babel/core@npm:^7.1.6, @babel/core@npm:^7.12.0, @babel/core@npm:^7.12.10, @babel/core@npm:^7.12.3, @babel/core@npm:^7.13.8, @babel/core@npm:^7.3.4":
+"@babel/core@npm:^7.0.0, @babel/core@npm:^7.1.6, @babel/core@npm:^7.12.0, @babel/core@npm:^7.12.10, @babel/core@npm:^7.12.3, @babel/core@npm:^7.13.8, @babel/core@npm:^7.3.4":
   version: 7.15.0
   resolution: "@babel/core@npm:7.15.0"
   dependencies:
@@ -106,7 +106,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:7.17.0, @babel/core@npm:^7.16.7":
+"@babel/core@npm:^7.16.7":
   version: 7.17.0
   resolution: "@babel/core@npm:7.17.0"
   dependencies:
@@ -2922,6 +2922,94 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ember-bdd/steps-mirage@workspace:addons/steps-mirage":
+  version: 0.0.0-use.local
+  resolution: "@ember-bdd/steps-mirage@workspace:addons/steps-mirage"
+  dependencies:
+    "@ember-bdd/core": "*"
+    "@ember/optional-features": ^2.0.0
+    "@ember/test-helpers": ^2.2.5
+    "@embroider/test-setup": ^0.41.0
+    "@glimmer/component": ^1.0.4
+    "@glimmer/tracking": ^1.0.4
+    "@sniptt/guards": ^0.2.0
+    "@types/chai-dom": ^0.0.11
+    "@types/ember-qunit": latest
+    "@types/ember-resolver": latest
+    "@types/ember__application": latest
+    "@types/ember__array": latest
+    "@types/ember__component": latest
+    "@types/ember__controller": latest
+    "@types/ember__debug": latest
+    "@types/ember__engine": latest
+    "@types/ember__error": latest
+    "@types/ember__object": latest
+    "@types/ember__polyfills": latest
+    "@types/ember__routing": latest
+    "@types/ember__runloop": latest
+    "@types/ember__service": latest
+    "@types/ember__string": latest
+    "@types/ember__template": latest
+    "@types/ember__test": latest
+    "@types/ember__test-helpers": latest
+    "@types/ember__utils": latest
+    "@types/htmlbars-inline-precompile": latest
+    "@types/qunit": latest
+    "@types/rsvp": latest
+    "@types/sinon": ^10.0.4
+    "@typescript-eslint/eslint-plugin": ^4.29.0
+    "@typescript-eslint/parser": ^4.29.0
+    babel-eslint: ^10.1.0
+    broccoli-asset-rev: ^3.0.0
+    broccoli-funnel: ^3.0.8
+    chai: ^4.3.4
+    chai-dom: "lolmaus/chai-dom#feature/39-checked"
+    ember-auto-import: ^2.4.0
+    ember-cli: ~3.27.0
+    ember-cli-babel: ^7.26.6
+    ember-cli-dependency-checker: ^3.2.0
+    ember-cli-htmlbars: ^5.7.1
+    ember-cli-htmlbars-inline-precompile: ^3.0.2
+    ember-cli-inject-live-reload: ^2.0.2
+    ember-cli-mirage: ^2.4.0
+    ember-cli-sri: ^2.1.1
+    ember-cli-terser: ^4.0.2
+    ember-cli-typescript: ^4.2.1
+    ember-cli-typescript-blueprints: latest
+    ember-disable-prototype-extensions: ^1.1.3
+    ember-export-application-global: ^2.0.1
+    ember-inflector: ^4.0.2
+    ember-load-initializers: ^2.1.2
+    ember-maybe-import-regenerator: ^0.1.6
+    ember-page-title: ^6.2.2
+    ember-qunit: ^5.1.4
+    ember-resolver: ^8.0.2
+    ember-source: ~3.27.2
+    ember-source-channel-url: ^3.0.0
+    ember-try: ^1.4.0
+    eslint: ^7.32.0
+    eslint-config-prettier: ^8.3.0
+    eslint-config-standard: ^16.0.3
+    eslint-import-resolver-typescript: ^2.4.0
+    eslint-plugin-ember: ^10.5.1
+    eslint-plugin-import: ^2.23.4
+    eslint-plugin-json: ^3.1.0
+    eslint-plugin-node: ^11.1.0
+    eslint-plugin-prettier: ^3.4.0
+    eslint-plugin-promise: ^5.1.0
+    eslint-plugin-qunit: ^6.1.1
+    eslint-plugin-standard: ^5.0.0
+    loader.js: ^4.7.0
+    npm-run-all: ^4.1.5
+    prettier: ^2.3.2
+    qunit: ^2.15.0
+    qunit-dom: ^1.6.0
+    sinon: ^11.1.2
+    typescript: latest
+    webpack: ^5.68.0
+  languageName: unknown
+  linkType: soft
+
 "@ember-data/adapter@npm:3.26.0":
   version: 3.26.0
   resolution: "@ember-data/adapter@npm:3.26.0"
@@ -3138,7 +3226,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ember/test-helpers@npm:^2.6.0":
+"@ember/test-helpers@npm:^2.2.5, @ember/test-helpers@npm:^2.6.0":
   version: 2.6.0
   resolution: "@ember/test-helpers@npm:2.6.0"
   dependencies:
@@ -3235,6 +3323,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@embroider/macros@npm:^0.41.0":
+  version: 0.41.0
+  resolution: "@embroider/macros@npm:0.41.0"
+  dependencies:
+    "@embroider/shared-internals": 0.41.0
+    assert-never: ^1.1.0
+    ember-cli-babel: ^7.23.0
+    lodash: ^4.17.10
+    resolve: ^1.8.1
+    semver: ^7.3.2
+  checksum: 91bbf00e34be3cea46c948222e423c0f74bbd2814f2f191155a7d8bf4c149af87b2d8ed8b98cc85891c6eca57bbbfa72134ed5dc70cf2342fdcbe65aca1f7c85
+  languageName: node
+  linkType: hard
+
 "@embroider/macros@npm:^1.0.0":
   version: 1.0.0
   resolution: "@embroider/macros@npm:1.0.0"
@@ -3251,6 +3353,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@embroider/shared-internals@npm:0.41.0":
+  version: 0.41.0
+  resolution: "@embroider/shared-internals@npm:0.41.0"
+  dependencies:
+    ember-rfc176-data: ^0.3.17
+    fs-extra: ^7.0.1
+    lodash: ^4.17.10
+    pkg-up: ^3.1.0
+    resolve-package-path: ^1.2.2
+    semver: ^7.3.2
+    typescript-memoize: ^1.0.0-alpha.3
+  checksum: 56dc34014dd88bd5baedd5effbdba754e26761e1a5daea545845d9080a647826108a827375f5d042dd274613eab0e853e94a367c30d0c04064f0d7e9fb8885bf
+  languageName: node
+  linkType: hard
+
 "@embroider/shared-internals@npm:1.0.0, @embroider/shared-internals@npm:^1.0.0":
   version: 1.0.0
   resolution: "@embroider/shared-internals@npm:1.0.0"
@@ -3263,6 +3380,16 @@ __metadata:
     semver: ^7.3.5
     typescript-memoize: ^1.0.1
   checksum: 8ab007d04e015012e66f415c01d164b7734175b4234440b403f0635e2e5162db9103f9b2be005dcc7d32ad13ab1148ad074096385edb39a2164cd32da0b87312
+  languageName: node
+  linkType: hard
+
+"@embroider/test-setup@npm:^0.41.0":
+  version: 0.41.0
+  resolution: "@embroider/test-setup@npm:0.41.0"
+  dependencies:
+    lodash: ^4.17.20
+    resolve: ^1.17.0
+  checksum: a547005909180cc302632ce5413ee5cbb68188d23ae0c957f24f2318a35b7f43011fa5b1e356b1fbcbf7f81dde77b51b5ae521797b53fa93dcd419885ac956f5
   languageName: node
   linkType: hard
 
@@ -4230,6 +4357,13 @@ __metadata:
   bin:
     ember-language-server: bin/ember-language-server.js
   checksum: 51501af20b138451c2b506a98f17c8f895a6cca38367d082db0ba2e9adcdc810eead0f7b7cbcfb76b253f0dce3245f7235f0692e698a12404016f7b32167ea4c
+  languageName: node
+  linkType: hard
+
+"@miragejs/pretender-node-polyfill@npm:^0.1.0":
+  version: 0.1.2
+  resolution: "@miragejs/pretender-node-polyfill@npm:0.1.2"
+  checksum: bb55983a253dc0d4162acac090b062500595c9844bfbd21fe25bc1f926808d0070d710e622aa6285fa16c673a65cf3e05f4b32e888c469f1bde8888a7934ee44
   languageName: node
   linkType: hard
 
@@ -10776,6 +10910,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ember-auto-import@npm:^1.12.0":
+  version: 1.12.1
+  resolution: "ember-auto-import@npm:1.12.1"
+  dependencies:
+    "@babel/core": ^7.1.6
+    "@babel/preset-env": ^7.10.2
+    "@babel/traverse": ^7.1.6
+    "@babel/types": ^7.1.6
+    "@embroider/shared-internals": ^1.0.0
+    babel-core: ^6.26.3
+    babel-loader: ^8.0.6
+    babel-plugin-syntax-dynamic-import: ^6.18.0
+    babylon: ^6.18.0
+    broccoli-debug: ^0.6.4
+    broccoli-node-api: ^1.7.0
+    broccoli-plugin: ^4.0.0
+    broccoli-source: ^3.0.0
+    debug: ^3.1.0
+    ember-cli-babel: ^7.0.0
+    enhanced-resolve: ^4.0.0
+    fs-extra: ^6.0.1
+    fs-tree-diff: ^2.0.0
+    handlebars: ^4.3.1
+    js-string-escape: ^1.0.1
+    lodash: ^4.17.19
+    mkdirp: ^0.5.1
+    resolve-package-path: ^3.1.0
+    rimraf: ^2.6.2
+    semver: ^7.3.4
+    symlink-or-copy: ^1.2.0
+    typescript-memoize: ^1.0.0-alpha.3
+    walk-sync: ^0.3.3
+    webpack: ^4.43.0
+  checksum: 8230c3ff6fd222eee7179e0e5c2ea0268702b66400a4b51de4dbc608bdfa8d2236125999b7bfa25dc36acb51d9eb93bcc45aea5783bdf95ad74f7e898014013d
+  languageName: node
+  linkType: hard
+
 "ember-auto-import@npm:^2.4.0":
   version: 2.4.0
   resolution: "ember-auto-import@npm:2.4.0"
@@ -11124,6 +11295,36 @@ __metadata:
   version: 2.0.1
   resolution: "ember-cli-lodash-subset@npm:2.0.1"
   checksum: 2667cd59443a67a04cf6f9cc402ffd7f6dac1c987b4908e3178481fd6ea0d492706f7999f8e6a2d4b97b136fe42e62457b569e96e91af78a1b096aa69d14984e
+  languageName: node
+  linkType: hard
+
+"ember-cli-mirage@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "ember-cli-mirage@npm:2.4.0"
+  dependencies:
+    "@embroider/macros": ^0.41.0
+    broccoli-file-creator: ^2.1.1
+    broccoli-funnel: ^3.0.3
+    broccoli-merge-trees: ^4.2.0
+    ember-auto-import: ^1.12.0
+    ember-cli-babel: ^7.26.6
+    ember-destroyable-polyfill: ^2.0.3
+    ember-get-config: 0.2.4 - 0.5.0
+    ember-inflector: ^2.0.0 || ^3.0.0 || ^4.0.2
+    lodash-es: ^4.17.11
+    miragejs: ^0.1.43
+  peerDependencies:
+    "@ember/test-helpers": "*"
+    ember-data: "*"
+    ember-qunit: "*"
+  peerDependenciesMeta:
+    "@ember/test-helpers":
+      optional: true
+    ember-data:
+      optional: true
+    ember-qunit:
+      optional: true
+  checksum: 459aed2d946ebb9d378e30b3b902157df4378ffc2f1686fa7179ee031240a1733d0b516c5813855ef701c2cc7359b2dccc7a60ddad87f7a5140a4057b5645b5a
   languageName: node
   linkType: hard
 
@@ -11833,6 +12034,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ember-get-config@npm:0.2.4 - 0.5.0":
+  version: 0.5.0
+  resolution: "ember-get-config@npm:0.5.0"
+  dependencies:
+    broccoli-file-creator: ^1.1.1
+    ember-cli-babel: ^7.26.6
+    ember-cli-htmlbars: ^5.7.1
+  checksum: c9ca75a44764705ea62324dba90770ae608d8614c1222ddc9f22ede506f056e65d0e2e518fbc3aa2665ea32e2d4c2735fff9fe4e031d1827c3ebaad3b03bfea2
+  languageName: node
+  linkType: hard
+
 "ember-get-config@npm:^0.3.0":
   version: 0.3.0
   resolution: "ember-get-config@npm:0.3.0"
@@ -11843,7 +12055,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ember-inflector@npm:^4.0.1, ember-inflector@npm:^4.0.2":
+"ember-inflector@npm:^2.0.0 || ^3.0.0 || ^4.0.2, ember-inflector@npm:^4.0.1, ember-inflector@npm:^4.0.2":
   version: 4.0.2
   resolution: "ember-inflector@npm:4.0.2"
   dependencies:
@@ -13439,6 +13651,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fake-xml-http-request@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "fake-xml-http-request@npm:2.1.2"
+  checksum: 7b1ebea1955c46cbda0e0c3308716cc82beca7bb6c549f1d1c2a8134203c9d6c5a21194e2c1e17650ff073ecbcd3e56cf1e21f248a86cbcb3567fd7a9ca4850e
+  languageName: node
+  linkType: hard
+
 "faker@npm:^5.5.2":
   version: 5.5.3
   resolution: "faker@npm:5.5.3"
@@ -14259,25 +14478,26 @@ fsevents@^1.2.7:
     bindings: ^1.5.0
     nan: ^2.12.1
   checksum: ae855aa737aaa2f9167e9f70417cf6e45a5cd11918e1fee9923709a0149be52416d765433b4aeff56c789b1152e718cd1b13ddec6043b78cdda68260d86383c1
+  conditions: os=darwin
   languageName: node
   linkType: hard
 
 "fsevents@patch:fsevents@^1.2.7#~builtin<compat/fsevents>":
   version: 1.2.13
-  resolution: "fsevents@patch:fsevents@npm%3A1.2.13#~builtin<compat/fsevents>::version=1.2.13&hash=1cc4b2"
+  resolution: "fsevents@patch:fsevents@npm%3A1.2.13#~builtin<compat/fsevents>::version=1.2.13&hash=18f3a7"
   dependencies:
     bindings: ^1.5.0
     nan: ^2.12.1
-  checksum: b264407498db2cfdcc2a05287334a4160c985a88e4a989e2f2f8dcc6afc8b04a4fcd82c797266442452e11c1fb07d7747d138b078fe4bb1f8f4fd2a6f2484d7e
+  conditions: os=darwin
   languageName: node
   linkType: hard
 
 "fsevents@patch:fsevents@~2.3.1#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=1cc4b2"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
-  checksum: 78db9daf1f6526a49cefee3917cc988f62dc7f25b5dd80ad6de4ffc4af7f0cab7491ac737626ff53e482a111bc53aac9e411fe3602458eca36f6a003ecf69c16
+  conditions: os=darwin
   languageName: node
   linkType: hard
 
@@ -14287,6 +14507,7 @@ fsevents@~2.3.1:
   dependencies:
     node-gyp: latest
   checksum: 97ade64e75091afee5265e6956cb72ba34db7819b4c3e94c431d4be2b19b8bb7a2d4116da417950c3425f17c8fe693d25e20212cac583ac1521ad066b77ae31f
+  conditions: os=darwin
   languageName: node
   linkType: hard
 
@@ -15431,6 +15652,13 @@ fsevents@~2.3.1:
   version: 1.1.7
   resolution: "inflected@npm:1.1.7"
   checksum: eac857f10871586006d629dc72bab05058f1967c10fae9d7391d627534566a8e5be0a1f690d2590102d890e4ef5647b73b7827380dc7bcf50faac4154f0ab084
+  languageName: node
+  linkType: hard
+
+"inflected@npm:^2.0.4":
+  version: 2.1.0
+  resolution: "inflected@npm:2.1.0"
+  checksum: 1e3fb2d24ec6c774977dd5ed884c6097b6525f66edecfdca0845ab4023d35f02af1057de50cd69cdc5829d0bd5ba69fd7fb41d4d8abdf85ee243bf2bbf65995d
   languageName: node
   linkType: hard
 
@@ -16895,6 +17123,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lodash-es@npm:^4.17.11":
+  version: 4.17.21
+  resolution: "lodash-es@npm:4.17.21"
+  checksum: 05cbffad6e2adbb331a4e16fbd826e7faee403a1a04873b82b42c0f22090f280839f85b95393f487c1303c8a3d2a010048bf06151a6cbe03eee4d388fb0a12d2
+  languageName: node
+  linkType: hard
+
 "lodash._baseassign@npm:^3.0.0":
   version: 3.2.0
   resolution: "lodash._baseassign@npm:3.2.0"
@@ -16972,6 +17207,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lodash.assign@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "lodash.assign@npm:4.2.0"
+  checksum: 75bbc6733c9f577c448031b4051f990f068802708891f94be9d4c2faffd6a9ec67a2c49671dafc908a068d35687765464853282842b4560b662e6c903d11cc90
+  languageName: node
+  linkType: hard
+
 "lodash.assignin@npm:^4.0.9, lodash.assignin@npm:^4.1.0":
   version: 4.2.0
   resolution: "lodash.assignin@npm:4.2.0"
@@ -16986,6 +17228,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lodash.camelcase@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "lodash.camelcase@npm:4.3.0"
+  checksum: cb9227612f71b83e42de93eccf1232feeb25e705bdb19ba26c04f91e885bfd3dd5c517c4a97137658190581d3493ea3973072ca010aab7e301046d90740393d1
+  languageName: node
+  linkType: hard
+
 "lodash.castarray@npm:^4.4.0":
   version: 4.4.0
   resolution: "lodash.castarray@npm:4.4.0"
@@ -16997,6 +17246,13 @@ fsevents@~2.3.1:
   version: 4.5.0
   resolution: "lodash.clonedeep@npm:4.5.0"
   checksum: 92c46f094b064e876a23c97f57f81fbffd5d760bf2d8a1c61d85db6d1e488c66b0384c943abee4f6af7debf5ad4e4282e74ff83177c9e63d8ff081a4837c3489
+  languageName: node
+  linkType: hard
+
+"lodash.compact@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "lodash.compact@npm:3.0.1"
+  checksum: 75039eddfa5ef2ea0da1fc3d36515e92227241f94258b3dcf771196e741c878698ce5b79c0cb7fe758841c9dfd0e6fa222888985aadc0384fd79bbc9680dd829
   languageName: node
   linkType: hard
 
@@ -17037,7 +17293,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.find@npm:^4.5.1":
+"lodash.find@npm:^4.5.1, lodash.find@npm:^4.6.0":
   version: 4.6.0
   resolution: "lodash.find@npm:4.6.0"
   checksum: b737f849a4fe36f5c3664ea636780dda2fde18335021faf80cdfdcb300ed75441da6f55cfd6de119092d8bb2ddbc4433f4a8de4b99c0b9c8640465b0901c717c
@@ -17054,7 +17310,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.flatten@npm:^4.2.0":
+"lodash.flatten@npm:^4.2.0, lodash.flatten@npm:^4.4.0":
   version: 4.4.0
   resolution: "lodash.flatten@npm:4.4.0"
   checksum: 0ac34a393d4b795d4b7421153d27c13ae67e08786c9cbb60ff5b732210d46f833598eee3fb3844bb10070e8488efe390ea53bb567377e0cb47e9e630bf0811cb
@@ -17068,10 +17324,31 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"lodash.forin@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.forin@npm:4.4.0"
+  checksum: c9c8e6c3204029fe0610efb8c74113b00a3d5a92b1d8defbf3f5cbc2d0f7663c680dff62e2950ed9406bb6d06e882fa39568c607bc44229d53fd93a9fd6c07b7
+  languageName: node
+  linkType: hard
+
 "lodash.get@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
   checksum: e403047ddb03181c9d0e92df9556570e2b67e0f0a930fcbbbd779370972368f5568e914f913e93f3b08f6d492abc71e14d4e9b7a18916c31fa04bd2306efe545
+  languageName: node
+  linkType: hard
+
+"lodash.has@npm:^4.5.2":
+  version: 4.5.2
+  resolution: "lodash.has@npm:4.5.2"
+  checksum: b3ec829a86852331d48b3730ff06088a283d128a3965aa521ffd942bcf5c82e06bed3164ff7a7751d11e768d88f0d7bab316192091489caf20f452d42f7055d5
+  languageName: node
+  linkType: hard
+
+"lodash.invokemap@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "lodash.invokemap@npm:4.6.0"
+  checksum: 646ceebbefbcb6da301f8c2868254680fd0bcdc6ada470495d9ae49c9c32938829c1b38a38c95d0258409a9655f85db404b16e648381c7450b7ed3d9c52d8808
   languageName: node
   linkType: hard
 
@@ -17086,6 +17363,41 @@ fsevents@~2.3.1:
   version: 3.0.4
   resolution: "lodash.isarray@npm:3.0.4"
   checksum: 3b298fb76ff16981353f7d0695d8680be9451b74d2e76714ddbd903a90fbaa8e1d84979d0ae99325f5a9033776771154b19e05027ab23de83202251c8abe81b5
+  languageName: node
+  linkType: hard
+
+"lodash.isempty@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "lodash.isempty@npm:4.4.0"
+  checksum: a8118f23f7ed72a1dbd176bf27f297d1e71aa1926288449cb8f7cef99ba1bc7527eab52fe7899ab080fa1dc150aba6e4a6367bf49fa4e0b78da1ecc095f8d8c5
+  languageName: node
+  linkType: hard
+
+"lodash.isequal@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "lodash.isequal@npm:4.5.0"
+  checksum: da27515dc5230eb1140ba65ff8de3613649620e8656b19a6270afe4866b7bd461d9ba2ac8a48dcc57f7adac4ee80e1de9f965d89d4d81a0ad52bb3eec2609644
+  languageName: node
+  linkType: hard
+
+"lodash.isfunction@npm:^3.0.9":
+  version: 3.0.9
+  resolution: "lodash.isfunction@npm:3.0.9"
+  checksum: 99e54c34b1e8a9ba75c034deb39cedbd2aca7af685815e67a2a8ec4f73ec9748cda6ebee5a07d7de4b938e90d421fd280e9c385cc190f903ac217ac8aff30314
+  languageName: node
+  linkType: hard
+
+"lodash.isinteger@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "lodash.isinteger@npm:4.0.4"
+  checksum: 6034821b3fc61a2ffc34e7d5644bb50c5fd8f1c0121c554c21ac271911ee0c0502274852845005f8651d51e199ee2e0cfebfe40aaa49c7fe617f603a8a0b1691
+  languageName: node
+  linkType: hard
+
+"lodash.isplainobject@npm:^4.0.6":
+  version: 4.0.6
+  resolution: "lodash.isplainobject@npm:4.0.6"
+  checksum: 29c6351f281e0d9a1d58f1a4c8f4400924b4c79f18dfc4613624d7d54784df07efaff97c1ff2659f3e085ecf4fff493300adc4837553104cef2634110b0d5337
   languageName: node
   linkType: hard
 
@@ -17114,10 +17426,24 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.map@npm:^4.4.0":
+"lodash.lowerfirst@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "lodash.lowerfirst@npm:4.3.1"
+  checksum: e1688e18873777d394db4994d150dfc14cf01bf450169cf8296af4d84ecd7c3c4ae4dab3746f77f8719a093e4fff58bee3ae73ae7e23ef508b7d970b189d9952
+  languageName: node
+  linkType: hard
+
+"lodash.map@npm:^4.4.0, lodash.map@npm:^4.6.0":
   version: 4.6.0
   resolution: "lodash.map@npm:4.6.0"
   checksum: 7369a41d7d24d15ce3bbd02a7faa3a90f6266c38184e64932571b9b21b758bd10c04ffd117d1859be1a44156f29b94df5045eff172bf8a97fddf68bf1002d12f
+  languageName: node
+  linkType: hard
+
+"lodash.mapvalues@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "lodash.mapvalues@npm:4.6.0"
+  checksum: 0ff1b252fda318fc36e47c296984925e98fbb0fc5a2ecc4ef458f3c739a9476d47e40c95ac653e8314d132aa59c746d4276527b99d6e271940555c6e12d2babd
   languageName: node
   linkType: hard
 
@@ -17142,7 +17468,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash.pick@npm:^4.2.1":
+"lodash.pick@npm:^4.2.1, lodash.pick@npm:^4.4.0":
   version: 4.4.0
   resolution: "lodash.pick@npm:4.4.0"
   checksum: 2c36cab7da6b999a20bd3373b40e31a3ef81fa264f34a6979c852c5bc8ac039379686b27380f0cb8e3781610844fafec6949c6fbbebc059c98f8fa8570e3675f
@@ -17167,6 +17493,13 @@ fsevents@~2.3.1:
   version: 3.6.1
   resolution: "lodash.restparam@npm:3.6.1"
   checksum: 8bda0c7aaeac93da2b7e856bfeec8e6fdefb4d7eadfe6fd84775312a729fc1cb985636d922fe33b49f41aba135204962f4b853d7946105b7704102edb2bf6082
+  languageName: node
+  linkType: hard
+
+"lodash.snakecase@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "lodash.snakecase@npm:4.1.1"
+  checksum: 1685ed3e83dda6eae5a4dcaee161a51cd210aabb3e1c09c57150e7dd8feda19e4ca0d27d0631eabe8d0f4eaa51e376da64e8c018ae5415417c5890d42feb72a8
   languageName: node
   linkType: hard
 
@@ -17214,6 +17547,13 @@ fsevents@~2.3.1:
   version: 4.7.0
   resolution: "lodash.uniqby@npm:4.7.0"
   checksum: 659264545a95726d1493123345aad8cbf56e17810fa9a0b029852c6d42bc80517696af09d99b23bef1845d10d95e01b8b4a1da578f22aeba7a30d3e0022a4938
+  languageName: node
+  linkType: hard
+
+"lodash.values@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "lodash.values@npm:4.3.0"
+  checksum: 857e122ddf6edb50137887f0b834d471f96d66692ebb5de8b048ed277c8a3dd1bc8f85d82cf31b0f5c6dbc5b72c036a591205f76eec86bb11818a1a6f7e5a28c
   languageName: node
   linkType: hard
 
@@ -17863,6 +18203,40 @@ fsevents@~2.3.1:
     minipass: ^3.0.0
     yallist: ^4.0.0
   checksum: f1fdeac0b07cf8f30fcf12f4b586795b97be856edea22b5e9072707be51fc95d41487faec3f265b42973a304fe3a64acd91a44a3826a963e37b37bafde0212c3
+  languageName: node
+  linkType: hard
+
+"miragejs@npm:^0.1.43":
+  version: 0.1.43
+  resolution: "miragejs@npm:0.1.43"
+  dependencies:
+    "@miragejs/pretender-node-polyfill": ^0.1.0
+    inflected: ^2.0.4
+    lodash.assign: ^4.2.0
+    lodash.camelcase: ^4.3.0
+    lodash.clonedeep: ^4.5.0
+    lodash.compact: ^3.0.1
+    lodash.find: ^4.6.0
+    lodash.flatten: ^4.4.0
+    lodash.forin: ^4.4.0
+    lodash.get: ^4.4.2
+    lodash.has: ^4.5.2
+    lodash.invokemap: ^4.6.0
+    lodash.isempty: ^4.4.0
+    lodash.isequal: ^4.5.0
+    lodash.isfunction: ^3.0.9
+    lodash.isinteger: ^4.0.4
+    lodash.isplainobject: ^4.0.6
+    lodash.lowerfirst: ^4.3.1
+    lodash.map: ^4.6.0
+    lodash.mapvalues: ^4.6.0
+    lodash.pick: ^4.4.0
+    lodash.snakecase: ^4.1.1
+    lodash.uniq: ^4.5.0
+    lodash.uniqby: ^4.7.0
+    lodash.values: ^4.3.0
+    pretender: ^3.4.7
+  checksum: 11da61a83fc816748f635b4a4792a56a82dc6a0b7f5049c5337864948697b76eec421f3ca459fbbd35d8bb8e373e59bff9a773d20ae700977088a1f29857360d
   languageName: node
   linkType: hard
 
@@ -19463,6 +19837,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"pretender@npm:^3.4.7":
+  version: 3.4.7
+  resolution: "pretender@npm:3.4.7"
+  dependencies:
+    fake-xml-http-request: ^2.1.2
+    route-recognizer: ^0.3.3
+  checksum: ca767dfa3fdb5e49cec8f272de1c7d489f53986a9f58dd0caf379b6365b1f1241bbb03bea6fe4421ce3e2aaa894d6c7349a5ef603283710be2babca49f1ad6fb
+  languageName: node
+  linkType: hard
+
 "prettier-linter-helpers@npm:^1.0.0":
   version: 1.0.0
   resolution: "prettier-linter-helpers@npm:1.0.0"
@@ -20426,11 +20810,11 @@ fsevents@~2.3.1:
 
 "resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.11.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.12.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.13.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.17.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.3.3#~builtin<compat/resolve>, resolve@patch:resolve@^1.4.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.5.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.8.1#~builtin<compat/resolve>":
   version: 1.20.0
-  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"
+  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"
   dependencies:
     is-core-module: ^2.2.0
     path-parse: ^1.0.6
-  checksum: bed00be983cd20a8af0e7840664f655c4b269786dbd9595c5f156cd9d8a0050e65cdbbbdafc30ee9b6245b230c78a2c8ab6447a52545b582f476c29adb188cc5
+  checksum: a0dd7d16a8e47af23afa9386df2dff10e3e0debb2c7299a42e581d9d9b04d7ad5d2c53f24f1e043f7b3c250cbdc71150063e53d0b6559683d37f790b7c8c3cd5
   languageName: node
   linkType: hard
 
@@ -20574,6 +20958,13 @@ fsevents@~2.3.1:
   bin:
     rollup: dist/bin/rollup
   checksum: 3a02731c20c71321fae647c9c9cab0febee0580c6af029fdcd5dd6f424b8c85119d92c8554c6837327fd323c2458e92d955bbebc90ca6bed87cc626695e7c31f
+  languageName: node
+  linkType: hard
+
+"route-recognizer@npm:^0.3.3":
+  version: 0.3.4
+  resolution: "route-recognizer@npm:0.3.4"
+  checksum: 9586704491b26716eba1bdbb4a386893ecaab80c6dbf34e394957063b941ebf336ca09222f0892c9d118c609fa9b972d6e73e454abd4382acdc34dbb878e87f2
   languageName: node
   linkType: hard
 
@@ -22776,21 +23167,21 @@ typescript@latest:
 
 "typescript@patch:typescript@^4.1.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.2.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.3.5#~builtin<compat/typescript>":
   version: 4.3.5
-  resolution: "typescript@patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"
+  resolution: "typescript@patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: bc2c4fdf0f1557fdafe4ef74848c72ebd9c8c60829568248f869121aea2bb20e16649a252431d0acb185ec118143be22bed73d08f64379557810d82756afedde
+  checksum: 61fc1a2ca5037420de5bbe17c6ddc4cbcc0d52301ed94f0a7b5821c55ff9eb96307f0816f745ca8f0fc87ed92f3951cde6d97cd6fd6bc6920c02ea63b5b26259
   languageName: node
   linkType: hard
 
 "typescript@patch:typescript@latest#~builtin<compat/typescript>":
   version: 4.3.4
-  resolution: "typescript@patch:typescript@npm%3A4.3.4#~builtin<compat/typescript>::version=4.3.4&hash=d8b4e7"
+  resolution: "typescript@patch:typescript@npm%3A4.3.4#~builtin<compat/typescript>::version=4.3.4&hash=493e53"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: a6b1a3674b60971691b89fa8187a4905e132cb8061724b4bd485e5d5441caa61166fe3bcf2b47aa679a6d860cae823022ca51db713cc3446296274c005dd02e5
+  checksum: 49f3e6734d6f27c1931d3a665439350d9015b28eee87ba26ebcae0ba35fc609962ad8eb0b09f0324366497d65260c4222b8735098325bba46d508b5cab7b4640
   languageName: node
   linkType: hard
 

@@ -136,6 +136,9 @@ export default {
     expect(collection.elements).to.have.length(count);
   },
 
+  'Then I should see (NO |no )?(?:(\\d+) )?$emberBddLabel':
+    'Then there should be (NO |no )?(?:(\\d+) )?$emberBddLabel',
+
   //
 
   'Then $emberBddLabel should (not |NOT )?(?:have text|say|be) $emberBddString'(
