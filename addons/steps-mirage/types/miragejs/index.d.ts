@@ -7,20 +7,7 @@
  * Source: https://gist.github.com/dfreeman/33fc80164c0ad91d5e9480a94aa6454c#file-tests-model-ts
  */
 declare module 'miragejs' {
-  import {
-    FactoryDefinition,
-    ModelDefinition,
-    BelongsTo,
-    HasMany,
-    AnyRegistry,
-    AnyModels,
-    AnyFactories,
-    AnyResponse,
-    Instantiate,
-    ModelInstance,
-    AnyRegistry,
-    Instantiate,
-  } from 'miragejs/-types';
+  import { FactoryDefinition, ModelDefinition, BelongsTo, HasMany } from 'miragejs/-types';
   export { Server, createServer } from 'miragejs/server';
   export { Registry, Instantiate, ModelInstance } from 'miragejs/-types';
   export {
@@ -60,16 +47,24 @@ declare module 'miragejs' {
      * @param headers Any custom headers to set in this response
      * @param body Data to send in the response body
      */
-    constructor(code: number, headers?: Record<string, string>, body?: string | {});
+    constructor(
+      code: number,
+      headers?: Record<string, string>,
+      body?: string | Record<string, unknown>
+    );
 
-    toRackResponse(): [number, Record<string, string> | undefined, string | {} | undefined];
+    toRackResponse(): [
+      number,
+      Record<string, string> | undefined,
+      string | Record<string, unknown> | undefined
+    ];
   }
 
   /**
    * The base definition for Mirage models.
    *
    * Use `Model.extend({ ... })` to define a model's relationships
-   * (via `belongsTo()` and `hasMany()`) and any static default
+   * (via `belongsTo()` and `hasMany()`) and unknown static default
    * attribute values.
    */
   export const Model: ModelDefinition;
@@ -146,14 +141,7 @@ declare module 'miragejs' {
 }
 
 declare module 'miragejs/-types' {
-  import {
-    Collection,
-    Response,
-    Request,
-    Response,
-    Registry as MirageRegistry,
-    Collection,
-  } from 'miragejs';
+  import { Collection, Response, Response, Collection } from 'miragejs';
 
   /* A 1:1 relationship between models */
   export class BelongsTo<Name extends string> {
@@ -166,12 +154,12 @@ declare module 'miragejs/-types' {
   }
 
   // Captures the result of a `Model.extend()` call
-  interface ModelDefinition<Data extends {} = {}> {
+  interface ModelDefinition<Data extends Record<string, unknown> = Record<string, unknown>> {
     extend<NewData>(data: NewData): ModelDefinition<Assign<Data, NewData>>;
   }
 
   // Captures the result of a `Factory.extend()` call
-  interface FactoryDefinition<Data extends {} = {}> {
+  interface FactoryDefinition<Data extends Record<string, unknown> = Record<string, unknown>> {
     extend<NewData>(
       data: WithFactoryMethods<NewData>
     ): FactoryDefinition<Assign<Data, FlattenFactoryMethods<NewData>>>;
@@ -224,15 +212,15 @@ declare module 'miragejs/-types' {
   type ExtractModelData<Models, K> = K extends keyof Models
     ? Models[K] extends ModelDefinition<infer Data>
       ? Data
-      : {}
-    : {};
+      : Record<string, unknown>
+    : Record<string, unknown>;
 
   // Extracts factory definition info for the given key, if a corresponding factory is defined
   type ExtractFactoryData<Factories, K> = K extends keyof Factories
     ? Factories[K] extends FactoryDefinition<infer Data>
       ? FlattenFactoryMethods<Data>
-      : {}
-    : {};
+      : Record<string, unknown>
+    : Record<string, unknown>;
 
   /**
    * Models all available information about a given set of model and
@@ -251,30 +239,31 @@ declare module 'miragejs/-types' {
   export type AnyRegistry = Registry<AnyModels, AnyFactories>;
 
   type MaybePromise<T> = T | PromiseLike<T>;
-  type ValidResponse = Record<PropertyKey, any> | number | string | boolean | null;
+  type ValidResponse = Record<PropertyKey, unknown> | number | string | boolean | null;
   export type AnyResponse = MaybePromise<
     ModelInstance | Response | ValidResponse | ValidResponse[]
   >;
 
   /** Represents the type of an instantiated Mirage model.  */
-  export type ModelInstance<Data extends {} = {}> = Data & {
-    id?: string;
-    attrs: Data;
-    modelName: string;
+  export type ModelInstance<Data extends Record<string, unknown> = Record<string, unknown>> =
+    Data & {
+      id?: string;
+      attrs: Data;
+      modelName: string;
 
-    /** Persists any updates on this model back to the Mirage database. */
-    save(): void;
+      /** Persists unknown updates on this model back to the Mirage database. */
+      save(): void;
 
-    /** Updates and immediately persists a single or multiple attr(s) on this model. */
-    update<K extends keyof Data>(key: K, value: Data[K]): void;
-    update(changes: Partial<Data>): void;
+      /** Updates and immediately persists a single or multiple attr(s) on this model. */
+      update<K extends keyof Data>(key: K, value: Data[K]): void;
+      update(changes: Partial<Data>): void;
 
-    /** Removes this model from the Mirage database. */
-    destroy(): void;
+      /** Removes this model from the Mirage database. */
+      destroy(): void;
 
-    /** Reloads this model's data from the Mirage database. */
-    reload(): void;
-  };
+      /** Reloads this model's data from the Mirage database. */
+      reload(): void;
+    };
 }
 
 declare module 'miragejs/server' {
@@ -296,7 +285,7 @@ declare module 'miragejs/server' {
 
   export interface ServerConfig<Models extends AnyModels, Factories extends AnyFactories> {
     urlPrefix?: string;
-    fixtures?: any;
+    fixtures?: unknown;
     namespace?: string;
     timing?: number;
     environment?: string;
@@ -311,10 +300,10 @@ declare module 'miragejs/server' {
     baseConfig?: (this: Server<MirageRegistry<Models, Factories>>) => void;
     testConfig?: (this: Server<MirageRegistry<Models, Factories>>) => void;
 
-    inflector?: object;
+    inflector?: Record<string, unknown>;
     identityManagers?: IdentityManager;
     models?: Models;
-    serializers?: any;
+    serializers?: unknown;
     factories?: Factories;
 
     pretender?: PretenderServer;
@@ -417,7 +406,7 @@ declare module 'miragejs/server' {
     ): void;
 
     /** Pass through one or more URLs to make real requests. */
-    passthrough(urls?: ((request: Request) => any) | string | string[]): void;
+    passthrough(urls?: ((request: Request) => unknown) | string | string[]): void;
 
     /** Load all available fixture data matching the given name(s). */
     loadFixtures(...names: string[]): void;
@@ -441,10 +430,10 @@ declare module 'miragejs/db' {
   class DbClass {
     constructor(initialData: [], identityManagers?: IdentityManager[]);
 
-    createCollection(name: string, initialData?: any[]): void;
+    createCollection(name: string, initialData?: unknown[]): void;
     dump(): void;
     emptyData(): void;
-    loadData(data: any): void;
+    loadData(data: unknown): void;
   }
 
   /** The in-memory database containing all currently active data keyed by collection name. */
@@ -455,31 +444,37 @@ declare module 'miragejs/db' {
 
 declare module 'miragejs/db-collection' {
   export default class DbCollection {
-    constructor(name: string, initialData: any[], identityManager?: IdentityManager);
+    constructor(name: string, initialData: unknown[], identityManager?: IdentityManager);
 
     /** Returns a copy of the data, to prevent inadvertent data manipulation. */
-    all(): any[];
+    all(): unknown[];
 
     /** Returns a single record from the `collection` if `ids` is a single id, or an array of records if `ids` is an array of ids. */
-    find(id: number | string | number[] | string[]): any;
+    find(id: number | string | number[] | string[]): unknown;
 
-    /** Returns the first model from `collection` that matches the key-value pairs in the `query` object. */
-    findBy(query: object): any;
+    /** Returns the first model from `collection` that matches the key-value pairs in the `query` Record<string, unknown>. */
+    findBy(query: Record<string, unknown>): unknown;
 
     /** Finds the first record matching the provided _query_ in `collection`, or creates a new record using a merge of the `query` and optional `attributesForCreate`. */
-    firstOrCreate(query: object, attributesForCreate?: object): any;
+    firstOrCreate(
+      query: Record<string, unknown>,
+      attributesForCreate?: Record<string, unknown>
+    ): unknown;
 
-    /** Inserts `data` into the collection. `data` can be a single object or an array of objects. */
-    insert(data: any): any;
+    /** Inserts `data` into the collection. `data` can be a single Record<string, unknown> or an array of objects. */
+    insert(data: unknown): unknown;
 
     /** Removes one or more records in *collection*. */
-    remove(target?: object | number | string): void;
+    remove(target?: Record<string, unknown> | number | string): void;
 
     /** Updates one or more records in the collection. */
-    update(target: object | number | string, attrs?: object): any;
+    update(
+      target: Record<string, unknown> | number | string,
+      attrs?: Record<string, unknown>
+    ): unknown;
 
-    /** Returns an array of models from `collection` that match the key-value pairs in the `query` object. */
-    where(query: object): any;
+    /** Returns an array of models from `collection` that match the key-value pairs in the `query` Record<string, unknown>. */
+    where(query: Record<string, unknown>): unknown;
   }
 }
 
@@ -573,40 +568,44 @@ declare module 'miragejs/orm/schema' {
 
 declare module 'miragejs/serializer' {
   interface SerializerInterface {
-    schema?: Schema<any>;
-    attrs?: any;
-    embed?: any;
-    root?: any;
-    serializeIds?: any;
-    include?: any;
-    keyForAttribute?(attr: any): any;
-    keyForCollection?(modelName: any): any;
-    keyForEmbeddedRelationship?(attributeName: any): any;
-    keyForForeignKey?(relationshipName: any): any;
-    keyForModel?(modelName: any): any;
+    schema?: Schema<unknown>;
+    attrs?: unknown;
+    embed?: unknown;
+    root?: unknown;
+    serializeIds?: unknown;
+    include?: unknown;
+    keyForAttribute?(attr: unknown): unknown;
+    keyForCollection?(modelName: unknown): unknown;
+    keyForEmbeddedRelationship?(attributeName: unknown): unknown;
+    keyForForeignKey?(relationshipName: unknown): unknown;
+    keyForModel?(modelName: unknown): unknown;
     keyForPolymorphicForeignKeyId?(relationshipName: string): string;
     keyForPolymorphicForeignKeyType?(relationshipName: string): string;
-    keyForRelationship?(modelName: any): any;
-    keyForRelationshipIds?(modelName: any): any;
-    normalize?(json: any): any;
-    serialize?(primaryResource: any, request: any): any;
+    keyForRelationship?(modelName: unknown): unknown;
+    keyForRelationshipIds?(modelName: unknown): unknown;
+    normalize?(json: unknown): unknown;
+    serialize?(primaryResource: unknown, request: unknown): unknown;
     extend?(param?: SerializerInterface): SerializerInterface;
   }
 
   class Serializer implements SerializerInterface {
-    static extend(param?: SerializerInterface | {}): SerializerInterface | {};
+    static extend(
+      param?: SerializerInterface | Record<string, unknown>
+    ): SerializerInterface | Record<string, unknown>;
   }
 
   interface JSONAPISerializerInterface extends SerializerInterface {
     alwaysIncludeLinkageData?: boolean;
 
-    links?(model: any): any;
-    shouldIncludeLinkageData?(relationshipKey: string, model: any): boolean;
-    typeKeyForModel?(model: any): string;
+    links?(model: unknown): unknown;
+    shouldIncludeLinkageData?(relationshipKey: string, model: unknown): boolean;
+    typeKeyForModel?(model: unknown): string;
   }
 
   class JSONAPISerializer extends Serializer implements JSONAPISerializerInterface {
-    static extend(param?: JSONAPISerializerInterface | {}): JSONAPISerializerInterface;
+    static extend(
+      param?: JSONAPISerializerInterface | Record<string, unknown>
+    ): JSONAPISerializerInterface;
   }
 
   class ActiveModelSerializer extends Serializer {}
