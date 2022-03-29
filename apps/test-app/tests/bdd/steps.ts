@@ -3,6 +3,7 @@ import { StepImplementationsRecord } from '@ember-bdd/core';
 import { steps as stepsConfigEnvironment } from '@ember-bdd/steps-config-environment';
 import { steps as stepsEmber } from '@ember-bdd/steps-ember';
 import { steps as stepsDom } from '@ember-bdd/steps-dom';
+import { steps as stepsMirage } from '@ember-bdd/steps-mirage';
 
 // @ts-ignore
 import config from 'ember-get-config';
@@ -12,6 +13,7 @@ const steps: StepImplementationsRecord = {
   ...stepsConfigEnvironment,
   ...stepsEmber,
   ...stepsDom,
+  ...stepsMirage,
 
   'Given email "$email"'(email: string) {
     expect(email).match(/^.+?@.+?$/);

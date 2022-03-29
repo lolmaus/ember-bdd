@@ -52,6 +52,12 @@
       "@ember-bdd/steps-dom/*": [
         "node_modules/@ember-bdd/steps-dom/addon-test-support/*"
       ],
+      "@ember-bdd/steps-mirage": [
+        "node_modules/@ember-bdd/steps-mirage/addon-test-support"
+      ],
+      "@ember-bdd/steps-mirage/*": [
+        "node_modules/@ember-bdd/steps-mirage/addon-test-support/*"
+      ],
       "*": [
         "types/*"
       ]

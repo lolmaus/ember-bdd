@@ -69,4 +69,17 @@
   <input data-test-checkbox="checked" type="checkbox" checked>
   <input data-test-radio="unchecked" type="radio" name="radio group">
   <input data-test-radio="checked" type="radio" checked name="radio group">
+
+  <hr>
+
+  <h2>steps-mirage</h2>
+  <h3>Creating DB records (single-line)</h3>
+
+  <ol data-test-product-variants-age-30>
+    {{#each this.productVariantsAge30 as |pv|}}
+      <li data-test-product-variant>
+        {{pv.name}} {{pv.age}}
+      </li>
+    {{/each}}
+  </ol>
 </div>

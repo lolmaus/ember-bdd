@@ -13,6 +13,7 @@ import { REGEX_SELECTOR_MAYBE_WITH_EQ, REGEX_SELECTOR_WITH_EQ } from './regex';
 import { selectorFromLabel } from './labels';
 import { KeyEvent, KeyModifiers } from '@ember/test-helpers/dom/trigger-key-event';
 import { LabelOverridesRecord } from './types';
+import { isNumber } from '@hqoss/guards';
 
 export interface Collection {
   __isCollection__: true;
@@ -95,8 +96,9 @@ function _parseSelectorMaybeWithEq(
 ): [selector: string, index: number | null] {
   const matchResult = REGEX_SELECTOR_MAYBE_WITH_EQ.exec(selectorMaybeWithEq);
   assert(`findByLabel failed to parse a selector: "${selectorMaybeWithEq}"`, matchResult);
-  const [, selector, indexRaw] = matchResult;
-  const index = (indexRaw && parseInt(indexRaw, 10)) || null;
+  const [, selector, indexStr] = matchResult;
+  const indexRaw = indexStr && parseInt(indexStr, 10);
+  const index = isNumber(indexRaw) ? indexRaw : null;
   return [selector, index];
 }
 

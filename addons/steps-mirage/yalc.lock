@@ -2,7 +2,7 @@
   "version": "v1",
   "packages": {
     "@ember-bdd/core": {
-      "signature": "91fe7ca4e2e4634afca1ff81f851884a",
+      "signature": "11e9a34ecbf6544df1ba08375a4ed5b3",
       "replaced": "*"
     }
   }

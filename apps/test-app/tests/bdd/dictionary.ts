@@ -6,6 +6,8 @@ import {
   ConvertersOpinionatedRecord,
 } from '@ember-bdd/core';
 
+import { $emberBddMirageModelName } from '@ember-bdd/steps-mirage';
+
 const dictionary: ConvertersOpinionatedRecord = {
   // A regular expression with a capturing group
   $email: /(.+?@.+)/, // john.doe@example.com
@@ -38,6 +40,7 @@ const dictionary: ConvertersOpinionatedRecord = {
   $emberBddJson,
   $emberBddLabel,
   $emberBddString,
+  $emberBddMirageModelName,
 };
 
 export default dictionary;
