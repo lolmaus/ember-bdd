@@ -1,4 +1,5 @@
 @setupApplicationTest
+@setupMirage
 Feature: Steps DOM
 
 
