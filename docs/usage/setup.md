@@ -1,13 +1,39 @@
 ---
-title: Project Structure
+title: Setup
 index: 1
 ---
 
 
 
-Project structure
-=================
+Setup and pecommended project structure
+=======================================
 
+`ember-bdd` exposes the configuration to the user. Such an approach makes setup more verbose, but it provides visibility and flexibility: you can see what is going on and are able to tap into it.
+
+
+| h1    |    h2   |      h3 |
+|:------|:-------:|--------:|
+| 100   | 1       | 2       |
+| foo   | bar     | baz     |
+
+
+Recommended proejct structure
+-----------------------------
+
+Though all `ember-bdd` configuration can be done directly in the `test-helper.js` file, we recommend splitting it into a more elaborate file structure:
+
+| Path                   | Purpose                                                                                                                |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| **`tests/`**           | asdf                                                                                                                   |
+| **`  test-helper.js`** | the entry point for the initialization of your test suite. Delegates `ember-bdd` configuration to `tests/bdd/setup.js` |
+
+* **`bdd/`**
+  * **`setup.js`** — the entry point for `ember-bdd` initialization
+
+  * **`annotations.js`** — the Cucumber way of initializing tests, e. g. `setupApplicationTest`. See <LinkTo @route="page" @model="usage/annotations">Annotations</LinkTo>.
+  * Steps — step implementations.
+* <LinkTo @route="page" @model="usage/dictionary">Dictionary</LinkTo> — a dictionary of macros (AKA converters) used to parse values from steps into step implementations.
+* Label overrides — a way to reference elements via CSS selectors, instead of test selectors. Useful when dealing with third-party components.
 
 
 /tests/test-helper.js

@@ -11,6 +11,14 @@ Package name: `@ember-bdd/steps-mirage`.
 Steps for working the [Mirage](https://www.ember-cli-mirage.com) mock database to imitate a backend: seeding, simulating errors, etc.
 
 
+
+Setup
+-----
+
+In order to include this set of steps, do the following in your `tests/test-helper.js` (or, even better, in `tests/bdd/steps):
+
+
+
 Working with relationships
 --------------------------
 
@@ -29,7 +37,7 @@ Seeding records with bidirectional references is actually impossible: in order t
 Seeding steps
 -----------------
 
-### Creating DB records (single-line)
+### Creating DB records with identical attributes (single-line)
 
 Creates a given number of records in the Mirage database.
 
@@ -38,7 +46,7 @@ This step is useful when:
 1. There are not too much attributes to provide.
 2. Ids of records are not imporant, i. e. you don't need to reference created records in subsequent steps.
 
-Model name is tolerant to casing and quantity form. CamelCase is recommended
+Model name is tolerant to casing and quantity form. Use `CamelCase`, `dash-case` or `snake_case`.
 
 **Signature**: 
 
@@ -57,4 +65,59 @@ Given there are 5 records of type "ProductVariant" with properties {name: "john"
 Given there are 5 records of type "ProductVariant" with traits "foo, bar, baz"
 Given there are 5 records of type "ProductVariant" with traits "foo, bar" and properties {name: "john", age: 30}
 ```
+
+### Creating DB records with identical attributes (multi-line)
+
+This step is identical to the previous one, but lets you write out attributes as a table of keys and values.
+
+Keys are string literals, the should not be in quotes.
+
+Values are parsed as JSON. This means that they can be number, strings, objects, arrays, or `null`. Strings must be quoted.
+
+An empty value cell is treated as `null`.
+
+**Signature**: 
+
+```feature
+Given there(?: is a|'s a| are|'re) (?:(\\d+) )?records? of type $emberBddMirageModelName(?: with)?(?: traits? ${emberBddString})?(?: and)?(?: propert(?:y|ies) ({.+?}))?
+```
+
+**Examples*:
+
+```feature
+Given there are 5 records of type "ProductVariant" with traits "foo, bar" and the following properties:
+  -----------------
+  | key  | value  |
+  | name | "John" |
+  | age  | 30     |
+  -----------------
+```
+
+
+
+### Creating DB records with unique attributes
+
+This step lets you seed a Mirage model with a table where columns are attribute keys and records are attribute values.
+
+This step lets you provide explict ids. Ids are not required: if the `id` column is omitted, then Mirage will generate incremental ids.
+
+**Signature**:
+
+```feautre
+Given there are records of type $emberBddMirageModelName with the following properties:\n$emberBddTable
+```
+
+**Example**:
+
+```feature
+Given there are records of type "ProductVariant" with the following properties:
+  ------------------------
+  | id  | name    | age  |
+  | "1" | "John"  |  30  |
+  | "2" | "Alice" |  20  |
+  | "3" | "Bob"   |      |
+  | "4" | "Bob 2" | null |
+  ------------------------
+```
+
 

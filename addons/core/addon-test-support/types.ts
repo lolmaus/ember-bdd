@@ -1,5 +1,6 @@
 import { StepFn } from 'yadda';
 import { isArray, isFunction, isObject, isString } from '@hqoss/guards';
+import { TestContext } from 'ember-test-helpers';
 
 // prettier-ignore
 export type StepArgs =
@@ -123,3 +124,8 @@ export function isAnnotationsRecord(
 
 export type ModuleFunc = moduleFunc1 | moduleFunc2;
 export type TestFunc = QUnit['test'] | QUnit['only'] | QUnit['skip'] | QUnit['todo'];
+
+export interface BddTestContext extends TestContext {
+  assert: Assert;
+  ctx: Record<string, unknown>;
+}

@@ -73,12 +73,11 @@
   <hr>
 
   <h2>steps-mirage</h2>
-  <h3>Creating DB records (single-line)</h3>
 
-  <ol data-test-product-variants-age-30>
-    {{#each this.productVariantsAge30 as |pv|}}
+  <ol>
+    {{#each this.model as |pv|}}
       <li data-test-product-variant>
-        {{pv.name}} {{pv.age}}
+        {{pv.id}} {{pv.name}} {{pv.age}}
       </li>
     {{/each}}
   </ol>

@@ -3,6 +3,7 @@ import {
   $emberBddJson,
   $emberBddLabel,
   $emberBddString,
+  $emberBddTable,
   ConvertersOpinionatedRecord,
 } from '@ember-bdd/core';
 
@@ -40,6 +41,7 @@ const dictionary: ConvertersOpinionatedRecord = {
   $emberBddJson,
   $emberBddLabel,
   $emberBddString,
+  $emberBddTable,
   $emberBddMirageModelName,
 };
 

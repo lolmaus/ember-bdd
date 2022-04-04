@@ -3,6 +3,7 @@ import Model, { attr } from '@ember-data/model';
 export default class ProductVariant extends Model {
   @attr('string') name!: string | null;
   @attr('number') age!: number | null;
+  @attr('number') testCaseId!: string | null;
 }
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your models.

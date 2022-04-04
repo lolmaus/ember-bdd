@@ -9596,6 +9596,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^9.0.0":
+  version: 9.1.0
+  resolution: "commander@npm:9.1.0"
+  checksum: 1428319b6b90600a813c28fe1e413996d1be99bf01afe9ebc4a9fc6f8077ff3e75f11809b2d2f85bd9b13d7cb592154278e9bbfdb16dc5843cef97bcba6a9cfd
+  languageName: node
+  linkType: hard
+
 "common-tags@npm:^1.8.0":
   version: 1.8.0
   resolution: "common-tags@npm:1.8.0"
@@ -10519,6 +10526,7 @@ __metadata:
     npm-run-all: ^4.1.5
     prettier: ^2.3.2
     qunit-dom: ^1.6.0
+    showdown: ^2.0.3
     typescript: ^4.3.5
     webpack: ^5.68.0
   languageName: unknown
@@ -10643,6 +10651,7 @@ __metadata:
     qunit: ^2.14.1
     qunit-dom: ^1.6.0
     sass: ^1.32.8
+    showdown: ^2.0.3
     sinon: ^10.0.0
     sinon-chai: ^3.6.0
     typescript: ^4.2.3
@@ -21526,6 +21535,17 @@ fsevents@^1.2.7:
   bin:
     showdown: bin/showdown.js
   checksum: d6aac199cb28c2b89bce804eddda928c816e5a2b0e0e6dfe66db8ced6968e237995bf1d547046c9970b804e5c3181b1a55740883e1332c837024668f9c031a01
+  languageName: node
+  linkType: hard
+
+"showdown@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "showdown@npm:2.0.3"
+  dependencies:
+    commander: ^9.0.0
+  bin:
+    showdown: bin/showdown.js
+  checksum: 790e728a9ea19d8b3531c1562b063327e95198c9b416f0f927b36e68897233266b8b368e562b61d76dae3eaf88b5b90f95f1fb0a3db9b7504ea6c31e3e305024
   languageName: node
   linkType: hard
 

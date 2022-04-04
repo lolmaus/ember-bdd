@@ -38,10 +38,6 @@ export default class Application extends Controller {
   mouseEnterLeave = useResource(this, MouseEnterLeaveResource);
 
   @tracked model!: ArrayProxy<ProductVariant>;
-
-  get productVariantsAge30(): ProductVariant[] {
-    return this.model.filter((productVariant) => productVariant.age === 30);
-  }
 }
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your controllers.
