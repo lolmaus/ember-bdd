@@ -1,6 +1,7 @@
+@setupApplicationTest
+@setupMirage
 Feature: Steps Ember
 
-@setupApplicationTest
 Scenario: It should do something
   When I visit URL "/?foo=bar"
   Then I should be at URL "/?foo=bar"

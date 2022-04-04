@@ -3,8 +3,11 @@ import {
   $emberBddJson,
   $emberBddLabel,
   $emberBddString,
+  $emberBddTable,
   ConvertersOpinionatedRecord,
 } from '@ember-bdd/core';
+
+import { $emberBddMirageModelName } from '@ember-bdd/steps-mirage';
 
 const dictionary: ConvertersOpinionatedRecord = {
   // A regular expression with a capturing group
@@ -38,6 +41,8 @@ const dictionary: ConvertersOpinionatedRecord = {
   $emberBddJson,
   $emberBddLabel,
   $emberBddString,
+  $emberBddTable,
+  $emberBddMirageModelName,
 };
 
 export default dictionary;

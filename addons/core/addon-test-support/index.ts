@@ -3,6 +3,7 @@ export {
   $emberBddJson,
   $emberBddString,
   $emberBddLabel,
+  $emberBddTable,
   setupDictionary,
   getDictionary,
 } from './dictionary';
@@ -29,7 +30,21 @@ export { pause, isVisible, getIndexZero } from './helpers';
 
 export { selectorFromLabel, setupLabelOverrides, getLabelOverrides } from './labels';
 
-export { generateLabelRegexString } from './regex';
+export {
+  generateLabelRegexString,
+  REGEX_ITEM_MATCHING,
+  STR_SEPARATOR,
+  REGEX_SEPARATOR,
+  REGEX_SELECTOR_WITH_EQ,
+  REGEX_SELECTOR_MAYBE_WITH_EQ,
+  STR_ITEM_NON_MATCHING,
+  STR_LABEL,
+  REGEX_LABEL,
+  REGEX_LABEL_CONSTRAINED,
+  REGEX_COMMA_AND_SEPARATOR,
+  STR_STRING_WITH_ESCAPE,
+  REGEX_STRING_WITH_ESCAPE,
+} from './regex';
 
 export { setupAnnotations, getAnnotations } from './-private/annotations';
 

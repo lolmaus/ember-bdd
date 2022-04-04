@@ -170,8 +170,14 @@ module('Integration | Util | find-by-label', function (hooks): void {
     m = '`a Comment`';
     assert.equal(findByLabel('a Comment').elements[0].id, 'comment_1_1', m);
 
+    m = '`a Comment length`';
+    assert.equal(findByLabel('a Comment').elements.length, 9, m);
+
     m = '`1st Comment`';
     assert.equal(findByLabel('1st Comment').elements[0].id, 'comment_1_1', m);
+
+    m = '`1st Comment length`';
+    assert.equal(findByLabel('1st Comment').elements.length, 1, m);
 
     m = '`2nd Comment`';
     assert.equal(findByLabel('2nd Comment').elements[0].id, 'comment_1_2', m);

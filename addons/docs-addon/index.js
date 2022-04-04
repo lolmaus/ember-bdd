@@ -4,6 +4,7 @@
 
 const StaticSiteJson = require('broccoli-static-site-json');
 const broccoliMergeTrees = require('broccoli-merge-trees');
+const showdown = require('showdown');
 
 module.exports = {
   name: require('./package').name,
@@ -13,6 +14,9 @@ module.exports = {
   },
 
   treeForPublic() {
+    showdown.setFlavor('github');
+    showdown.setOption('ghCompatibleHeaderId', true);
+
     const inputFolder = '../../docs/';
 
     const config = {

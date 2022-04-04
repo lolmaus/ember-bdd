@@ -1,27 +1,19 @@
 import { StepFn } from 'yadda';
 import { isArray, isFunction, isObject, isString } from '@hqoss/guards';
+import { TestContext } from 'ember-test-helpers';
 
+// prettier-ignore
 export type StepArgs =
-  // | [Assert]
-  // | [unknown, Assert]
-  // | [unknown, unknown, Assert]
-  // | [unknown, unknown, unknown, Assert]
-  // | [unknown, unknown, unknown, unknown, Assert]
-  // | [unknown, unknown, unknown, unknown, unknown, Assert]
-  // | [unknown, unknown, unknown, unknown, unknown, unknown, Assert]
-  // | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert]
-  // | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert]
-  // | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, Assert]
-  | []
-  | [unknown]
-  | [unknown, unknown]
-  | [unknown, unknown, unknown]
-  | [unknown, unknown, unknown, unknown]
-  | [unknown, unknown, unknown, unknown, unknown]
-  | [unknown, unknown, unknown, unknown, unknown, unknown]
-  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown]
-  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown]
-  | [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown];
+| []
+| [unknown | undefined]
+| [unknown | undefined, unknown | undefined]
+| [unknown | undefined, unknown | undefined, unknown | undefined]
+| [unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined]
+| [unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined]
+| [unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined]
+| [unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined]
+| [unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined]
+| [unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined, unknown | undefined];
 
 export type StepImplementation = (
   this: StepFnOpinionated,
@@ -62,9 +54,8 @@ export function isConverterTuple(
 ): maybeConverter is ConverterOpinionatedTuple {
   // prettier-ignore
   return (
-    // @ts-ignore Asserting type
-    isConverterSimple(maybeConverter[0])
-    // @ts-ignore Asserting type
+    isArray(maybeConverter)
+    && isConverterSimple(maybeConverter[0])
     && isFunction(maybeConverter[1])
   );
 }
@@ -133,3 +124,8 @@ export function isAnnotationsRecord(
 
 export type ModuleFunc = moduleFunc1 | moduleFunc2;
 export type TestFunc = QUnit['test'] | QUnit['only'] | QUnit['skip'] | QUnit['todo'];
+
+export interface BddTestContext extends TestContext {
+  assert: Assert;
+  ctx: Record<string, unknown>;
+}

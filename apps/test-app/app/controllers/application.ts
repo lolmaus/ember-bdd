@@ -1,9 +1,11 @@
+import ArrayProxy from '@ember/array/proxy';
 import Controller from '@ember/controller';
 import { assert } from '@ember/debug';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { isBoolean } from '@sniptt/guards';
 import { Resource, useResource } from 'ember-resources';
+import ProductVariant from 'test-app/models/product-variant';
 
 class ClickResource extends Resource {
   @tracked prop = false;
@@ -34,6 +36,8 @@ export default class Application extends Controller {
   click = useResource(this, ClickResource);
   dblclick = useResource(this, DblclickResource);
   mouseEnterLeave = useResource(this, MouseEnterLeaveResource);
+
+  @tracked model!: ArrayProxy<ProductVariant>;
 }
 
 // DO NOT DELETE: this is how TypeScript knows how to look up your controllers.

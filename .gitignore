@@ -37,3 +37,4 @@ package.json.ember-try
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+.yalc/

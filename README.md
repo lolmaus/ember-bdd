@@ -82,3 +82,15 @@ Roadmap
     * [ ] Fill out `package.json`s
     * [ ] Set up `release-it` via [create-rwjblue-release-it-setup](https://github.com/rwjblue/create-rwjblue-release-it-setup)
     * [ ] Publish to npm
+
+
+
+Addon creation checklist
+------------------------
+
+* Steps
+  * Documentation at `/docs/steps/<addon-name>.md`
+  * Implementation at `/addons/steps-<addon-name>/addon-test-support/steps.ts`
+  * Unit tests at `/addons/steps-<addon-name>/tests/unit/steps-test.ts` (or `/integration/`)
+  * Acceptance smoke tests at `/apps/test-app/tests/acceptance/steps-<addon-name>.feature
+    * Add your addon to configuration files at `/apps/test-app/tests/bdd/`

@@ -97,7 +97,7 @@ export default const steps = {
 
   // A step that uses table syntax: useful to seed multiple records,
   // but not practical to seed just one, since it consumes at least four lines of the feature file
-  "Given the following posts with\n$opinionatedTable"(rows) {
+  "Given the following posts with\n$emberBddTable"(rows) {
     rows.forEach(row => {
       steps["Given a post with $fields"].call(this, row);
     })

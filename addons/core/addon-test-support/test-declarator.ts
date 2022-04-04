@@ -8,7 +8,7 @@ import FeatureParser, {
 } from 'yadda/lib/parsers/FeatureParser';
 import { cached } from 'tracked-toolbox';
 import composeSteps from './-private/compose-steps';
-import { ModuleFunc, TestFunc } from './types';
+import { BddTestContext, ModuleFunc, TestFunc } from './types';
 import { generateDictionary } from './-private/dictionary';
 import { assert } from '@ember/debug';
 import { applyAnnotations } from './-private/annotations';
@@ -69,21 +69,28 @@ export default class TestDeclarator {
             applyAnnotations(scenario.annotations, hooks);
 
             testFunction(scenario.title, (assert: Assert) => {
-              return this.runScenario(scenario, assert);
+              return this.runScenario(scenario, assert, this as unknown as BddTestContext);
             });
           });
         } else {
           testFunction(scenario.title, (assert: Assert) => {
-            return this.runScenario(scenario, assert);
+            return this.runScenario(scenario, assert, this as unknown as BddTestContext);
           });
         }
       });
     });
   }
 
-  protected runScenario(scenario: ScenarioExport, assert: Assert): Promise<void> {
+  protected runScenario(
+    scenario: ScenarioExport,
+    assert: Assert,
+    context: BddTestContext
+  ): Promise<void> {
     return new Promise((resolve, reject) => {
-      this.yaddaInstance.run(scenario.steps, { assert, ctx: {} }, (err: Error | null) => {
+      context.assert = assert;
+      context.ctx = {};
+
+      this.yaddaInstance.run(scenario.steps, context, (err: Error | null) => {
         if (err) {
           reject(err);
         }
